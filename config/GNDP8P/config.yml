@@ -6,5 +6,5 @@ symbols: config/GNDP8P/symbols.txt
 splits: config/GNDP8P/splits.txt
 # Change this to match the linker verison.
 # See config.example.yml for a list.
-mw_comment_version: 14
+mw_comment_version: 11
 quick_analysis: false
