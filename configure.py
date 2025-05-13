@@ -219,6 +219,8 @@ cflags_runtime = [
     "-inline auto",
 ]
 
+cflags_indep = [*cflags_base, "-O0"]
+
 config.linker_version = "GC/1.3.2"
 
 
@@ -248,6 +250,15 @@ def MatchingFor(*versions):
 config.warn_missing_config = True
 config.warn_missing_source = False
 config.libs = [
+    {
+        "lib": "Indep",
+        "mw_version": config.linker_version,
+        "cflags": cflags_indep,
+        "host": False,
+        "objects": [
+            Object(Matching, "Indep/SourceLists/EcstasyE.cpp"),
+        ],
+    },
     {
         "lib": "Runtime.PPCEABI.H",
         "mw_version": config.linker_version,
