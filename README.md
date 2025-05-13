@@ -1,4 +1,4 @@
-Some Game  
+Need for Speed: Underground
 [![Build Status]][actions] [![Code Progress]][progress] [![Data Progress]][progress] [![Discord Badge]][discord]
 =============
 
@@ -14,7 +14,7 @@ Replace with your repository's URL.
 [Discord Badge]: https://img.shields.io/discord/458389297192632330?color=%237289DA&logo=discord&logoColor=%23FFFFFF
 [discord]: https://discord.gg/bBEqpmSV
 
-A work-in-progress decompilation of Some Game.
+A work-in-progress decompilation of Need for Speed: Underground.
 
 This repository does **not** contain any game assets or assembly whatsoever. An existing copy of the game is required.
 
