@@ -10,47 +10,47 @@ Sections:
 	.sbss       type:bss align:4
 	.sdata2     type:rodata align:32
 
-Indep/SourceLists/eMatrixE.cpp:
+Speed/Indep/SourceLists/eMatrixE.cpp:
 	.bss        start:0x802A88E0 end:0x802ABE9C
 
-Indep/SourceLists/EcstasyE.cpp:
+Speed/Indep/SourceLists/EcstasyE.cpp:
 	.text       start:0x800034A0 end:0x800099CC
 	.rodata     start:0x8022FBE0 end:0x802305D0
 
-Indep/SourceLists/EcstasyEx.cpp:
+Speed/Indep/SourceLists/EcstasyEx.cpp:
 	.text       start:0x800099CC end:0x8000B850
 	.sdata      start:0x803715E0 end:0x8037162C
 
-Indep/SourceLists/eLightE.cpp:
+Speed/Indep/SourceLists/eLightE.cpp:
 	.text       start:0x8000B850 end:0x8000BBF8
 	.sdata      start:0x8037162C end:0x80371648
 
-Indep/SourceLists/eEnvMapE.cpp:
+Speed/Indep/SourceLists/eEnvMapE.cpp:
 	.text       start:0x8000BBF8 end:0x8000C1D8
 
-Indep/SourceLists/eMathE.cpp:
+Speed/Indep/SourceLists/eMathE.cpp:
 	.text       start:0x8000C1D8 end:0x8000D424
 	.sdata      start:0x80371648 end:0x80371650
 
-Indep/SourceLists/ePShader.cpp:
+Speed/Indep/SourceLists/ePShader.cpp:
 	.text       start:0x8000D424 end:0x8000EC58
 	.data       start:0x8026AD10 end:0x8026B920
 	.sdata      start:0x80371650 end:0x80371658
 	.sbss       start:0x80373550 end:0x80373574
 
-Indep/SourceLists/eVShader.cpp:
+Speed/Indep/SourceLists/eVShader.cpp:
 	.text       start:0x8000EC58 end:0x8000F31C
 	.sdata      start:0x80371658 end:0x80371678
 	.sbss       start:0x80373574 end:0x80373588
 
-Indep/SourceLists/eStrip.cpp:
+Speed/Indep/SourceLists/eStrip.cpp:
 	.text       start:0x8000F31C end:0x8000F4C4
 	.sdata      start:0x80371678 end:0x8037169C
 
-Indep/SourceLists/eSolidPlat.cpp:
+Speed/Indep/SourceLists/eSolidPlat.cpp:
 	.text       start:0x8000F4C4 end:0x800104A8
 
-Indep/SourceLists/eViewPlat.cpp:
+Speed/Indep/SourceLists/eViewPlat.cpp:
 	.text       start:0x800104A8 end:0x80010734
 
 Platform.cpp:
