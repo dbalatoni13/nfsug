@@ -1,5 +1,5 @@
 #include "Speed/Indep/bSlotPool.hpp"
-#include <dolphin.h>
+#include "Speed/Indep/eViewPlat.hpp"
 
 enum VIDEO_MODE {
   NUM_VIDEO_MODES = 3,
@@ -7,6 +7,16 @@ enum VIDEO_MODE {
   MODE_PAL60 = 1,
   MODE_PAL = 0,
 };
+
+enum EVIEWMODE {
+    EVIEWMODE_TWOV = 4,
+    EVIEWMODE_TWOH = 3,
+    EVIEWMODE_ONE_RVM = 2,
+    EVIEWMODE_ONE = 1,
+    EVIEWMODE_NONE = 0,
+};
+
+EVIEWMODE CurrentViewMode = EVIEWMODE_NONE;
 
 unsigned int bGetTicker();
 int bGetFixTickerDifference(unsigned int start_ticks, unsigned int end_ticks);
@@ -21,6 +31,28 @@ void SetScreenBuffers();
 void eWaitUntilRenderingDone();
 SlotPool *bNewSlotPool(int slot_size, int num_slots, const char *debug_name,
                        int memory_pool);
+eView::eRenderTarget * eGetRenderTarget(int render_target);
+
+eView::eView * eGetView(int view_id);
+
+// goes in eView.hpp
+inline eView::eView * eGetView(int view_id, bool doAssert) {
+  if (doAssert) {
+    // ?
+  }
+  return eGetView(view_id);
+}
+// idk where these go
+Camera FlailerCamera;
+Camera Player1Camera;
+Camera Player2Camera;
+Camera Player1RVMCamera;
+Camera Player1HeadlightCamera;
+Camera Player2HeadlightCamera;
+Mtx44 Player1HeadlightProjection;
+Mtx44 Player2HeadlightProjection;
+Mtx44 Player1ReflectionProjection;
+Mtx44 Player2ReflectionProjection;
 
 unsigned int LastVBlankTime;
 volatile int FrameCounter;
@@ -62,53 +94,53 @@ void InitSlotPools(void) {
   return;
 }
 
-void epInitViews(void) {
-  // eView *var_r30;
-  // bMatrix4 *var_r29;
-  // bMatrix4 *var_r28;
-  // s32 var_r27;
-  // s32 var_r26;
+void epInitViews(void)
+{
+    eView::eView * view = eGetView(0, false);
+    view->SetRenderTarget(eGetRenderTarget(0));
+    view->SetCamera(&FlailerCamera);
+    view->SetActive(1);
 
-  // var_r27 = 1;
-  // var_r26 = 0;
-  // var_r30 = eGetView__Fi(0);
-  // var_r30->unk_4C = eGetRenderTarget__Fi(0);
-  // var_r30->unk_08 = 1;
-  // var_r30->unk_34 = &FlailerCamera;
-  // var_r30 = eGetView__Fi(1);
-  // var_r29 = &Player1Camera;
-  // var_r30->unk_4C = eGetRenderTarget__Fi(1);
-  // var_r29 = &Player1Camera;
-  // var_r30->unk_08 = 1;
-  // var_r30->unk_34 = &Player1Camera;
-  // var_r30 = eGetView__Fi(2);
-  // var_r28 = &Player2Camera;
-  // var_r30->unk_4C = eGetRenderTarget__Fi(2);
-  // var_r28 = &Player2Camera;
-  // var_r30->unk_08 = 0;
-  // var_r30->unk_34 = &Player2Camera;
-  // var_r30 = eGetView__Fi(8);
-  // var_r30->unk_34 = &Player1HeadlightCamera;
-  // var_r30->unk_4C = eGetRenderTarget__Fi(3);
-  // var_r30->unk_08 = 1;
-  // var_r30->unk_00->unk_100 = &Player1HeadlightProjection;
-  // var_r30 = eGetView__Fi(9);
-  // var_r30->unk_34 = &Player2HeadlightCamera;
-  // var_r30->unk_4C = eGetRenderTarget__Fi(4);
-  // var_r30->unk_08 = 0;
-  // var_r30->unk_00->unk_100 = &Player2HeadlightProjection;
-  // var_r30 = eGetView__Fi(3);
-  // var_r30->unk_4C = eGetRenderTarget__Fi(5);
-  // var_r30->unk_08 = 0;
-  // var_r30->unk_34 = &Player1RVMCamera;
-  // var_r30 = eGetView__Fi(4);
-  // var_r30->unk_4C = eGetRenderTarget__Fi(6);
-  // var_r30->unk_34 = &Player1Camera;
-  // var_r30->unk_08 = 1;
-  // var_r30->unk_00->unk_100 = &Player1ReflectionProjection;
-  // var_r30 = eGetView__Fi(5);
-  // var_r30->unk_4C = eGetRenderTarget__Fi(7);
-  // var_r30->unk_34 = &Player2Camera;
-  // var_r30->unk_08 = 0;
-  // var_r30->unk_00->unk_100 = &Player2ReflectionProjection;
+    view = eGetView(1, false);
+    view->SetRenderTarget(eGetRenderTarget(1));
+    view->SetCamera(&Player1Camera);
+    view->SetActive(1);
+
+    view = eGetView(2, false);
+    view->SetRenderTarget(eGetRenderTarget(2));
+    view->SetCamera(&Player2Camera);
+    view->SetActive(1);
+
+    view = eGetView(8, false);
+    view->SetCamera(&Player1HeadlightCamera);
+    view->SetRenderTarget(eGetRenderTarget(3));
+    view->SetActive(1);
+    view->PlatInfo->LightPerspectiveProjection = &Player1HeadlightProjection;
+
+    view = eGetView(9, false);
+    view->SetCamera(&Player2HeadlightCamera);
+    view->SetRenderTarget(eGetRenderTarget(4));
+    view->SetActive(0);
+    view->PlatInfo->LightPerspectiveProjection = &Player2HeadlightProjection;
+
+    view = eGetView(3, false);
+    view->SetRenderTarget(eGetRenderTarget(5));
+    view->SetActive(0);
+    view->SetCamera(&Player1RVMCamera);
+
+    view = eGetView(4, false);
+    view->SetRenderTarget(eGetRenderTarget(6));
+    view->SetCamera(&Player1Camera);
+    view->SetActive(1);
+    view->PlatInfo->LightPerspectiveProjection = &Player1ReflectionProjection;
+
+    view = eGetView(5, false);
+    view->SetRenderTarget(eGetRenderTarget(7));
+    view->SetCamera(&Player2Camera);
+    view->SetActive(0);
+    view->PlatInfo->LightPerspectiveProjection = &Player2ReflectionProjection;
+}
+
+EVIEWMODE eGetCurrentViewMode() {
+    return CurrentViewMode;
 }

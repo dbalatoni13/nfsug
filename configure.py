@@ -256,7 +256,8 @@ config.libs = [
         "cflags": cflags_indep,
         "host": False,
         "objects": [
-            Object(Matching, "Speed/Indep/SourceLists/EcstasyE.cpp"),
+            Object(NonMatching, "Speed/Indep/SourceLists/EcstasyE.cpp"),
+            Object(NonMatching, "Speed/Indep/SourceLists/eMatrixE.cpp"),
         ],
     },
     {
