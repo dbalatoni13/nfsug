@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Speed/Indep/bVector.hpp"
+#include "Speed/Indep/bWare/Inc/bVector.hpp"
 
 struct CameraParams {
   // total size: 0xD4

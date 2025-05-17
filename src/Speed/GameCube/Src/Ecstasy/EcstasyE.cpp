@@ -1,5 +1,6 @@
-#include "Speed/Indep/bSlotPool.hpp"
-#include "Speed/Indep/eViewPlat.hpp"
+#include "./eViewPlat.hpp"
+#include "Speed/Indep/bWare/Inc/bSlotPool.hpp"
+
 
 enum VIDEO_MODE {
   NUM_VIDEO_MODES = 3,
@@ -9,11 +10,11 @@ enum VIDEO_MODE {
 };
 
 enum EVIEWMODE {
-    EVIEWMODE_TWOV = 4,
-    EVIEWMODE_TWOH = 3,
-    EVIEWMODE_ONE_RVM = 2,
-    EVIEWMODE_ONE = 1,
-    EVIEWMODE_NONE = 0,
+  EVIEWMODE_TWOV = 4,
+  EVIEWMODE_TWOH = 3,
+  EVIEWMODE_ONE_RVM = 2,
+  EVIEWMODE_ONE = 1,
+  EVIEWMODE_NONE = 0,
 };
 
 EVIEWMODE CurrentViewMode = EVIEWMODE_NONE;
@@ -31,12 +32,12 @@ void SetScreenBuffers();
 void eWaitUntilRenderingDone();
 SlotPool *bNewSlotPool(int slot_size, int num_slots, const char *debug_name,
                        int memory_pool);
-eView::eRenderTarget * eGetRenderTarget(int render_target);
+eView::eRenderTarget *eGetRenderTarget(int render_target);
 
-eView::eView * eGetView(int view_id);
+eView::eView *eGetView(int view_id);
 
 // goes in eView.hpp
-inline eView::eView * eGetView(int view_id, bool doAssert) {
+inline eView::eView *eGetView(int view_id, bool doAssert) {
   if (doAssert) {
     // ?
   }
@@ -94,53 +95,50 @@ void InitSlotPools(void) {
   return;
 }
 
-void epInitViews(void)
-{
-    eView::eView * view = eGetView(0, false);
-    view->SetRenderTarget(eGetRenderTarget(0));
-    view->SetCamera(&FlailerCamera);
-    view->SetActive(1);
+void epInitViews(void) {
+  eView::eView *view = eGetView(0, false);
+  view->SetRenderTarget(eGetRenderTarget(0));
+  view->SetCamera(&FlailerCamera);
+  view->SetActive(1);
 
-    view = eGetView(1, false);
-    view->SetRenderTarget(eGetRenderTarget(1));
-    view->SetCamera(&Player1Camera);
-    view->SetActive(1);
+  view = eGetView(1, false);
+  view->SetRenderTarget(eGetRenderTarget(1));
+  view->SetCamera(&Player1Camera);
+  view->SetActive(1);
 
-    view = eGetView(2, false);
-    view->SetRenderTarget(eGetRenderTarget(2));
-    view->SetCamera(&Player2Camera);
-    view->SetActive(1);
+  view = eGetView(2, false);
+  view->SetRenderTarget(eGetRenderTarget(2));
+  view->SetCamera(&Player2Camera);
+  view->SetActive(1);
 
-    view = eGetView(8, false);
-    view->SetCamera(&Player1HeadlightCamera);
-    view->SetRenderTarget(eGetRenderTarget(3));
-    view->SetActive(1);
-    view->PlatInfo->LightPerspectiveProjection = &Player1HeadlightProjection;
+  view = eGetView(8, false);
+  view->SetCamera(&Player1HeadlightCamera);
+  view->SetRenderTarget(eGetRenderTarget(3));
+  view->SetActive(1);
+  view->PlatInfo->LightPerspectiveProjection = &Player1HeadlightProjection;
 
-    view = eGetView(9, false);
-    view->SetCamera(&Player2HeadlightCamera);
-    view->SetRenderTarget(eGetRenderTarget(4));
-    view->SetActive(0);
-    view->PlatInfo->LightPerspectiveProjection = &Player2HeadlightProjection;
+  view = eGetView(9, false);
+  view->SetCamera(&Player2HeadlightCamera);
+  view->SetRenderTarget(eGetRenderTarget(4));
+  view->SetActive(0);
+  view->PlatInfo->LightPerspectiveProjection = &Player2HeadlightProjection;
 
-    view = eGetView(3, false);
-    view->SetRenderTarget(eGetRenderTarget(5));
-    view->SetActive(0);
-    view->SetCamera(&Player1RVMCamera);
+  view = eGetView(3, false);
+  view->SetRenderTarget(eGetRenderTarget(5));
+  view->SetActive(0);
+  view->SetCamera(&Player1RVMCamera);
 
-    view = eGetView(4, false);
-    view->SetRenderTarget(eGetRenderTarget(6));
-    view->SetCamera(&Player1Camera);
-    view->SetActive(1);
-    view->PlatInfo->LightPerspectiveProjection = &Player1ReflectionProjection;
+  view = eGetView(4, false);
+  view->SetRenderTarget(eGetRenderTarget(6));
+  view->SetCamera(&Player1Camera);
+  view->SetActive(1);
+  view->PlatInfo->LightPerspectiveProjection = &Player1ReflectionProjection;
 
-    view = eGetView(5, false);
-    view->SetRenderTarget(eGetRenderTarget(7));
-    view->SetCamera(&Player2Camera);
-    view->SetActive(0);
-    view->PlatInfo->LightPerspectiveProjection = &Player2ReflectionProjection;
+  view = eGetView(5, false);
+  view->SetRenderTarget(eGetRenderTarget(7));
+  view->SetCamera(&Player2Camera);
+  view->SetActive(0);
+  view->PlatInfo->LightPerspectiveProjection = &Player2ReflectionProjection;
 }
 
-EVIEWMODE eGetCurrentViewMode() {
-    return CurrentViewMode;
-}
+EVIEWMODE eGetCurrentViewMode() { return CurrentViewMode; }

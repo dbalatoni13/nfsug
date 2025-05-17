@@ -156,9 +156,6 @@ config.asflags = [
     "-mgekko",
     "--strip-local-absolute",
     "-I include",
-    "-I src",
-    "-I src/Speed/GameCube/bWare/GameCube/dolphinsdk/include",
-    "-I include/libc",
     f"-I build/{config.version}/include",
     f"--defsym BUILD_VERSION={version_num}",
 ]
@@ -180,6 +177,9 @@ cflags_base = [
     "-O2",
     # "-Wall",
     "-I include",
+    "-I src",
+    "-I src/Speed/GameCube/bWare/GameCube/dolphinsdk/include",
+    "-I include/libc",
     f"-I build/{config.version}/include",
     f"-DBUILD_VERSION={version_num}",
     f"-DVERSION_{config.version}",
@@ -232,8 +232,7 @@ config.libs = [
         "cflags": cflags_indep,
         "host": False,
         "objects": [
-            Object(NonMatching, "Speed/Indep/SourceLists/EcstasyE.cpp"),
-            Object(NonMatching, "Speed/Indep/SourceLists/eMatrixE.cpp"),
+            Object(Matching, "Speed/GameCube/Src/Ecstasy/EcstasyE.cpp"),
         ],
     },
     {

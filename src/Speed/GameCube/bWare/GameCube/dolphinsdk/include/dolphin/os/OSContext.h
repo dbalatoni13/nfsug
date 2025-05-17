@@ -160,14 +160,13 @@ typedef struct OSContext {
 
 u32 OSGetStackPointer(void);
 void OSDumpContext(OSContext *context);
-u32 OSSaveContext(OSContext* context);
-void OSLoadContext(OSContext* context);
-void OSClearContext(OSContext* context);
-OSContext* OSGetCurrentContext();
-void OSSetCurrentContext(OSContext* context);
+u32 OSSaveContext(OSContext *context);
+void OSLoadContext(OSContext *context);
+void OSClearContext(OSContext *context);
+OSContext *OSGetCurrentContext();
+void OSSetCurrentContext(OSContext *context);
 void OSSaveFPUContext(OSContext *fpuContext);
 void OSInitContext(OSContext *context, u32 pc, u32 newsp);
-
 
 #ifdef __cplusplus
 }

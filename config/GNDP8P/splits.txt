@@ -10,9 +10,6 @@ Sections:
 	.sbss       type:bss align:4
 	.sdata2     type:rodata align:32
 
-Speed/Indep/Src/Ecstasy/eMatrixE.cpp:
-	.bss        start:0x802A88E0 end:0x802ABE9C
-
 Speed/GameCube/Src/Ecstasy/EcstasyE.cpp:
 	.text       start:0x800034A0 end:0x800099CC
 	.rodata     start:0x8022FBE0 end:0x802305D0
@@ -29,8 +26,12 @@ Speed/GameCube/Src/Ecstasy/eEnvMapE.cpp:
 	.text       start:0x8000BBF8 end:0x8000C1D8
 
 Speed/GameCube/Src/Ecstasy/eMathE.cpp:
-	.text       start:0x8000C1D8 end:0x8000D424
+	.text       start:0x8000C1D8 end:0x8000D364
 	.sdata      start:0x80371648 end:0x80371650
+
+Speed/Indep/Src/Ecstasy/eMatrixE.cpp:
+	.text       start:0x8000D364 end:0x8000D424
+	.bss        start:0x802A88E0 end:0x802ABE9C
 
 Speed/GameCube/Src/Ecstasy/ePShader.cpp:
 	.text       start:0x8000D424 end:0x8000EC58
@@ -1481,38 +1482,38 @@ Speed/GameCube/bWare/GameCube/dolphinsdk/src/si/SISteeringAuto.c:
 	.text       start:0x801BB664 end:0x801BC4F4
 	.sbss       start:0x80373EF0 end:0x80373EF8
 
-IPSocket.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPSocket.c:
 	.text       start:0x801BC4F4 end:0x801BCD34
 	.data       start:0x80281518 end:0x80281678
 	.bss        start:0x803121A8 end:0x80316140
 	.sdata      start:0x80372E58 end:0x80372E60
 	.sbss       start:0x80373EF8 end:0x80373F50
 
-IPPPPoE.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPPPPoE.c:
 	.data       start:0x80281678 end:0x80281DD8
 	.bss        start:0x80316140 end:0x80316670
 	.sdata      start:0x80372E60 end:0x80372E90
 
-IPPap.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPPap.c:
 	.bss        start:0x80316670 end:0x803166A8
 
-IPChap.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPChap.c:
 	.bss        start:0x803166A8 end:0x80316710
 
-IPLcp.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPLcp.c:
 	.data       start:0x80281DD8 end:0x80281F10
 	.sdata2     start:0x80375140 end:0x80375160
 
-IP.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IP.c:
 	.data       start:0x80281F10 end:0x80281F20
 	.bss        start:0x80316710 end:0x80316720
 	.sdata      start:0x80372E90 end:0x80372E98
 
-IPIcmp.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPIcmp.c:
 	.text       start:0x801BCD34 end:0x801BD71C
 	.data       start:0x80281F20 end:0x80281F58
 
-IPRoute.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPRoute.c:
 	.text       start:0x801BD71C end:0x801BE534
 	.data       start:0x80281F58 end:0x80281FE8
 	.bss        start:0x80316720 end:0x80316C20
@@ -1520,61 +1521,61 @@ IPRoute.c:
 	.sbss       start:0x80373F50 end:0x80373F70
 	.sdata2     start:0x80375160 end:0x80375170
 
-IPFrag.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPFrag.c:
 	.bss        start:0x80316C20 end:0x80316C60
 
-IPUdp.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPUdp.c:
 	.text       start:0x801BE534 end:0x801BF394
 	.sdata      start:0x80372EA8 end:0x80372EB4
 
-IPEther.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPEther.c:
 	.text       start:0x801BF394 end:0x801BFD64
 	.data       start:0x80281FE8 end:0x80282040
 	.bss        start:0x80316C60 end:0x8031B988
 	.sdata      start:0x80372EB4 end:0x80372EC8
 	.sbss       start:0x80373F70 end:0x80373F98
 
-IFFifo.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IFFifo.c:
 	.sdata      start:0x80372EC8 end:0x80372EE8
 
-IPTcpTimeWait.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPTcpTimeWait.c:
 	.bss        start:0x8031B988 end:0x8031B9A0
 
-IPTcp.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPTcp.c:
 	.data       start:0x80282040 end:0x80282120
 	.sdata      start:0x80372EE8 end:0x80372F40
 
-IPTcpOutput.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPTcpOutput.c:
 	.text       start:0x801BFD64 end:0x801C0598
 
-IPTcpTimer.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPTcpTimer.c:
 	.text       start:0x801C0598 end:0x801C08E4
 
-IPTcpUser.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPTcpUser.c:
 	.text       start:0x801C08E4 end:0x801C1F38
 	.data       start:0x80282120 end:0x80282178
 	.sdata      start:0x80372F40 end:0x80372F48
 
-IPDns.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPDns.c:
 	.text       start:0x801C1F38 end:0x801C29BC
 	.data       start:0x80282178 end:0x802822F8
 	.sdata      start:0x80372F48 end:0x80372FF8
 
-IPDhcp.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPDhcp.c:
 	.text       start:0x801C29BC end:0x801C304C
 	.data       start:0x802822F8 end:0x80282780
 	.bss        start:0x8031B9A0 end:0x8031BEE0
 	.sdata      start:0x80372FF8 end:0x80373030
 
-IPZero.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPZero.c:
 	.bss        start:0x8031BEE0 end:0x8031BF20
 	.sbss       start:0x80373F98 end:0x80373FA8
 
-IPPPP.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPPPP.c:
 	.text       start:0x801C304C end:0x801C51DC
 	.data       start:0x80282780 end:0x80282940
 
-IPArp.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ip/IPArp.c:
 	.data       start:0x80282940 end:0x80282A80
 	.bss        start:0x8031BF20 end:0x8031E960
 	.sdata      start:0x80373030 end:0x80373058
@@ -2590,17 +2591,17 @@ Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDUnlock.c:
 Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDRdwr.c:
 	.text       start:0x80223EEC end:0x80225C24
 
-eth.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/net/eth.c:
 	.text       start:0x80225C24 end:0x80225C58
 	.data       start:0x80290180 end:0x80290208
 	.bss        start:0x8035A340 end:0x8035AFA0
 	.sdata      start:0x803734BC end:0x803734E0
 	.sbss       start:0x80374180 end:0x80374224
 
-ethsec.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/net/ethsec.c:
 	.text       start:0x80225C58 end:0x802268B0
 	.bss        start:0x8035AFA0 end:0x803713D8
 
-md5.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/net/md5.c:
 	.text       start:0x802268B0 end:0x80227854
 	.data       start:0x80290208 end:0x80298DE0

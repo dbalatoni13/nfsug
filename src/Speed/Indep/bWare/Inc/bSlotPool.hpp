@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Speed/Indep/bNode.hpp"
+#include "./bWare.hpp"
 
 enum SlotPoolFlags {
   SLOTPOOL_FLAG_WARN_IF_NONEMPTY_DELETE = 8,
