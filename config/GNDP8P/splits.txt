@@ -10,262 +10,262 @@ Sections:
 	.sbss       type:bss align:4
 	.sdata2     type:rodata align:32
 
-Speed/Indep/SourceLists/eMatrixE.cpp:
+Speed/Indep/Src/Ecstasy/eMatrixE.cpp:
 	.bss        start:0x802A88E0 end:0x802ABE9C
 
-Speed/Indep/SourceLists/EcstasyE.cpp:
+Speed/GameCube/Src/Ecstasy/EcstasyE.cpp:
 	.text       start:0x800034A0 end:0x800099CC
 	.rodata     start:0x8022FBE0 end:0x802305D0
 
-Speed/Indep/SourceLists/EcstasyEx.cpp:
+Speed/GameCube/Src/Ecstasy/EcstasyEx.cpp:
 	.text       start:0x800099CC end:0x8000B850
 	.sdata      start:0x803715E0 end:0x8037162C
 
-Speed/Indep/SourceLists/eLightE.cpp:
+Speed/GameCube/Src/Ecstasy/eLightE.cpp:
 	.text       start:0x8000B850 end:0x8000BBF8
 	.sdata      start:0x8037162C end:0x80371648
 
-Speed/Indep/SourceLists/eEnvMapE.cpp:
+Speed/GameCube/Src/Ecstasy/eEnvMapE.cpp:
 	.text       start:0x8000BBF8 end:0x8000C1D8
 
-Speed/Indep/SourceLists/eMathE.cpp:
+Speed/GameCube/Src/Ecstasy/eMathE.cpp:
 	.text       start:0x8000C1D8 end:0x8000D424
 	.sdata      start:0x80371648 end:0x80371650
 
-Speed/Indep/SourceLists/ePShader.cpp:
+Speed/GameCube/Src/Ecstasy/ePShader.cpp:
 	.text       start:0x8000D424 end:0x8000EC58
 	.data       start:0x8026AD10 end:0x8026B920
 	.sdata      start:0x80371650 end:0x80371658
 	.sbss       start:0x80373550 end:0x80373574
 
-Speed/Indep/SourceLists/eVShader.cpp:
+Speed/GameCube/Src/Ecstasy/eVShader.cpp:
 	.text       start:0x8000EC58 end:0x8000F31C
 	.sdata      start:0x80371658 end:0x80371678
 	.sbss       start:0x80373574 end:0x80373588
 
-Speed/Indep/SourceLists/eStrip.cpp:
+Speed/GameCube/Src/Ecstasy/eStrip.cpp:
 	.text       start:0x8000F31C end:0x8000F4C4
 	.sdata      start:0x80371678 end:0x8037169C
 
-Speed/Indep/SourceLists/eSolidPlat.cpp:
+Speed/GameCube/Src/Ecstasy/eSolidPlat.cpp:
 	.text       start:0x8000F4C4 end:0x800104A8
 
-Speed/Indep/SourceLists/eViewPlat.cpp:
+Speed/GameCube/Src/Ecstasy/eViewPlat.cpp:
 	.text       start:0x800104A8 end:0x80010734
 
-Platform.cpp:
+Speed/GameCube/Src/Platform.cpp:
 	.text       start:0x80010734 end:0x80010A28
 	.rodata     start:0x802305D0 end:0x802306CC
 	.sdata      start:0x8037169C end:0x803716AC
 	.sbss       start:0x80373588 end:0x8037359C
 
-TextureInfoPlat.cpp:
+Speed/GameCube/Src/Ecstasy/TextureInfoPlat.cpp:
 	.text       start:0x80010A28 end:0x80010F34
 	.sdata      start:0x803716AC end:0x803716F0
 
-screenshot.cpp:
+Speed/GameCube/Src/Render/screenshot.cpp:
 	.bss        start:0x802ABE9C end:0x802ABEC8
 	.sdata      start:0x803716F0 end:0x80371730
 	.sbss       start:0x8037359C end:0x803735C4
 
-JoyE.cpp:
+Speed/GameCube/Src/JoyE.cpp:
 	.text       start:0x80010F34 end:0x80011890
 	.rodata     start:0x802306CC end:0x80230C60
 
-bba_com.cpp:
+Speed/GameCube/Render/bba_com.cpp:
 	.text       start:0x80011890 end:0x80015160
 	.bss        start:0x802ABEC8 end:0x802ACA34
 	.sdata      start:0x80371730 end:0x80371784
 
-AcidFXE.cpp:
+Speed/GameCube/Render/AcidFXE.cpp:
 	.text       start:0x80015160 end:0x800152A4
 	.data       start:0x8026B920 end:0x8026BC50
 
-DemoDisc.cpp:
+Speed/Indep/Src/Misc/DemoDisc.cpp:
 	.text       start:0x800152A4 end:0x80015328
 
-MovieE.cpp:
+Speed/GameCube/Src/MovieE.cpp:
 	.text       start:0x80015328 end:0x800159D0
 	.sdata      start:0x80371784 end:0x803717F8
 
-Wheels.cpp:
+Speed/GameCube/Src/Logitech/Wheels.cpp:
 	.text       start:0x800159D0 end:0x80015BD0
 
-Ramp.cpp:
+Speed/GameCube/Src/Logitech/Ramp.cpp:
 	.text       start:0x80015BD0 end:0x80015C00
 
-Periodic.cpp:
+Speed/GameCube/Src/Logitech/Periodic.cpp:
 	.text       start:0x80015C00 end:0x80015E40
 
-LGWheels.cpp:
+Speed/GameCube/Src/Logitech/LGWheels.cpp:
 	.text       start:0x80015E40 end:0x80017B1C
 
-Force.cpp:
+Speed/GameCube/Src/Logitech/Force.cpp:
 	.text       start:0x80017B1C end:0x80017D50
 
-Constant.cpp:
+Speed/GameCube/Src/Logitech/Constant.cpp:
 	.text       start:0x80017D50 end:0x80017F5C
 
-Condition.cpp:
+Speed/GameCube/Src/Logitech/Condition.cpp:
 	.text       start:0x80017F5C end:0x8001818C
 
-Stream.cpp:
+Speed/Indep/Src/EAXSound/RealStream/Src/Stream.cpp:
 	.text       start:0x8001818C end:0x80019F0C
 	.sbss       start:0x803735C4 end:0x8037363C
 
-FEPkg_MU_OnlineDialogBox.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_MU_OnlineDialogBox.cpp:
 	.text       start:0x80019F0C end:0x8001A44C
 
-FEPkg_MU_Keyboard.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_MU_Keyboard.cpp:
 	.text       start:0x8001A44C end:0x8001B238
 
-GC_MemoryCard.cpp:
+Speed/GameCube/Src/MemoryCard/GC_MemoryCard.cpp:
 	.text       start:0x8001B238 end:0x8001D3CC
 
-World.cpp:
+Speed/Indep/Src/World/World.cpp:
 	.text       start:0x8001D3CC end:0x8001F148
 
-RaceCoordinator.cpp:
+Speed/Indep/Src/World/RaceCoordinator.cpp:
 	.text       start:0x8001F148 end:0x80022334
 
-Car.cpp:
+Speed/Indep/Src/World/Car.cpp:
 	.text       start:0x80022334 end:0x8002984C
 	.rodata     start:0x802338AC end:0x80234518
 	.data       start:0x8026BC50 end:0x80271F50
 	.bss        start:0x802ACA34 end:0x802ACB8C
 	.sdata      start:0x803717F8 end:0x80371870
 
-Player.cpp:
+Speed/Indep/Src/World/Player.cpp:
 	.text       start:0x8002984C end:0x80033538
 	.rodata     start:0x80234518 end:0x802350B0
 	.bss        start:0x802ACB8C end:0x802B9678
 	.sdata      start:0x80371870 end:0x8037191C
 
-RaceParameters.cpp:
+Speed/Indep/Src/World/RaceParameters.cpp:
 	.text       start:0x80033538 end:0x80036C70
 
-StylePoints.cpp:
+Speed/Indep/Src/World/StylePoints.cpp:
 	.text       start:0x80036C70 end:0x8003775C
 
-OnlineManager.cpp:
+Speed/Indep/Src/World/OnlineManager.cpp:
 	.text       start:0x8003775C end:0x800377B8
 
-DriftManager.cpp:
+Speed/Indep/Src/World/DriftManager.cpp:
 	.text       start:0x800377B8 end:0x80038834
 	.rodata     start:0x802350B0 end:0x802390BC
 
-MiscStyleManager.cpp:
+Speed/Indep/Src/World/MiscStyleManager.cpp:
 	.text       start:0x80038834 end:0x8003BDEC
 
-Track.cpp:
+Speed/Indep/Src/World/Track.cpp:
 	.text       start:0x8003BDEC end:0x8003BF24
 
-TrackInfo.cpp:
+Speed/Indep/Src/World/TrackInfo.cpp:
 	.text       start:0x8003BF24 end:0x8003C2B0
 
-TrackRoute.cpp:
+Speed/Indep/Src/World/TrackRoute.cpp:
 	.text       start:0x8003C2B0 end:0x8003E568
 
-TrackRouteEditor.cpp:
+Speed/Indep/Src/World/TrackRouteEditor.cpp:
 	.text       start:0x8003E568 end:0x8003E58C
 
-TrackPath.cpp:
+Speed/Indep/Src/World/TrackPath.cpp:
 	.text       start:0x8003E58C end:0x800401C4
 
-TrackStreamer.cpp:
+Speed/Indep/Src/World/TrackStreamer.cpp:
 	.text       start:0x800401C4 end:0x80043E6C
 
-Scenery.cpp:
+Speed/Indep/Src/World/Scenery.cpp:
 	.text       start:0x80043E6C end:0x80043F4C
 	.bss        start:0x802B9678 end:0x802BC328
 	.sdata      start:0x8037191C end:0x80371934
 
-VisibleSection.cpp:
+Speed/Indep/Src/World/VisibleSection.cpp:
 	.text       start:0x80043F4C end:0x80044C44
 
-Main.cpp:
+Speed/Indep/Src/Misc/Main.cpp:
 	.text       start:0x80044C44 end:0x80045FC0
 	.sdata      start:0x80371934 end:0x803719AC
 	.sbss       start:0x8037363C end:0x80373658
 
-SpeedChunks.cpp:
+Speed/Indep/Src/Misc/SpeedChunks.cpp:
 	.bss        start:0x802BC328 end:0x802BC5F0
 	.sdata      start:0x803719AC end:0x803719FC
 
-ResourceLoader.cpp:
+Speed/Indep/Src/Misc/ResourceLoader.cpp:
 	.text       start:0x80045FC0 end:0x80047570
 
-GameFlow.cpp:
+Speed/Indep/Src/Misc/GameFlow.cpp:
 	.text       start:0x80047570 end:0x80047610
 
-BuildRegionAmerica.cpp:
+Speed/Indep/Src/Misc/BuildRegionAmerica.cpp:
 	.text       start:0x80047610 end:0x80047678
 
-AICarController.cpp:
+Speed/Indep/Src/AI/AICarController.cpp:
 	.text       start:0x80047678 end:0x8004BB5C
 	.sbss       start:0x80373658 end:0x80373668
 
-AIPlan.cpp:
+Speed/Indep/Src/AI/AIPlan.cpp:
 	.text       start:0x8004BB5C end:0x80055ED8
 
-AIUtil.cpp:
+Speed/Indep/Src/AI/AIUtil.cpp:
 	.text       start:0x80055ED8 end:0x80058310
 	.sdata      start:0x803719FC end:0x80371A0C
 
-CollisionPredictor.cpp:
+Speed/Indep/Src/AI/CollisionPredictor.cpp:
 	.text       start:0x80058310 end:0x8005979C
 
-CarController.cpp:
+Speed/Indep/Src/AI/CarController.cpp:
 	.text       start:0x8005979C end:0x80059D00
 
-DriveTarget.cpp:
+Speed/Indep/Src/AI/DriveTarget.cpp:
 	.text       start:0x80059D00 end:0x8005C6E8
 	.sbss       start:0x80373668 end:0x80373684
 
-DrivingChoice.cpp:
+Speed/Indep/Src/AI/DrivingChoice.cpp:
 	.text       start:0x8005C6E8 end:0x8005F5DC
 	.bss        start:0x802BC5F0 end:0x802BD408
 	.sdata      start:0x80371A0C end:0x80371C14
 
-DragController.cpp:
+Speed/Indep/Src/AI/DragController.cpp:
 	.text       start:0x8005F5DC end:0x80061E98
 
-PsychoDriver.cpp:
+Speed/Indep/Src/AI/PsychoDriver.cpp:
 	.text       start:0x80061E98 end:0x80062260
 	.rodata     start:0x802390BC end:0x8023BD94
 	.sbss       start:0x80373684 end:0x803736E8
 
-DragDriver.cpp:
+Speed/Indep/Src/AI/DragDriver.cpp:
 	.text       start:0x80062260 end:0x80062890
 
-RealDriver.cpp:
+Speed/Indep/Src/AI/RealDriver.cpp:
 	.text       start:0x80062890 end:0x800647E0
 
-AIDriver.cpp:
+Speed/Indep/Src/AI/AIDriver.cpp:
 	.text       start:0x800647E0 end:0x8006637C
 
-Aerodynamics.cpp:
+Speed/Indep/Src/Physics/Aerodynamics.cpp:
 	.text       start:0x8006637C end:0x80066798
 
-BeltMover.cpp:
+Speed/Indep/Src/Physics/BeltMover.cpp:
 	.text       start:0x80066798 end:0x80067FA4
 
-CarState.cpp:
+Speed/Indep/Src/Physics/Dynamics/CarState.cpp:
 	.text       start:0x80067FA4 end:0x8006955C
 
-Collision.cpp:
+Speed/Indep/Src/Physics/Dynamics/Collision.cpp:
 	.text       start:0x8006955C end:0x8006A5F4
 
-CollisionBody.cpp:
+Speed/Indep/Src/Physics/Dynamics/CollisionBody.cpp:
 	.text       start:0x8006A5F4 end:0x8006F48C
 
-ComponentPhysics.cpp:
+Speed/Indep/Src/Physics/Behaviors/ComponentPhysics.cpp:
 	.text       start:0x8006F48C end:0x8006F7A0
 
-Contact.cpp:
+Speed/Indep/Src/Physics/Behaviors/Contact.cpp:
 	.text       start:0x8006F7A0 end:0x800713B0
 
-Engine.cpp:
+Speed/Indep/Src/Physics/Behaviors/Engine.cpp:
 	.text       start:0x800713B0 end:0x80073F74
 
 GJKsimplex.cpp:
@@ -290,20 +290,20 @@ PhysicsMover.cpp:
 	.sdata      start:0x80371C14 end:0x80371C80
 	.sbss       start:0x803736E8 end:0x803737A0
 
-AnimBank.cpp:
+Speed/Indep/Src/Src/Animation/AnimBank.cpp:
 	.text       start:0x8007F904 end:0x8007FB0C
 
-AnimCtrl.cpp:
+Speed/Indep/Src/Animation/AnimCtrl.cpp:
 	.text       start:0x8007FB0C end:0x800803C4
 
 AnimEAGLBridge.cpp:
 	.text       start:0x800803C4 end:0x800805D4
 	.rodata     start:0x8023BD94 end:0x8023F0A0
 
-AnimPart.cpp:
+Speed/Indep/Src/Animation/AnimPart.cpp:
 	.text       start:0x800805D4 end:0x80080770
 
-AnimSkeleton.cpp:
+Speed/Indep/Src/Animation/AnimSkeleton.cpp:
 	.text       start:0x80080770 end:0x80080900
 
 NFSAnimCtrl.cpp:
@@ -315,272 +315,272 @@ NFSAnimInit.cpp:
 NFSAnimBank.cpp:
 	.text       start:0x8008298C end:0x80082C9C
 
-Camera.cpp:
+Speed/Indep/Src/Camera/Camera.cpp:
 	.text       start:0x80082C9C end:0x80083E58
 	.sdata      start:0x80371C80 end:0x80371DC4
 
-CameraCoordinator.cpp:
+Speed/Indep/Src/Camera/CameraCoordinator.cpp:
 	.text       start:0x80083E58 end:0x8008723C
 
-DragData.cpp:
+Speed/Indep/Src/Camera/DragData.cpp:
 	.text       start:0x8008723C end:0x8008B628
 	.bss        start:0x802BE2D4 end:0x802BF024
 
-CameraMover.cpp:
+Speed/Indep/Src/Camera/CameraMover.cpp:
 	.text       start:0x8008B628 end:0x8009FA5C
 	.rodata     start:0x8023F0A0 end:0x80241114
 	.bss        start:0x802BF024 end:0x802ECAA0
 	.sdata      start:0x80371DC4 end:0x80371DCC
 	.sdata2     start:0x803742C4 end:0x803742D0
 
-ZoneCameras.cpp:
+Speed/Indep/Src/Camera/ZoneCameras.cpp:
 	.sdata      start:0x80371DCC end:0x80371E7C
 
-FEPkg_Options.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_Options.cpp:
 	.text       start:0x8009FA5C end:0x8009FC38
 
-FEPkg_PauseMenu.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_PauseMenu.cpp:
 	.text       start:0x8009FC38 end:0x800A054C
 
-FEPkg_PreRace.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_PreRace.cpp:
 	.text       start:0x800A054C end:0x800A135C
 
-FEPkg_PostRace.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_PostRace.cpp:
 	.text       start:0x800A135C end:0x800A6054
 
-FEPkg_Hud.cpp:
+Speed/Indep/Src/Frontend/Hud/FEPkg_Hud.cpp:
 	.text       start:0x800A6054 end:0x800B0A0C
 	.rodata     start:0x80241114 end:0x8024C050
 
-FEDatabase.cpp:
+Speed/Indep/Src/Frontend/Database/FEDatabase.cpp:
 	.text       start:0x800B0A0C end:0x800B0BB4
 
-FEPkg_GarageMain.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/SafeHouse/FEPkg_GarageMain.cpp:
 	.text       start:0x800B0BB4 end:0x800B5EC8
 	.sdata      start:0x80371E7C end:0x80371F10
 
-FEPkg_MU_Main.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/SafeHouse/FEPkg_MU_Main.cpp:
 	.text       start:0x800B5EC8 end:0x800B9B54
 
-FEPkg_MU_QuickRaceModeSelect.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/SafeHouse/QuickRace/FEPkg_MU_QuickRaceModeSelect.cpp:
 	.text       start:0x800B9B54 end:0x800BA8B0
 
-FEPkg_MU_QuickRaceOptions.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/SafeHouse/QuickRace/FEPkg_MU_QuickRaceOptions.cpp:
 	.text       start:0x800BA8B0 end:0x800BBCF0
 
-FEPkg_MU_QuickRaceTrackSelect.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/SafeHouse/QuickRace/FEPkg_MU_QuickRaceTrackSelect.cpp:
 	.text       start:0x800BBCF0 end:0x800BDBC8
 
-FEPkg_MU_QuickRaceCarSelect.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/SafeHouse/QuickRace/FEPkg_MU_QuickRaceCarSelect.cpp:
 	.text       start:0x800BDBC8 end:0x800BE908
 
-FEPkg_MU_QuickRaceLapPopup.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/SafeHouse/QuickRace/FEPkg_MU_QuickRaceLapPopup.cpp:
 	.text       start:0x800BE908 end:0x800BF058
 
-FEPkg_MU_PauseOptions.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/SafeHouse/QuickRace/FEPkg_MU_PauseOptions.cpp:
 	.text       start:0x800BF058 end:0x800C3CE0
 
-CarSelect.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/CarSelect.cpp:
 	.text       start:0x800C3CE0 end:0x800C3F8C
 
-FEpkg_UndergroundTradeCar.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEpkg_UndergroundTradeCar.cpp:
 	.text       start:0x800C3F8C end:0x800C5430
 
-FEPkg_UndergroundChooseCar.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEPkg_UndergroundChooseCar.cpp:
 	.text       start:0x800C5430 end:0x800C5B40
 
-FEPkg_UndergroundStatusStuff.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEPkg_UndergroundStatusStuff.cpp:
 	.text       start:0x800C5B40 end:0x800C852C
 
-FEPkg_UndergroundMapScreen.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEPkg_UndergroundMapScreen.cpp:
 	.text       start:0x800C852C end:0x800C920C
 
-FEPkg_MU_MainMenuCarCustomize.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEPkg_MU_MainMenuCarCustomize.cpp:
 	.text       start:0x800C920C end:0x800C997C
 
-FEPkg_MemcardPrompter.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEPkg_MemcardPrompter.cpp:
 	.text       start:0x800C997C end:0x800CA4CC
 
-FEpkg_UndergroundJunkmanSamanthaUnique.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEpkg_UndergroundJunkmanSamanthaUnique.cpp:
 	.text       start:0x800CA4CC end:0x800CB108
 
-FEPkg_ChooseUserProfile.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEPkg_ChooseUserProfile.cpp:
 	.text       start:0x800CB108 end:0x800CCEB0
 
-FEng_SoundShenanigans.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEng_SoundShenanigans.cpp:
 	.text       start:0x800CCEB0 end:0x800CDAA0
 	.bss        start:0x802ECAA0 end:0x802ED6FC
 	.sbss       start:0x80373810 end:0x80373948
 
-FEPkg_MU_Pause.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEPkg_MU_Pause.cpp:
 	.text       start:0x800CDAA0 end:0x800CEB50
 
-FEPkg_MU_Options.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEPkg_MU_Options.cpp:
 	.text       start:0x800CEB50 end:0x800D49BC
 
-FEPkg_MU_OptionsController.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEPkg_MU_OptionsController.cpp:
 	.text       start:0x800D49BC end:0x800D56D4
 
-FEPkg_MU_OptionsHUD.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEPkg_MU_OptionsHUD.cpp:
 	.text       start:0x800D56D4 end:0x800D63F4
 
-FEPkg_MU_ScreenPos.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEPkg_MU_ScreenPos.cpp:
 	.text       start:0x800D63F4 end:0x800D6524
 
-FEPkg_Chyron.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_Chyron.cpp:
 	.text       start:0x800D6524 end:0x800D68AC
 	.sdata      start:0x80371F10 end:0x80371F30
 
-FEPkg_Loading.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_Loading.cpp:
 	.sdata      start:0x80371F30 end:0x80371F54
 
-FEPkg_ColorPicker.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_ColorPicker.cpp:
 	.text       start:0x800D68AC end:0x800D8B3C
 
-FEPkg_ConfirmDialog.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_ConfirmDialog.cpp:
 	.text       start:0x800D8B3C end:0x800D8FD8
 
-FEPkg_InfoDialog.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_InfoDialog.cpp:
 	.text       start:0x800D8FD8 end:0x800DAE00
 
-FEPkg_MU_MPLogin.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/FEPkg_MU_MPLogin.cpp:
 	.text       start:0x800DAE00 end:0x800DC2F0
 
-FEPkg_MU_MultiplayerCarSelect.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_MU_MultiplayerCarSelect.cpp:
 	.text       start:0x800DC2F0 end:0x800DCB78
 
-FEPkg_MU_MPChooseGarage.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_MU_MPChooseGarage.cpp:
 	.text       start:0x800DCB78 end:0x800DCF74
 
-FEPkg_VinylShop.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_VinylShop.cpp:
 	.text       start:0x800DCF74 end:0x800DF774
 	.sdata      start:0x80371F54 end:0x80371F7C
 
-StatsScreen.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/StatsScreen.cpp:
 	.text       start:0x800DF774 end:0x800DF84C
 
-FEPkg_ONL_WaitSync.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_ONL_WaitSync.cpp:
 	.text       start:0x800DF84C end:0x800DFA28
 
-FEpkg_MU_InGameTutorialScreen.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEpkg_MU_InGameTutorialScreen.cpp:
 	.text       start:0x800DFA28 end:0x800DFB34
 
-FEPkg_PresetBrowser.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_PresetBrowser.cpp:
 	.text       start:0x800DFB34 end:0x800E0300
 
-FEngine.cpp:
+Speed/Indep/Src/FEng/FEngine.cpp:
 	.text       start:0x800E0300 end:0x800E3820
 	.data       start:0x80271F50 end:0x80272A08
 	.sdata      start:0x80371F7C end:0x80371FA4
 
-FEngRender.cpp:
+Speed/Indep/Src/Frontend/FEngRender.cpp:
 	.text       start:0x800E3820 end:0x800E6258
 
-FEngSpeedPackages.cpp:
+Speed/Indep/Src/FEng/FEngSpeedPackages.cpp:
 	.text       start:0x800E6258 end:0x800E6370
 
-FEngStandard.cpp:
+Speed/Indep/Src/FEng/FEngStandard.cpp:
 	.text       start:0x800E6370 end:0x800E64F4
 
-FEngFont.cpp:
+Speed/Indep/Src/Frontend/FEngFont.cpp:
 	.text       start:0x800E64F4 end:0x800E71B8
 
-FEngInterface.cpp:
+Speed/Indep/Src/Frontend/FEngInterfaces/FEngInterface.cpp:
 	.text       start:0x800E71B8 end:0x800EA2F0
 	.sdata      start:0x80371FA4 end:0x80371FE0
 
-FEngFrontend.cpp:
+Speed/Indep/Src/Frontend/FEngFrontend.cpp:
 	.text       start:0x800EA2F0 end:0x800ECA9C
 	.data       start:0x80272A08 end:0x80272ED8
 
-FEButtonMap.cpp:
+Speed/Indep/Src/FEng/FEButtonMap.cpp:
 	.text       start:0x800ECA9C end:0x800ECF44
 	.data       start:0x80272ED8 end:0x8027857C
 	.bss        start:0x802ED6FC end:0x802ED744
 
-FECodeListBox.cpp:
+Speed/Indep/Src/FEng/FECodeListBox.cpp:
 	.text       start:0x800ECF44 end:0x800EEBF0
 
-FEEvent.cpp:
+Speed/Indep/Src/FEng/FEEvent.cpp:
 	.text       start:0x800EEBF0 end:0x800EED10
 
-FEGroup.cpp:
+Speed/Indep/Src/FEng/FEGroup.cpp:
 	.text       start:0x800EED10 end:0x800EEDCC
 
-FEJoyPad.cpp:
+Speed/Indep/Src/FEng/FEJoyPad.cpp:
 	.text       start:0x800EEDCC end:0x800EEFB0
 
-FEKeyInterp.cpp:
+Speed/Indep/Src/FEng/FEKeyInterp.cpp:
 	.text       start:0x800EEFB0 end:0x800EF108
 
-FEKeyInterpLinear.cpp:
+Speed/Indep/Src/FEng/FEKeyInterpLinear.cpp:
 	.text       start:0x800EF108 end:0x800EFF08
 
-FEKeyInterpNone.cpp:
+Speed/Indep/Src/FEng/FEKeyInterpNone.cpp:
 	.text       start:0x800EFF08 end:0x800F0008
 
-FEKeyTrack.cpp:
+Speed/Indep/Src/FEng/FEKeyTrack.cpp:
 	.text       start:0x800F0008 end:0x800F0570
 
-FEList.cpp:
+Speed/Indep/Src/FEng/FEList.cpp:
 	.text       start:0x800F0570 end:0x800F1EC8
 
-FEMessageResponse.cpp:
+Speed/Indep/Src/FEng/FEMessageResponse.cpp:
 	.text       start:0x800F1EC8 end:0x800F2630
 
-FEMsgTargetList.cpp:
+Speed/Indep/Src/FEng/FEMsgTargetList.cpp:
 	.text       start:0x800F2630 end:0x800F2A18
 
-FEObject.cpp:
+Speed/Indep/Src/FEng/FEObject.cpp:
 	.text       start:0x800F2A18 end:0x800F3C6C
 	.bss        start:0x802ED744 end:0x802F1310
 
-FEPackage.cpp:
+Speed/Indep/Src/FEng/FEPackage.cpp:
 	.text       start:0x800F3C6C end:0x800F5204
 
-FEPackageList.cpp:
+Speed/Indep/Src/FEng/FEPackageList.cpp:
 	.text       start:0x800F5204 end:0x800F52D8
 
-FEPackageReader.cpp:
+Speed/Indep/Src/FEng/FEPackageReader.cpp:
 	.text       start:0x800F52D8 end:0x800F8114
 
-FEScript.cpp:
+Speed/Indep/Src/FEng/FEScript.cpp:
 	.text       start:0x800F8114 end:0x800F8990
 
-FESlotPool.cpp:
+Speed/Indep/Src/FEng/FESlotPool.cpp:
 	.text       start:0x800F8990 end:0x800F8D84
 
-FETypeLib.cpp:
+Speed/Indep/Src/FEng/FETypeLib.cpp:
 	.text       start:0x800F8D84 end:0x800F9330
 	.sdata      start:0x80371FE0 end:0x8037202C
 
-FETypeNode.cpp:
+Speed/Indep/Src/FEng/FETypeNode.cpp:
 	.text       start:0x800F9330 end:0x800F94C8
 
-FETypes.cpp:
+Speed/Indep/Src/FEng/FETypes.cpp:
 	.text       start:0x800F94C8 end:0x800FA000
 
-FEPkg_PartsBrowser.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_PartsBrowser.cpp:
 	.text       start:0x800FA000 end:0x801076B8
 	.sdata      start:0x8037202C end:0x80372068
 
-FERefList.cpp:
+Speed/Indep/Src/FEng/FERefList.cpp:
 	.text       start:0x801076B8 end:0x801078A8
 
-FEString.cpp:
+Speed/Indep/Src/FEng/FEString.cpp:
 	.text       start:0x801078A8 end:0x801079E8
 
-FERenderObject.cpp:
+Speed/Indep/Src/Frontend/FERenderObject.cpp:
 	.text       start:0x801079E8 end:0x8010A134
 	.sdata      start:0x80372068 end:0x8037207C
 
-FEMouse.cpp:
+Speed/Indep/Src/FEng/FEMouse.cpp:
 	.text       start:0x8010A134 end:0x8010A310
 
 ScreenPrintf.cpp:
 	.text       start:0x8010A310 end:0x8010A584
 
-FEng_Magazines.cpp:
+Speed/Indep/Src/FEng/FEng_Magazines.cpp:
 	.text       start:0x8010A584 end:0x8010BB08
 	.sdata      start:0x8037207C end:0x80372088
 
@@ -594,23 +594,23 @@ MagazineTextureHandler.cpp:
 WideDecalManager.cpp:
 	.text       start:0x8010D1B8 end:0x8010D44C
 
-EAXSound.cpp:
+Speed/Indep/Src/EAXSound/EAXSound.cpp:
 	.text       start:0x8010D44C end:0x80110C0C
 	.rodata     start:0x8024C050 end:0x8024C224
 	.sdata      start:0x803720D4 end:0x80372160
 
-EAXAemsManager.cpp:
+Speed/Indep/Src/EAXSound/EAXAemsManager.cpp:
 	.text       start:0x80110C0C end:0x8011250C
 	.rodata     start:0x8024C224 end:0x8024C29C
 
-EAXMod.cpp:
+Speed/Indep/Src/EAXSound/EAXMod.cpp:
 	.text       start:0x8011250C end:0x801127F0
 	.rodata     start:0x8024C29C end:0x8024C9BC
 
-EAXFrontEnd.cpp:
+Speed/Indep/Src/EAXSound/EAXFrontEnd.cpp:
 	.text       start:0x801127F0 end:0x801132E0
 
-EAXAITunerCar.cpp:
+Speed/Indep/Src/EAXSound/EAXAITunerCar.cpp:
 	.text       start:0x801132E0 end:0x80113F0C
 
 EVTSYS_ENVIRO.cpp:
@@ -628,146 +628,146 @@ COLLISION_EVTS.cpp:
 ENGINE_EVTSYS.cpp:
 	.text       start:0x801140E4 end:0x8011415C
 
-EAXTrafficCar.cpp:
+Speed/Indep/Src/EAXSound/EAXTrafficCar.cpp:
 	.text       start:0x8011415C end:0x80114CC4
 
-EAXTunerCar.cpp:
+Speed/Indep/Src/EAXSound/EAXTunerCar.cpp:
 	.text       start:0x80114CC4 end:0x8011C084
 	.rodata     start:0x8024C9BC end:0x8024D41C
 	.sdata      start:0x80372160 end:0x803721AC
 	.sdata2     start:0x803742D0 end:0x80374300
 
-EAXCar.cpp:
+Speed/Indep/Src/EAXSound/EAXCar.cpp:
 	.text       start:0x8011C084 end:0x8011D84C
 	.sdata2     start:0x80374300 end:0x80374388
 
-EAX3DS.cpp:
+Speed/Indep/Src/EAXSound/EAX3DS.cpp:
 	.text       start:0x8011D84C end:0x80122C1C
 	.rodata     start:0x8024D41C end:0x8024D934
 
-EAXCollision.cpp:
+Speed/Indep/Src/EAXSound/EAXCollision.cpp:
 	.text       start:0x80122C1C end:0x801233F4
 	.rodata     start:0x8024D934 end:0x8024DA40
 	.sdata      start:0x803721AC end:0x8037221C
 
-EAXSND8Wrapper.cpp:
+Speed/Indep/Src/EAXSound/EAXSND8Wrapper.cpp:
 	.text       start:0x801233F4 end:0x80123880
 	.rodata     start:0x8024DA40 end:0x8024DA6C
 	.bss        start:0x802F1310 end:0x802F7294
 
-EAXSndTweakData.cpp:
+Speed/Indep/Src/EAXSound/EAXSndTweakData.cpp:
 	.rodata     start:0x8024DA6C end:0x8024EF90
 
-bCrc32.cpp:
+Speed/Indep/bWare/Src/bCrc32.cpp:
 	.rodata     start:0x8024EF90 end:0x8024F6A0
 
 SoundObject.cpp:
 	.text       start:0x80123880 end:0x8012415C
 
-EAXEnvironment.cpp:
+Speed/Indep/Src/EAXSound/EAXEnvironment.cpp:
 	.text       start:0x8012415C end:0x80126B60
 
-EAXMixer.cpp:
+Speed/Indep/Src/EAXSound/EAXMixer.cpp:
 	.text       start:0x80126B60 end:0x801277B0
 	.sdata      start:0x8037221C end:0x8037233C
 
-EAXPresets.cpp:
+Speed/Indep/Src/EAXSound/EAXPresets.cpp:
 	.text       start:0x801277B0 end:0x80127AC4
 
-EAXS_StreamManager.cpp:
+Speed/Indep/Src/EAXSound/Stream/EAXS_StreamManager.cpp:
 	.text       start:0x80127AC4 end:0x80128FD4
 
-EAXS_StreamControl.cpp:
+Speed/Indep/Src/EAXSound/Stream/EAXS_StreamControl.cpp:
 	.text       start:0x80128FD4 end:0x80129648
 
-EAXS_Streams.cpp:
+Speed/Indep/Src/EAXSound/Stream/EAXS_Streams.cpp:
 	.text       start:0x80129648 end:0x8012A340
 
-EAXS_AmbMonoStream.cpp:
+Speed/Indep/Src/EAXSound/Stream/EAXS_AmbMonoStream.cpp:
 	.text       start:0x8012A340 end:0x8012AFB0
 
-EAXS_AmbStereoStream.cpp:
+Speed/Indep/Src/EAXSound/Stream/EAXS_AmbStereoStream.cpp:
 	.text       start:0x8012AFB0 end:0x8012C660
 
-EAXS_MusicStream.cpp:
+Speed/Indep/Src/EAXSound/Stream/EAXS_MusicStream.cpp:
 	.text       start:0x8012C660 end:0x8012D41C
 
-EAXS_TCMonoStream.cpp:
+Speed/Indep/Src/EAXSound/Stream/EAXS_TCMonoStream.cpp:
 	.text       start:0x8012D41C end:0x8012DFFC
 
-EAXS_SpeechStream.cpp:
+Speed/Indep/Src/EAXSound/Stream/EAXS_SpeechStream.cpp:
 	.text       start:0x8012DFFC end:0x8012E8E8
 
-Ecstasy.cpp:
+Speed/Indep/Src/Src/Ecstasy/Ecstasy.cpp:
 	.text       start:0x8012E8E8 end:0x8012ED64
 
-eStreamingPack.cpp:
+Speed/Indep/Src/Ecstasy/eStreamingPack.cpp:
 	.text       start:0x8012ED64 end:0x8012FF54
 
-eModel.cpp:
+Speed/Indep/Src/Ecstasy/eModel.cpp:
 	.text       start:0x8012FF54 end:0x801306A8
 
-eSolid.cpp:
+Speed/Indep/Src/Ecstasy/eSolid.cpp:
 	.text       start:0x801306A8 end:0x8013255C
 
-eLight.cpp:
+Speed/Indep/Src/Ecstasy/eLight.cpp:
 	.text       start:0x8013255C end:0x80136F3C
 	.bss        start:0x802F7294 end:0x802F82D0
 
-eView.cpp:
+Speed/Indep/Src/Ecstasy/eView.cpp:
 	.text       start:0x80136F3C end:0x801375B4
 
-Texture.cpp:
+Speed/Indep/Src/Ecstasy/Texture.cpp:
 	.text       start:0x801375B4 end:0x80138FB4
 
-Sun.cpp:
+Speed/Indep/Src/World/Sun.cpp:
 	.text       start:0x80138FB4 end:0x8013959C
 
-bDebug.cpp:
+Speed/Indep/bWare/Src/bDebug.cpp:
 	.text       start:0x8013959C end:0x80139C00
 	.sdata      start:0x8037233C end:0x80372380
 
-bFunkServer.cpp:
+Speed/Indep/bWare/Src/bFunkServer.cpp:
 	.text       start:0x80139C00 end:0x80139C88
 
-bInventory.cpp:
+Speed/Indep/bWare/Src/bInventory.cpp:
 	.text       start:0x80139C88 end:0x80139C94
 
-bList.cpp:
+Speed/Indep/bWare/Src/bList.cpp:
 	.text       start:0x80139C94 end:0x80139F88
 
-bMath.cpp:
+Speed/Indep/bWare/Src/bMath.cpp:
 	.text       start:0x80139F88 end:0x8013A9A4
 
-bMatrix.cpp:
+Speed/Indep/bWare/Src/bMatrix.cpp:
 	.text       start:0x8013A9A4 end:0x8013AAB4
 
-bMemCpy.cpp:
+Speed/Indep/bWare/Src/bMemCpy.cpp:
 	.text       start:0x8013AAB4 end:0x8013AC20
 
-bMemory.cpp:
+Speed/Indep/bWare/Src/bMemory.cpp:
 	.text       start:0x8013AC20 end:0x8013BC9C
 
-bPrintf.cpp:
+Speed/Indep/bWare/Src/bPrintf.cpp:
 	.text       start:0x8013BC9C end:0x8013D3F8
 	.rodata     start:0x8024F6A0 end:0x802505BC
 	.bss        start:0x802F82D0 end:0x802F9D48
 	.sdata      start:0x80372380 end:0x8037267C
 	.sbss       start:0x80373948 end:0x803739A8
 
-bQuaternion.cpp:
+Speed/Indep/bWare/Src/bQuaternion.cpp:
 	.text       start:0x8013D3F8 end:0x8013D468
 
-bSlotPool.cpp:
+Speed/Indep/bWare/Src/bSlotPool.cpp:
 	.text       start:0x8013D468 end:0x8013DD8C
 
-bVector.cpp:
+Speed/Indep/bWare/Src/bVector.cpp:
 	.text       start:0x8013DD8C end:0x8013E8F4
 
-Strings.cpp:
+Speed/Indep/bWare/Src/Strings.cpp:
 	.text       start:0x8013E8F4 end:0x8013EBB4
 
-Global_.cpp:
+SpeedGlobal_.cpp:
 	.text       start:0x8013EBB4 end:0x8013EC34
 
 NFSU_Streams.cpp:
@@ -776,16 +776,16 @@ NFSU_Streams.cpp:
 FEPkg_MapScreen.cpp:
 	.text       start:0x8013ECBC end:0x8013FA60
 
-Config.cpp:
+Speed/Indep/Src/Misc/Config.cpp:
 	.text       start:0x8013FA60 end:0x8013FA64
 
-CarRender.cpp:
+Speed/Indep/Src/World/CarRender.cpp:
 	.text       start:0x8013FA64 end:0x80148DE4
 	.rodata     start:0x802505BC end:0x80251DA4
 	.bss        start:0x802F9D48 end:0x802FB170
 	.sbss       start:0x803739A8 end:0x80373A5C
 
-SkyRender.cpp:
+Speed/Indep/Src/World/SkyRender.cpp:
 	.text       start:0x80148DE4 end:0x80149284
 
 Replay.cpp:
@@ -794,34 +794,34 @@ Replay.cpp:
 DemoModeReplay.cpp:
 	.text       start:0x8014B28C end:0x8014BD6C
 
-Joystick.cpp:
+Speed/Indep/Src/Misc/Joystick.cpp:
 	.text       start:0x8014BD6C end:0x8014D4D0
 
-Rumble.cpp:
+Speed/Indep/Src/Misc/Rumble.cpp:
 	.text       start:0x8014D4D0 end:0x8014E5F4
 	.rodata     start:0x80251DA4 end:0x80252D80
 	.bss        start:0x802FB170 end:0x802FB7B4
 
-TrafficMover.cpp:
+Speed/Indep/Src/Physics/TrafficMover.cpp:
 	.text       start:0x8014E5F4 end:0x8014EDA8
 
-PhysicsUpgrades.cpp:
+Speed/Indep/Src/Physics/PhysicsUpgrades.cpp:
 	.text       start:0x8014EDA8 end:0x8014F65C
 
 MobileTopology.cpp:
 	.text       start:0x8014F65C end:0x801501B0
 
-WorldEntity.cpp:
+Speed/Indep/Src/World/WorldEntity.cpp:
 	.text       start:0x801501B0 end:0x80150C90
 	.sdata      start:0x8037267C end:0x80372798
 
-WorldObject.cpp:
+Speed/Indep/Src/World/WorldObject.cpp:
 	.text       start:0x80150C90 end:0x80151CF8
 
-Mover.cpp:
+Speed/Indep/Src/World/Mover.cpp:
 	.text       start:0x80151CF8 end:0x80152064
 
-SpaceNode.cpp:
+Speed/Indep/Src/World/SpaceNode.cpp:
 	.text       start:0x80152064 end:0x80152920
 
 SpaceCase.cpp:
@@ -834,7 +834,7 @@ AnimationMover.cpp:
 	.text       start:0x80152CCC end:0x80153A30
 	.bss        start:0x802FB7B4 end:0x802FBA14
 
-CarWorldObject.cpp:
+Speed/Indep/Src/World/CarWorldObject.cpp:
 	.text       start:0x80153A30 end:0x80153EB8
 
 Avoidable.cpp:
@@ -843,10 +843,10 @@ Avoidable.cpp:
 SomeWorldObjects.cpp:
 	.text       start:0x80155950 end:0x8015609C
 
-Joylog.cpp:
+Speed/Indep/Src/Misc/Joylog.cpp:
 	.text       start:0x8015609C end:0x80156280
 
-CarInfo.cpp:
+Speed/Indep/Src/World/CarInfo.cpp:
 	.text       start:0x80156280 end:0x8015D464
 	.rodata     start:0x80252D80 end:0x80257A38
 	.data       start:0x8027857C end:0x802791B8
@@ -855,7 +855,7 @@ CarInfo.cpp:
 CarPartNames.cpp:
 	.text       start:0x8015D464 end:0x8015D46C
 
-Spline.cpp:
+Speed/Indep/Src/Misc/Spline.cpp:
 	.text       start:0x8015D46C end:0x8015E1AC
 	.bss        start:0x802FBA14 end:0x802FE13C
 	.sbss       start:0x80373A5C end:0x80373B54
@@ -863,38 +863,38 @@ Spline.cpp:
 TrafficController.cpp:
 	.text       start:0x8015E1AC end:0x8015F790
 
-Table.cpp:
+Speed/Indep/Src/Misc/Table.cpp:
 	.text       start:0x8015F790 end:0x801604C8
 
-RigidBody.cpp:
+Speed/Indep/Src/Physics/Behaviors/RigidBody.cpp:
 	.text       start:0x801604C8 end:0x80161E14
 
-Timer.cpp:
+Speed/Indep/Src/Misc/Timer.cpp:
 	.text       start:0x80161E14 end:0x80162C90
 	.sdata      start:0x80372798 end:0x80372910
 
-Wheel.cpp:
+Speed/Indep/Src/Physics/Core/Wheel.cpp:
 	.text       start:0x80162C90 end:0x801649B0
 
-Suspension.cpp:
+Speed/Indep/Src/Physics/Core/Suspension.cpp:
 	.text       start:0x801649B0 end:0x80165B4C
 
-WeatherMan.cpp:
+Speed/Indep/Src/World/WeatherMan.cpp:
 	.text       start:0x80165B4C end:0x80165CAC
 
 fogvolume.cpp:
 	.text       start:0x80165CAC end:0x801662F4
 
-Skids.cpp:
+Speed/Indep/Src/World/Skids.cpp:
 	.text       start:0x801662F4 end:0x801673C4
 
-Clans.cpp:
+Speed/Indep/Src/World/Clans.cpp:
 	.text       start:0x801673C4 end:0x801678C4
 
-QueuedFile.cpp:
+Speed/Indep/Src/Misc/QueuedFile.cpp:
 	.text       start:0x801678C4 end:0x80167FCC
 
-CarLoader.cpp:
+Speed/Indep/Src/World/CarLoader.cpp:
 	.text       start:0x80167FCC end:0x8016A170
 
 NIS.cpp:
@@ -902,28 +902,28 @@ NIS.cpp:
 	.data       start:0x802791B8 end:0x8027ABA8
 	.bss        start:0x802FE13C end:0x802FE674
 
-LZCompress.cpp:
+Speed/Indep/Src/Misc/LZCompress.cpp:
 	.text       start:0x8016A284 end:0x8016A630
 
-BodyDamage.cpp:
+Speed/Indep/Src/World/BodyDamage.cpp:
 	.text       start:0x8016A630 end:0x8016B1AC
 
-CarDamage.cpp:
+Speed/Indep/Src/World/CarDamage.cpp:
 	.text       start:0x8016B1AC end:0x8016BC98
 
-EventManager.cpp:
+Speed/Indep/Src/World/EventManager.cpp:
 	.text       start:0x8016BC98 end:0x8016C8A0
 
-TrackMap.cpp:
+Speed/Indep/Src/World/TrackMap.cpp:
 	.text       start:0x8016C8A0 end:0x8016FE3C
 
-WorldModel.cpp:
+Speed/Indep/Src/World/SrcWorldModel.cpp:
 	.text       start:0x8016FE3C end:0x80171F40
 
-TerrainType.cpp:
+Speed/Indep/Src/World/TerrainType.cpp:
 	.text       start:0x80171F40 end:0x80171FCC
 
-WorldObjectCollisionBody.cpp:
+Speed/Indep/Src/World/WorldObjectCollisionBody.cpp:
 	.text       start:0x80171FCC end:0x80172850
 
 CharacterInfo.cpp:
@@ -935,14 +935,14 @@ Subworld.cpp:
 FernFlattener.cpp:
 	.text       start:0x8017424C end:0x80174D84
 
-bRepeat.cpp:
+Speed/Indep/Src/Misc/bRepeat.cpp:
 	.text       start:0x80174D84 end:0x8017522C
 
-bFile.cpp:
+Speed/Indep/Src/Misc/bFile.cpp:
 	.text       start:0x8017522C end:0x80176088
 	.sdata      start:0x80372910 end:0x80372958
 
-bMemoryOverloads.cpp:
+Speed/Indep/Src/Misc/bMemoryOverloads.cpp:
 	.text       start:0x80176088 end:0x801761D8
 
 Print3d.cpp:
@@ -975,13 +975,13 @@ TrackedController.cpp:
 RealController.cpp:
 	.text       start:0x8017EEF8 end:0x8017F9D8
 
-QuickSpline.cpp:
+Speed/Indep/Src/Misc/QuickSpline.cpp:
 	.text       start:0x8017F9D8 end:0x80181370
 
-Stomper.cpp:
+Speed/Indep/Src/Misc/Stomper.cpp:
 	.text       start:0x80181370 end:0x80181A54
 
-EasterEggs.cpp:
+Speed/Indep/Src/Misc/EasterEggs.cpp:
 	.text       start:0x80181A54 end:0x80181BB8
 	.data       start:0x8027ABA8 end:0x8027C370
 
@@ -991,10 +991,10 @@ crtE1.tmp:
 Elipse.cpp:
 	.text       start:0x80181BB8 end:0x80181E2C
 
-Slider.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Common/Slider.cpp:
 	.text       start:0x80181E2C end:0x80182C38
 
-Localize.cpp:
+Speed/Indep/Src/Frontend/Localization/Localize.cpp:
 	.text       start:0x80182C38 end:0x801832A8
 	.bss        start:0x802FE9A4 end:0x802FEC20
 	.sbss       start:0x80373B54 end:0x80373B70
@@ -1012,15 +1012,15 @@ NFSSkeleton.cpp:
 FuturePoints.cpp:
 	.text       start:0x8018799C end:0x8018B4E8
 
-NeuQuant.cpp:
+Speed/Indep/Src/World/NeuQuant.cpp:
 	.text       start:0x8018B4E8 end:0x8018BFAC
 	.bss        start:0x802FEC20 end:0x8030A4C8
 	.sbss       start:0x80373B70 end:0x80373B98
 
-CarSkin.cpp:
+Speed/Indep/Src/World/CarSkin.cpp:
 	.text       start:0x8018BFAC end:0x8018ED68
 
-SubTitle.cpp:
+Speed/Indep/Src/Frontend/SubTitle.cpp:
 	.text       start:0x8018ED68 end:0x8018F268
 
 ppc42.tmp:
@@ -1043,10 +1043,10 @@ sndvd.c:
 	.data       start:0x8027C640 end:0x8027C648
 	.bss        start:0x8030A6A8 end:0x8030A6C0
 
-vprintf.c:
+libc/vprintf.c:
 	.text       start:0x80193108 end:0x8019313C
 
-vsprintf.c:
+libc/vsprintf.c:
 	.text       start:0x8019313C end:0x80193198
 
 atexit.c:
@@ -1058,168 +1058,168 @@ qsort.c:
 sn_malloc.c:
 	.text       start:0x80193BBC end:0x80193BF8
 
-memcpy.c:
+libc/memcpy.c:
 	.text       start:0x80193BF8 end:0x80193C9C
 
-memmove.c:
+libc/memmove.c:
 	.text       start:0x80193C9C end:0x80193D88
 
-memset.c:
+libc/memset.c:
 	.text       start:0x80193D88 end:0x80193E1C
 
-strcasecmp.c:
+libc/strcasecmp.c:
 	.text       start:0x80193E1C end:0x80193E98
 
-strchr.c:
+libc/strchr.c:
 	.text       start:0x80193E98 end:0x80193F34
 
-strcmp.c:
+libc/strcmp.c:
 	.text       start:0x80193F34 end:0x80193FDC
 
-strcpy.c:
+libc/strcpy.c:
 	.text       start:0x80193FDC end:0x80194060
 
-strlen.c:
+libc/strlen.c:
 	.text       start:0x80194060 end:0x801940CC
 
-strncmp.c:
+libc/strncmp.c:
 	.text       start:0x801940CC end:0x801941AC
 
-strncpy.c:
+libc/strncpy.c:
 	.text       start:0x801941AC end:0x80194278
 
-vfprintf.c:
+libc/vfprintf.c:
 	.text       start:0x80194278 end:0x801963A8
 	.rodata     start:0x80257A38 end:0x80257AC8
 	.data       start:0x8027C648 end:0x8027C670
 	.bss        start:0x8030A6C0 end:0x8030A7E4
 	.sdata      start:0x80372A00 end:0x80372A08
 
-impure.c:
+libc/impure.c:
 	.data       start:0x8027C670 end:0x8027C974
 
-vfprintf_1.c:
+libc/vfprintf_1.c:
 	.text       start:0x801963A8 end:0x80197AFC
 	.rodata     start:0x80257AC8 end:0x80257C38
 	.bss        start:0x8030A7E4 end:0x8030A864
 	.sdata      start:0x80372A08 end:0x80372A14
 
-locale.c:
+libc/locale.c:
 	.rodata     start:0x80257C38 end:0x80257CA0
 	.sdata      start:0x80372A14 end:0x80372CAC
 
-_tolower.c:
+libc/_tolower.c:
 	.text       start:0x80197AFC end:0x80197B48
 
-math_support.c:
+libc/math_support.c:
 	.text       start:0x80197B48 end:0x8019845C
 	.rodata     start:0x80257CA0 end:0x80257E30
 	.sdata2     start:0x803743A0 end:0x80374428
 
-mbtowc_r.c:
+libc/mbtowc_r.c:
 	.text       start:0x8019845C end:0x80198778
 	.data       start:0x8027C974 end:0x8027CCD4
 
-libgcc2.c:
+libc/libgcc2.c:
 	.data       start:0x8027CCD4 end:0x8027CCE4
 	.bss        start:0x8030A864 end:0x8030A868
 
-memchr.c:
+libc/memchr.c:
 	.text       start:0x80198778 end:0x80198900
 
-libgcc2_1.c:
+libc/libgcc2_1.c:
 	.text       start:0x80198900 end:0x80198940
 
-libgcc2_2.c:
+libc/libgcc2_2.c:
 	.text       start:0x80198940 end:0x80198980
 
-libgcc2_3.c:
+libc/libgcc2_3.c:
 	.text       start:0x80198980 end:0x80198EFC
 	.sdata2     start:0x80374428 end:0x80374528
 
-libgcc2_5.c:
+libc/libgcc2_5.c:
 	.text       start:0x80198EFC end:0x80198F3C
 
-libgcc2_6.c:
+libc/libgcc2_6.c:
 	.text       start:0x80198F3C end:0x80199470
 	.sdata2     start:0x80374528 end:0x80374628
 
-libgcc2_7.c:
+libc/libgcc2_7.c:
 	.text       start:0x80199470 end:0x80199490
 
-libgcc2_8.c:
+libc/libgcc2_8.c:
 	.text       start:0x80199490 end:0x80199974
 	.sdata2     start:0x80374628 end:0x80374728
 
-libgcc2_9.c:
+libc/libgcc2_9.c:
 	.text       start:0x80199974 end:0x80199E0C
 	.sdata2     start:0x80374728 end:0x80374828
 
-libgcc2_10.c:
+libc/libgcc2_10.c:
 	.text       start:0x80199E0C end:0x80199EE8
 	.data       start:0x8027CCE4 end:0x8027CCE8
 	.bss        start:0x8030A868 end:0x8030A888
 
-e_pow.c:
+libc/e_pow.c:
 	.text       start:0x80199EE8 end:0x8019A6B8
 	.sdata2     start:0x80374828 end:0x80374930
 
-e_sqrt.c:
+libc/e_sqrt.c:
 	.text       start:0x8019A6B8 end:0x8019A8CC
 	.sdata2     start:0x80374930 end:0x80374940
 
-s_fabs.c:
+libc/s_fabs.c:
 	.text       start:0x8019A8CC end:0x8019A908
 
-ef_pow.c:
+libc/ef_pow.c:
 	.text       start:0x8019A908 end:0x8019AFFC
 	.sdata2     start:0x80374940 end:0x803749C4
 
-ef_sqrt.c:
+libc/ef_sqrt.c:
 	.text       start:0x8019AFFC end:0x8019B0F4
 	.sdata2     start:0x803749C4 end:0x803749CC
 
-sf_cos.c:
+libc/sf_cos.c:
 	.text       start:0x8019B0F4 end:0x8019B1D0
 	.sdata2     start:0x803749CC end:0x803749D0
 
-sf_fabs.c:
+libc/sf_fabs.c:
 	.text       start:0x8019B1D0 end:0x8019B1F4
 
-sf_sin.c:
+libc/sf_sin.c:
 	.text       start:0x8019B1F4 end:0x8019B2D0
 
-s_scalbn.c:
+libc/s_scalbn.c:
 	.text       start:0x8019B2D0 end:0x8019B424
 	.sdata2     start:0x803749D0 end:0x803749F0
 
-sf_scalbn.c:
+libc/sf_scalbn.c:
 	.text       start:0x8019B424 end:0x8019B540
 	.sdata2     start:0x803749F0 end:0x80374A00
 
-kf_cos.c:
+libc/kf_cos.c:
 	.text       start:0x8019B540 end:0x8019B62C
 	.sdata2     start:0x80374A00 end:0x80374A1C
 
-kf_sin.c:
+libc/kf_sin.c:
 	.text       start:0x8019B62C end:0x8019B6D8
 	.sdata2     start:0x80374A1C end:0x80374A38
 
-ef_rem_pio2.c:
+libc/ef_rem_pio2.c:
 	.text       start:0x8019B6D8 end:0x8019BA28
 	.sdata2     start:0x80374A38 end:0x80374DF8
 
-s_copysign.c:
+libc/s_copysign.c:
 	.text       start:0x8019BA28 end:0x8019BA78
 
-sf_copysign.c:
+libc/sf_copysign.c:
 	.text       start:0x8019BA78 end:0x8019BAAC
 
-kf_rem_pio2.c:
+libc/kf_rem_pio2.c:
 	.text       start:0x8019BAAC end:0x8019C330
 	.sdata2     start:0x80374DF8 end:0x80374E40
 
-sf_floor.c:
+libc/sf_floor.c:
 	.text       start:0x8019C330 end:0x8019C518
 	.sdata2     start:0x80374E40 end:0x80374E58
 
@@ -1230,254 +1230,254 @@ allsrc.c:
 	.sbss       start:0x80373B98 end:0x80373BB0
 	.sdata2     start:0x80374E58 end:0x80374E80
 
-OS.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OS.c:
 	.text       start:0x8019E8A0 end:0x8019F918
 	.data       start:0x8027CD10 end:0x8027CF08
 	.bss        start:0x8030F360 end:0x8030F3B0
 	.sdata      start:0x80372CAC end:0x80372CC0
 	.sbss       start:0x80373BB0 end:0x80373BF0
 
-OSAlarm.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSAlarm.c:
 	.text       start:0x8019F918 end:0x801A0268
 	.data       start:0x8027CF08 end:0x8027D0F0
 	.sbss       start:0x80373BF0 end:0x80373BF8
 
-OSAlloc.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSAlloc.c:
 	.data       start:0x8027D0F0 end:0x8027D488
 	.sbss       start:0x80373BF8 end:0x80373C08
 
-OSArena.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSArena.c:
 	.sdata      start:0x80372CC0 end:0x80372CCC
 	.sbss       start:0x80373C08 end:0x80373C10
 
-OSAudioSystem.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSAudioSystem.c:
 	.data       start:0x8027D488 end:0x8027D508
 
-OSCache.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSCache.c:
 	.data       start:0x8027D508 end:0x8027D738
 
-OSContext.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSContext.c:
 	.text       start:0x801A0268 end:0x801A1184
 	.data       start:0x8027D738 end:0x8027D910
 
-OSError.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSError.c:
 	.data       start:0x8027D910 end:0x8027DC30
 	.bss        start:0x8030F3B0 end:0x8030F400
 	.sdata      start:0x80372CCC end:0x80372CD0
 
-OSFont.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSFont.c:
 	.text       start:0x801A1184 end:0x801A2700
 	.data       start:0x8027DC30 end:0x8027E740
 	.sdata      start:0x80372CD0 end:0x80372CD8
 	.sbss       start:0x80373C10 end:0x80373C20
 	.sdata2     start:0x80374E80 end:0x80374EA8
 
-OSInterrupt.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSInterrupt.c:
 	.text       start:0x801A2700 end:0x801A2774
 	.data       start:0x8027E740 end:0x8027E770
 	.sbss       start:0x80373C20 end:0x80373C38
 
-OSLink.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSLink.c:
 	.data       start:0x8027E770 end:0x8027E7C0
 
-OSMemory.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSMemory.c:
 	.text       start:0x801A2774 end:0x801A2EC8
 	.data       start:0x8027E7C0 end:0x8027E7D0
 
-OSReset.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSReset.c:
 	.text       start:0x801A2EC8 end:0x801A3614
 	.sbss       start:0x80373C38 end:0x80373C48
 
-OSResetSW.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSResetSW.c:
 	.sbss       start:0x80373C48 end:0x80373C68
 
-OSRtc.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSRtc.c:
 	.text       start:0x801A3614 end:0x801A4224
 	.bss        start:0x8030F400 end:0x8030F458
 
-OSSync.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSSync.c:
 	.text       start:0x801A4224 end:0x801A42A8
 
-OSThread.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSThread.c:
 	.text       start:0x801A42A8 end:0x801A5E20
 	.data       start:0x8027E7D0 end:0x8027EFE0
 	.bss        start:0x8030F458 end:0x8030FE60
 	.sdata      start:0x80372CD8 end:0x80372CE8
 	.sbss       start:0x80373C68 end:0x80373C78
 
-mtx.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/mtx/mtx.c:
 	.sdata      start:0x80372CE8 end:0x80372CF0
 	.sdata2     start:0x80374EA8 end:0x80374F08
 
-OSTime.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSTime.c:
 	.data       start:0x8027EFE0 end:0x8027F040
 
-db.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/db/db.c:
 	.data       start:0x8027F040 end:0x8027F058
 
-mtx44.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/mtx/mtx44.c:
 	.data       start:0x8027F058 end:0x8027F068
 	.sdata2     start:0x80374F08 end:0x80374F48
 
-vec.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/mtx/vec.c:
 	.sdata2     start:0x80374F48 end:0x80374F70
 
-__ppc_eabi_init.cpp:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/__ppc_eabi_init.cpp:
 	.text       start:0x801A5E20 end:0x801A5F08
 
-OSReboot.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSReboot.c:
 	.text       start:0x801A5F08 end:0x801A7654
 	.bss        start:0x8030FE60 end:0x80310E80
 	.sbss       start:0x80373C78 end:0x80373C90
 
-dvdfs.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/dvd/dvdfs.c:
 	.text       start:0x801A7654 end:0x801A7684
 	.data       start:0x8027F068 end:0x8027F458
 	.sdata      start:0x80372CF0 end:0x80372CFC
 	.sbss       start:0x80373C90 end:0x80373CB0
 
-dvd.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/dvd/dvd.c:
 	.text       start:0x801A7684 end:0x801A9F78
 	.data       start:0x8027F458 end:0x8027F5D8
 	.bss        start:0x80310E80 end:0x80310F18
 	.sdata      start:0x80372CFC end:0x80372D18
 	.sbss       start:0x80373CB0 end:0x80373D08
 
-dvdqueue.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/dvd/dvdqueue.c:
 	.data       start:0x8027F5D8 end:0x8027F740
 	.bss        start:0x80310F18 end:0x80310F38
 	.sdata      start:0x80372D18 end:0x80372D58
 
-dvderror.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/dvd/dvderror.c:
 	.text       start:0x801A9F78 end:0x801AA238
 	.data       start:0x8027F740 end:0x8027F788
 
-dvdFatal.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/dvd/dvdFatal.c:
 	.data       start:0x8027F788 end:0x8027FBB8
 	.sbss       start:0x80373D08 end:0x80373D10
 	.sdata2     start:0x80374F70 end:0x80374F98
 
-fstload.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/dvd/fstload.c:
 	.text       start:0x801AA238 end:0x801AA88C
 	.data       start:0x8027FBB8 end:0x8027FC28
 	.bss        start:0x80310F38 end:0x80310FA8
 	.sdata      start:0x80372D58 end:0x80372D68
 	.sbss       start:0x80373D10 end:0x80373D20
 
-dvdlow.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/dvd/dvdlow.c:
 	.text       start:0x801AA88C end:0x801ACC54
 	.bss        start:0x80310FA8 end:0x80311078
 	.sdata      start:0x80372D68 end:0x80372D74
 	.sbss       start:0x80373D20 end:0x80373D68
 
-vi.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/vi/vi.c:
 	.text       start:0x801ACC54 end:0x801AD110
 	.data       start:0x8027FC28 end:0x8027FFF8
 	.bss        start:0x80311078 end:0x803111C0
 	.sdata      start:0x80372D74 end:0x80372D84
 	.sbss       start:0x80373D68 end:0x80373DC8
 
-Padclamp.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/pad/Padclamp.c:
 	.text       start:0x801AD110 end:0x801AE678
 	.rodata     start:0x80257E30 end:0x80258094
 	.sdata2     start:0x80374F98 end:0x80374FBC
 
-Pad.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/pad/Pad.c:
 	.text       start:0x801AE678 end:0x801AF434
 	.data       start:0x8027FFF8 end:0x80280050
 	.bss        start:0x803111C0 end:0x80311240
 	.sdata      start:0x80372D84 end:0x80372DB0
 	.sbss       start:0x80373DC8 end:0x80373DF8
 
-ai.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ai/ai.c:
 	.text       start:0x801AF434 end:0x801AF738
 	.data       start:0x80280050 end:0x802800A0
 	.sbss       start:0x80373DF8 end:0x80373E58
 
-GXInit.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXInit.c:
 	.text       start:0x801AF738 end:0x801B121C
 	.data       start:0x802800A0 end:0x802802E0
 	.bss        start:0x80311240 end:0x80311870
 	.sbss       start:0x80373E58 end:0x80373E70
 	.sdata2     start:0x80374FBC end:0x80374FE0
 
-GXFrameBuf.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXFrameBuf.c:
 	.sdata2     start:0x80374FE0 end:0x80375010
 
-GXAttr.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXAttr.c:
 	.data       start:0x802802E0 end:0x80280558
 	.sdata      start:0x80372DB0 end:0x80372DC0
 
-GXFifo.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXFifo.c:
 	.text       start:0x801B121C end:0x801B2F04
 	.sbss       start:0x80373E70 end:0x80373E90
 
-GXMisc.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXMisc.c:
 	.text       start:0x801B2F04 end:0x801B43BC
 	.data       start:0x80280558 end:0x80280D30
 	.sbss       start:0x80373E90 end:0x80373EA8
 
-GXDisplayList.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXDisplayList.c:
 	.bss        start:0x80311870 end:0x80311E48
 	.sbss       start:0x80373EA8 end:0x80373EB0
 
-GXLight.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXLight.c:
 	.data       start:0x80280D30 end:0x80280D50
 	.sdata2     start:0x80375010 end:0x80375058
 
-GXTexture.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXTexture.c:
 	.text       start:0x801B43BC end:0x801B7700
 	.data       start:0x80280D50 end:0x80281068
 	.sdata      start:0x80372DC0 end:0x80372E0C
 	.sdata2     start:0x80375058 end:0x80375090
 
-GXBump.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXBump.c:
 	.sdata2     start:0x80375090 end:0x803750C8
 
-GXTev.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXTev.c:
 	.data       start:0x80281068 end:0x802810E0
 
-GXPixel.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXPixel.c:
 	.data       start:0x802810E0 end:0x8028115C
 	.sdata2     start:0x803750C8 end:0x80375128
 
-GXTransform.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXTransform.c:
 	.sdata2     start:0x80375128 end:0x80375140
 
-GXPerf.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/gx/GXPerf.c:
 	.data       start:0x8028115C end:0x80281248
 
-EXIBios.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/exi/EXIBios.c:
 	.text       start:0x801B7700 end:0x801B90DC
 	.data       start:0x80281248 end:0x80281358
 	.bss        start:0x80311E48 end:0x80311F08
 	.sdata      start:0x80372E0C end:0x80372E44
 	.sbss       start:0x80373EB0 end:0x80373EB8
 
-EXIUart.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/exi/EXIUart.c:
 	.text       start:0x801B90DC end:0x801B970C
 	.sbss       start:0x80373EB8 end:0x80373EC8
 
-SIBios.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/si/SIBios.c:
 	.text       start:0x801B970C end:0x801BB118
 	.data       start:0x80281358 end:0x80281470
 	.bss        start:0x80311F08 end:0x803121A8
 	.sdata      start:0x80372E44 end:0x80372E58
 	.sbss       start:0x80373EC8 end:0x80373ED8
 
-SISamplingRate.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/si/SISamplingRate.c:
 	.data       start:0x80281470 end:0x80281508
 	.sbss       start:0x80373ED8 end:0x80373EE0
 
-SISteering.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/si/SISteering.c:
 	.text       start:0x801BB118 end:0x801BB1CC
 	.data       start:0x80281508 end:0x80281518
 	.sbss       start:0x80373EE0 end:0x80373EF0
 
-SISteeringXfer.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/si/SISteeringXfer.c:
 	.text       start:0x801BB1CC end:0x801BB664
 
-SISteeringAuto.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/si/SISteeringAuto.c:
 	.text       start:0x801BB664 end:0x801BC4F4
 	.sbss       start:0x80373EF0 end:0x80373EF8
 
@@ -1580,18 +1580,18 @@ IPArp.c:
 	.sdata      start:0x80373030 end:0x80373058
 	.sbss       start:0x80373FA8 end:0x80373FB8
 
-DebuggerDriver.c:
+Speed/GameCube/bWare/GameCube/OdemuExi2/src/DebuggerDriver.c:
 	.text       start:0x801C51DC end:0x801C5474
 	.sdata      start:0x80373058 end:0x80373060
 	.sbss       start:0x80373FB8 end:0x80373FD0
 
-AmcExi2Comm.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/amcExi2/AmcExi2Comm.c:
 	.text       start:0x801C5474 end:0x801C6088
 	.data       start:0x80282A80 end:0x80282BA4
 	.sdata      start:0x80373060 end:0x80373068
 	.sbss       start:0x80373FD0 end:0x80373FE8
 
-AmcExi.c:
+Speed/GameCube/bWare/GameCube/amcstubs/src/amcExi2/AmcExi.c:
 	.text       start:0x801C6088 end:0x801C7090
 	.bss        start:0x8031E960 end:0x80320188
 	.sdata      start:0x80373068 end:0x80373070
@@ -1599,39 +1599,39 @@ AmcExi.c:
 audioplayer.cpp:
 	.text       start:0x801C7090 end:0x801C7370
 
-rcmpbase.cpp:
+egami/rcmp/dev/source/decoder/cmn/rcmpbase.cpp:
 	.text       start:0x801C7370 end:0x801C77DC
 
 rcmp2real.cpp:
 	.text       start:0x801C77DC end:0x801C7800
 
-rcmp_mad_codec.cpp:
+egami/rcmp/dev/source/decoder/cmn/rcmp_mad_codec.cpp:
 	.text       start:0x801C7800 end:0x801C82A0
 
-rcmp_mad_codec_chunk_types.cpp:
+egami/rcmp/dev/source/decoder/cmn/rcmp_mad_codec_chunk_types.cpp:
 	.text       start:0x801C82A0 end:0x801C82D8
 	.rodata     start:0x80258094 end:0x802580A0
 
-maddec.cpp:
+egami/rcmp/dev/source/decoder/cmn/maddec.cpp:
 	.text       start:0x801C82D8 end:0x801C8DF4
 	.rodata     start:0x802580A0 end:0x80258F90
 	.bss        start:0x80320188 end:0x80320488
 	.sbss       start:0x80373FE8 end:0x80374004
 
-maddeca.cpp:
+egami/rcmp/dev/source/decoder/cmn/maddeca.cpp:
 	.text       start:0x801C8DF4 end:0x801C8FBC
 	.rodata     start:0x80258F90 end:0x80259E0C
 
-madidct.cpp:
+egami/rcmp/dev/source/decoder/cmn/madidct.cpp:
 	.text       start:0x801C8FBC end:0x801C93F4
 	.bss        start:0x80320488 end:0x803207B0
 
-dlopen.cpp:
+Speed/Indep/Src/EAGL4Anim/dlopen.cpp:
 	.text       start:0x801C93F4 end:0x801CAEC4
 	.rodata     start:0x80259E0C end:0x8026A190
 	.data       start:0x80282BA4 end:0x80282BAC
 
-conspool.cpp:
+Speed/Indep/Src/EAGL4Anim/conspool.cpp:
 	.text       start:0x801CAEC4 end:0x801CB0B8
 
 device_cmn.cpp:
@@ -1684,16 +1684,16 @@ SingleDrawTexture.cpp:
 	.text       start:0x801D1214 end:0x801D1C64
 	.data       start:0x80287DA8 end:0x80287E10
 
-printmessage.cpp:
+Speed/Indep/Src/EAGL4Anim/printmessage.cpp:
 	.data       start:0x80287E10 end:0x80287E58
 
-sympool.cpp:
+Speed/Indep/Src/EAGL4Anim/sympool.cpp:
 	.text       start:0x801D1C64 end:0x801D25E0
 
 model.cpp:
 	.text       start:0x801D25E0 end:0x801D26AC
 
-device.cpp:
+realcore/source/input/cmn/device.cpp:
 	.text       start:0x801D26AC end:0x801D29C4
 
 rendermethod.cpp:
@@ -1706,102 +1706,102 @@ texturerc.cpp:
 pcode.cpp:
 	.text       start:0x801D3820 end:0x801D3CC8
 
-Skeleton.cpp:
+Speed/Indep/Src/EAGL4Anim/Skeleton.cpp:
 	.text       start:0x801D3CC8 end:0x801D45AC
 
-System.cpp:
+Speed/Indep/Src/EAGL4Anim/System.cpp:
 	.text       start:0x801D45AC end:0x801D4870
 
-SystemCmn.cpp:
+Speed/Indep/Src/EAGL4Anim/SystemCmn.cpp:
 	.text       start:0x801D4870 end:0x801D495C
 
-ScratchBuffer.cpp:
+Speed/Indep/Src/EAGL4Anim/ScratchBuffer.cpp:
 	.text       start:0x801D495C end:0x801D4A44
 
-MemoryPoolManager.cpp:
+Speed/Indep/Src/EAGL4Anim/MemoryPoolManager.cpp:
 	.text       start:0x801D4A44 end:0x801D521C
 
-RawStateChan.cpp:
+Speed/Indep/Src/EAGL4Anim/RawStateChan.cpp:
 	.text       start:0x801D521C end:0x801D571C
 
-AnimBank_1.cpp:
+Speed/Indep/Src/EAGL4Anim/AnimBank.cpp:
 	.text       start:0x801D571C end:0x801D59C0
 
-FnAnimMemoryMap.cpp:
+Speed/Indep/Src/EAGL4Anim/FnAnimMemoryMap.cpp:
 	.text       start:0x801D59C0 end:0x801D5A38
 
-CompoundChannel.cpp:
+Speed/Indep/Src/EAGL4Anim/CompoundChannel.cpp:
 	.text       start:0x801D5A38 end:0x801D6900
 
-FnDeltaQFast.cpp:
+Speed/Indep/Src/EAGL4Anim/FnDeltaQFast.cpp:
 	.text       start:0x801D6900 end:0x801D8AA0
 
-FnDeltaF3.cpp:
+Speed/Indep/Src/EAGL4Anim/FnDeltaF3.cpp:
 	.text       start:0x801D8AA0 end:0x801DAB6C
 
-FnDeltaQ.cpp:
+Speed/Indep/Src/EAGL4Anim/FnDeltaQ.cpp:
 	.text       start:0x801DAB6C end:0x801DD62C
 
-FnDeltaF1.cpp:
+Speed/Indep/Src/EAGL4Anim/FnDeltaF1.cpp:
 	.text       start:0x801DD62C end:0x801DEE3C
 
-FnDeltaSingleQ.cpp:
+Speed/Indep/Src/EAGL4Anim/FnDeltaSingleQ.cpp:
 	.text       start:0x801DEE3C end:0x801E220C
 
-DeltaChan.cpp:
+Speed/Indep/Src/EAGL4Anim/DeltaChan.cpp:
 	.text       start:0x801E220C end:0x801E40D8
 
-DeltaCompressedData.cpp:
+Speed/Indep/Src/EAGL4Anim/DeltaCompressedData.cpp:
 	.text       start:0x801E40D8 end:0x801E4EE0
 
-FnEventBlender.cpp:
+Speed/Indep/Src/EAGL4Anim/FnEventBlender.cpp:
 	.text       start:0x801E4EE0 end:0x801E5184
 
-RawPoseChannel.cpp:
+Speed/Indep/Src/EAGL4Anim/RawPoseChannel.cpp:
 	.text       start:0x801E5184 end:0x801E572C
 
-StatelessQ.cpp:
+Speed/Indep/Src/EAGL4Anim/StatelessQ.cpp:
 	.text       start:0x801E572C end:0x801E57BC
 
-StatelessF3.cpp:
+Speed/Indep/Src/EAGL4Anim/StatelessF3.cpp:
 	.text       start:0x801E57BC end:0x801E6EBC
 
-RawEventChannel.cpp:
+Speed/Indep/Src/EAGL4Anim/RawEventChannel.cpp:
 	.text       start:0x801E6EBC end:0x801E7434
 
-FnRunBlender.cpp:
+Speed/Indep/Src/EAGL4Anim/FnRunBlender.cpp:
 	.text       start:0x801E7434 end:0x801E9240
 
-FnTurnBlender.cpp:
+Speed/Indep/Src/EAGL4Anim/FnTurnBlender.cpp:
 	.text       start:0x801E9240 end:0x801EA584
 	.data       start:0x802883D4 end:0x802883D8
 
-FnStatelessQ.cpp:
+Speed/Indep/Src/EAGL4Anim/FnStatelessQ.cpp:
 	.text       start:0x801EA584 end:0x801EB0CC
 
-FnStatelessF3.cpp:
+Speed/Indep/Src/EAGL4Anim/FnStatelessF3.cpp:
 	.text       start:0x801EB0CC end:0x801EC00C
 
-filesys.cpp:
+realcore/source/file/cmn/filesys.cpp:
 	.text       start:0x801EC00C end:0x801EE07C
 	.data       start:0x802883D8 end:0x80288434
 	.bss        start:0x803208B8 end:0x803208E4
 	.sdata      start:0x80373070 end:0x80373078
 	.sdata2     start:0x80375170 end:0x80375210
 
-filesysopts.cpp:
+realcore/source/file/cmn/filesysopts.cpp:
 	.text       start:0x801EE07C end:0x801EE3CC
 
-syncfile.cpp:
+realcore/source/file/cmn/syncfile.cpp:
 	.text       start:0x801EE3CC end:0x801EE944
 
-hlafile.cpp:
+realcore/source/file/cmn/hlafile.cpp:
 	.text       start:0x801EE944 end:0x801EF744
 	.bss        start:0x803208E4 end:0x80328C78
 	.sdata      start:0x80373078 end:0x80373080
 	.sbss       start:0x80374004 end:0x80374008
 
-hlsfile.cpp:
+realcore/source/file/cmn/hlsfile.cpp:
 	.text       start:0x801EF744 end:0x801EF958
 	.sdata      start:0x80373080 end:0x80373090
 
@@ -1813,37 +1813,37 @@ filedev.cpp:
 	.bss        start:0x80328C78 end:0x8032AD20
 	.sdata2     start:0x80375210 end:0x803752B8
 
-e_acos.c:
+libc/e_acos.c:
 	.sdata2     start:0x803752B8 end:0x80375328
 
-e_atan2.c:
+libc/e_atan2.c:
 	.sdata2     start:0x80375328 end:0x80375358
 
-s_atan.c:
+libc/s_atan.c:
 	.sdata2     start:0x80375358 end:0x80375400
 
-ef_atan2.c:
+libc/ef_atan2.c:
 	.sdata2     start:0x80375400 end:0x80375418
 
 fixdmult.cpp:
 	.text       start:0x801F17D0 end:0x801F1810
 
-gc_interface.cpp:
+realmemcard/source/lib/gc/gc_interface.cpp:
 	.text       start:0x801F1810 end:0x801F2B60
 	.bss        start:0x8032AD20 end:0x8032B538
 	.sdata      start:0x80373090 end:0x803730C4
 	.sbss       start:0x80374008 end:0x80374010
 
-public.cpp:
+realmemcard/source/lib/gc/public.cpp:
 	.text       start:0x801F2B60 end:0x801F3C24
 	.bss        start:0x8032B538 end:0x8032B5F8
 	.sdata      start:0x803730C4 end:0x803730CC
 
-trctasks.cpp:
+realmemcard/source/lib/gc/trctasks.cpp:
 	.text       start:0x801F3C24 end:0x801F78F4
 	.sdata      start:0x803730CC end:0x803730D4
 
-tasks.cpp:
+realmemcard/source/lib/gc/tasks.cpp:
 	.text       start:0x801F78F4 end:0x801F8C30
 	.bss        start:0x8032B5F8 end:0x8032B614
 	.sdata      start:0x803730D4 end:0x803730DC
@@ -1871,49 +1871,49 @@ inittmr.cpp:
 	.bss        start:0x80330680 end:0x803306A8
 	.sdata      start:0x80373128 end:0x80373130
 
-timer.cpp:
+realcore/source/system/cmn/timer.cpp:
 	.text       start:0x801FBA74 end:0x801FBABC
 	.sdata      start:0x80373130 end:0x80373138
 
-systask.cpp:
+realcore/source/system/cmn/systask.cpp:
 	.bss        start:0x803306A8 end:0x80333420
 	.sdata      start:0x80373138 end:0x80373158
 
 initvblt.cpp:
 	.sdata      start:0x80373158 end:0x80373184
 
-threads.cpp:
+realcore/source/system/gc/threads.cpp:
 	.text       start:0x801FBABC end:0x801FBDFC
 
 mutex2.cpp:
 	.text       start:0x801FBDFC end:0x801FC018
 
-signals.cpp:
+realcore/source/system/gc/signals.cpp:
 	.text       start:0x801FC018 end:0x801FC0A8
 
-printstr.cpp:
+realcore/source/system/debug/cmn/printstr.cpp:
 	.text       start:0x801FC0A8 end:0x801FC52C
 	.data       start:0x80288434 end:0x80288694
 
-abortmsg.cpp:
+realcore/source/system/debug/cmn/abortmsg.cpp:
 	.text       start:0x801FC52C end:0x801FC708
 
-memclear.cpp:
+realcore/source/std/cmn/memclear.cpp:
 	.text       start:0x801FC708 end:0x801FC770
 
-timerthread.cpp:
+realcore/source/system/gc/timerthread.cpp:
 	.text       start:0x801FC770 end:0x801FC8D0
 
 printn3.cpp:
 	.text       start:0x801FC8D0 end:0x801FC8FC
 
-memfill.cpp:
+realcore/source/system/gc/memfill.cpp:
 	.text       start:0x801FC8FC end:0x801FCA40
 
 memcopy.cpp:
 	.text       start:0x801FCA40 end:0x801FCC38
 
-exit.cpp:
+realcore/source/std/cmn/exit.cpp:
 	.text       start:0x801FCC38 end:0x801FCD78
 	.data       start:0x80288694 end:0x8028A6B0
 
@@ -1971,623 +1971,623 @@ swizzlesize.cpp:
 cluttype.cpp:
 	.text       start:0x801FDF80 end:0x801FEE84
 
-csis.cpp:
+csis/dev/source/library/cmn/csis.cpp:
 	.text       start:0x801FEE84 end:0x801FEED4
 	.sdata      start:0x80373184 end:0x80373188
 
-saems.c:
+snd/source/library/cmn/saems.c:
 	.text       start:0x801FEED4 end:0x8020180C
 	.data       start:0x8028A6B0 end:0x8028A6E4
 
-saemsamb.c:
+snd/source/library/cmn/saemsamb.c:
 	.text       start:0x8020180C end:0x80201A28
 
-saemsstr.c:
+snd/source/library/cmn/saemsstr.c:
 	.text       start:0x80201A28 end:0x802027DC
 
-saemstimupdt.c:
+snd/source/library/cmn/saemstimupdt.c:
 	.text       start:0x802027DC end:0x80202854
 
-salloc.c:
+snd/source/library/cmn/salloc.c:
 	.text       start:0x80202854 end:0x80202E48
 	.data       start:0x8028A6E4 end:0x8028B530
 
-sbadd.c:
+snd/source/library/cmn/sbadd.c:
 	.text       start:0x80202E48 end:0x8020309C
 
-sballoc.c:
+snd/source/library/cmn/ssballoc.c:
 	.text       start:0x8020309C end:0x80203120
 
-sbhdrcpy.c:
+snd/source/library/cmn/ssbhdrcpy.c:
 	.text       start:0x80203120 end:0x80203194
 
-sbhdrsze.c:
+snd/source/library/cmn/ssbhdrsze.c:
 	.text       start:0x80203194 end:0x802031AC
 
-sbplay.c:
+snd/source/library/cmn/ssbplay.c:
 	.text       start:0x802031AC end:0x80203238
 
-sbremove.c:
+snd/source/library/cmn/ssbremove.c:
 	.text       start:0x80203238 end:0x802033C8
 
-sbvalid.c:
+snd/source/library/cmn/ssbvalid.c:
 	.text       start:0x802033C8 end:0x80203424
 
-scalcfx.c:
+snd/source/library/gc/sscalcfx.c:
 	.text       start:0x80203424 end:0x8020349C
 
-sdfx.c:
+snd/source/library/gc/ssdfx.c:
 	.text       start:0x8020349C end:0x802036E8
 
-sdspmix.c:
+snd/source/library/gc/sdspmix.c:
 	.text       start:0x802036E8 end:0x80203EF0
 	.bss        start:0x80333420 end:0x80333C04
 
-seffect.c:
+snd/source/library/cmn/seffect.c:
 	.text       start:0x80203EF0 end:0x802040EC
 
-sevent.cpp:
+snd/source/library/cmn/sevent.cpp:
 	.text       start:0x802040EC end:0x802043C4
 
-sfxlevel.c:
+snd/source/library/cmn/sfxlevel.c:
 	.text       start:0x802043C4 end:0x80204458
 
-sfxrevc.c:
+snd/source/library/mix/sfxrevc.c:
 	.text       start:0x80204458 end:0x80204F50
 	.bss        start:0x80333C04 end:0x80333E00
 
-sgetdata.c:
+snd/source/library/cmn/sgetdata.c:
 	.text       start:0x80204F50 end:0x80204FD0
 
-sinitdts.c:
+snd/source/library/cmn/sinitdts.c:
 	.text       start:0x80204FD0 end:0x80204FD4
 
-smemcpy.c:
+snd/source/library/cmn/smemcpy.c:
 	.text       start:0x80204FD4 end:0x802051CC
 
-smemman.c:
+snd/source/library/cmn/smemman.c:
 	.text       start:0x802051CC end:0x80205544
 
-smixer.c:
+snd/source/library/mix/smixer.c:
 	.text       start:0x80205544 end:0x80206568
 
-snddrv.c:
+snd/source/library/gc/snddrv.c:
 	.text       start:0x80206568 end:0x80209198
 	.data       start:0x8028B530 end:0x8028B558
 	.bss        start:0x80333E00 end:0x80340738
 
-spatkey.c:
+snd/source/library/cmn/spatkey.c:
 	.text       start:0x80209198 end:0x80209244
 
-spitch.c:
+snd/source/library/cmn/spitch.c:
 	.text       start:0x80209244 end:0x802092D8
 
-spktplay.c:
+snd/source/library/cmn/spktplay.c:
 	.text       start:0x802092D8 end:0x80209E84
 
-splysdef.c:
+snd/source/library/cmn/splysdef.c:
 	.text       start:0x80209E84 end:0x80209EE0
 
-spoutlat.c:
+snd/source/library/cmn/spoutlat.c:
 	.text       start:0x80209EE0 end:0x80209F18
 
-srandom.c:
+snd/source/library/cmn/srandom.c:
 	.text       start:0x80209F18 end:0x8020A054
 
-srender.c:
+snd/source/library/cmn/srender.c:
 	.text       start:0x8020A054 end:0x8020A124
 
-sresopat.c:
+snd/source/library/cmn/sresopat.c:
 	.text       start:0x8020A124 end:0x8020A1A4
 
-sserver.c:
+snd/source/library/cmn/sserver.c:
 	.text       start:0x8020A1A4 end:0x8020A584
 	.data       start:0x8028B558 end:0x8028B774
 
-ssine.c:
+snd/source/library/cmn/ssine.c:
 	.text       start:0x8020A584 end:0x8020A604
 
-sst.c:
+snd/source/library/cmn/sst.c:
 	.text       start:0x8020A604 end:0x8020B7AC
 	.rodata     start:0x8026A190 end:0x8026A7AC
 
-vfscanf.c:
+libc/vfscanf.c:
 	.rodata     start:0x8026A7AC end:0x8026A860
 
 base64.c:
 	.rodata     start:0x8026A860 end:0x8026A8C0
 
-sst3dpos.c:
+snd/source/library/cmn/sst3dpos.c:
 	.text       start:0x8020B7AC end:0x8020B810
 
-sstcrtap.c:
+snd/source/library/cmn/sstcrtap.c:
 	.text       start:0x8020B810 end:0x8020B850
 
-sstfxlev.c:
+snd/source/library/cmn/sstfxlev.c:
 	.text       start:0x8020B850 end:0x8020B8A8
 
-sstgetrp.c:
+snd/source/library/cmn/sstgetrp.c:
 	.text       start:0x8020B8A8 end:0x8020B920
 
-ssthighp.c:
+snd/source/library/cmn/ssthighp.c:
 	.text       start:0x8020B920 end:0x8020B970
 
-ssthold.c:
+snd/source/library/cmn/ssthold.c:
 	.text       start:0x8020B970 end:0x8020B9C8
 
-sstlowp.c:
+snd/source/library/cmn/sstlowp.c:
 	.text       start:0x8020B9C8 end:0x8020BA18
 
-sstop.c:
+snd/source/library/cmn/sstop.c:
 	.text       start:0x8020BA18 end:0x8020BA78
 
-sstovrhd.c:
+snd/source/library/cmn/sstovrhd.c:
 	.text       start:0x8020BA78 end:0x8020BAF4
 
-sstpmult.c:
+snd/source/library/cmn/sstpmult.c:
 	.text       start:0x8020BAF4 end:0x8020BB50
 
-sstqreqi.c:
+snd/source/library/cmn/sstqreqi.c:
 	.text       start:0x8020BB50 end:0x8020BB7C
 
-sstrmdry.cpp:
+snd/source/library/cmn/sstrmdry.cpp:
 	.text       start:0x8020BB7C end:0x8020BBCC
 
-sstrstat.c:
+snd/source/library/cmn/sstrstat.c:
 	.text       start:0x8020BBCC end:0x8020BDE0
 
-sstsetgl.c:
+snd/source/library/cmn/sstsetgl.c:
 	.text       start:0x8020BDE0 end:0x8020BE2C
 
-sststat.c:
+snd/source/library/cmn/sststat.c:
 	.text       start:0x8020BE2C end:0x8020BF0C
 
-ssttmul.c:
+snd/source/library/cmn/ssttmul.c:
 	.text       start:0x8020BF0C end:0x8020BF5C
 
-sstvol.c:
+snd/source/library/cmn/sstvol.c:
 	.text       start:0x8020BF5C end:0x8020C240
 
-ssys.cpp:
+snd/source/library/cmn/ssys.cpp:
 	.text       start:0x8020C240 end:0x8020C7CC
 
-ssysinit.c:
+snd/source/library/cmn/ssysinit.c:
 	.text       start:0x8020C7CC end:0x8020CE70
 	.data       start:0x8028B774 end:0x8028B77C
 
-ssysserv.c:
+snd/source/library/cmn/ssysserv.c:
 	.text       start:0x8020CE70 end:0x8020CFB0
 
-ssysveccsismutex.cpp:
+snd/source/library/cmn/ssysveccsismutex.cpp:
 	.text       start:0x8020CFB0 end:0x8020D02C
 
-stagpat.c:
+snd/source/library/cmn/stagpat.c:
 	.text       start:0x8020D02C end:0x8020D8B8
 	.data       start:0x8028B77C end:0x8028B9C8
 
-stimemul.c:
+snd/source/library/cmn/stimemul.c:
 	.text       start:0x8020D8B8 end:0x8020D934
 
-stpparse.c:
+snd/source/library/cmn/stpparse.c:
 	.text       start:0x8020D934 end:0x8020DFD8
 
-stretch.c:
+snd/source/library/mix/stretch.c:
 	.text       start:0x8020DFD8 end:0x8020E8D8
 
-svecreal.cpp:
+snd/source/library/cmn/svecreal.cpp:
 	.text       start:0x8020E8D8 end:0x8020E8FC
 
-svol.c:
+snd/source/library/cmn/svol.c:
 	.text       start:0x8020E8FC end:0x8020EA40
 
-sx87d16.c:
+snd/source/library/mix/sx87d16.c:
 	.text       start:0x8020EA40 end:0x8020EA98
 
-coda.cpp:
+snd/source/library/extern/coda/cmn/coda.cpp:
 	.text       start:0x8020EA98 end:0x8020EAB0
 
-s3dlow.c:
+snd/source/library/cmn/s3dlow.c:
 	.text       start:0x8020EAB0 end:0x8020EB7C
 
-saramman.c:
+snd/source/library/gc/saramman.c:
 	.text       start:0x8020EB7C end:0x8020EF20
 
-satospkr.c:
+snd/source/library/cmn/satospkr.c:
 	.text       start:0x8020EF20 end:0x8020F498
 
-sclcptch.c:
+snd/source/library/cmn/sclcptch.c:
 	.text       start:0x8020F498 end:0x8020F5F8
 
-sctlfilt.c:
+snd/source/library/cmn/sctlfilt.c:
 	.text       start:0x8020F5F8 end:0x8020F660
 
-sctrldry.cpp:
+snd/source/library/cmn/sctrldry.cpp:
 	.text       start:0x8020F660 end:0x8020F718
 
-sdownmix.cpp:
+snd/source/library/cmn/sdownmix.cpp:
 	.text       start:0x8020F718 end:0x8020F788
 
-sfamplf.c:
+snd/source/library/mix/sfamplf.c:
 	.text       start:0x8020F788 end:0x8020F8A0
 
-sfbpffir8.c:
+snd/source/library/mix/sfbpffir8.c:
 	.text       start:0x8020F8A0 end:0x8020FA2C
 
-sfecho.c:
+snd/source/library/mix/sfecho.c:
 	.text       start:0x8020FA2C end:0x8020FD3C
 
-sfft24.c:
+snd/source/library/mix/sfft24.c:
 	.text       start:0x8020FD3C end:0x8020FDB4
 
-sfhpffir8.c:
+snd/source/library/mix/sfhpffir8.c:
 	.text       start:0x8020FDB4 end:0x8020FF0C
 
-sfilter.c:
+snd/source/library/mix/sfilter.c:
 	.text       start:0x8020FF0C end:0x802100B8
 
-sfir.c:
+snd/source/library/mix/sfir.c:
 	.text       start:0x802100B8 end:0x80210460
 
-sfir8.c:
+snd/source/library/mix/sfir8.c:
 	.text       start:0x80210460 end:0x8021054C
 
-sflpf.c:
+snd/source/library/mix/sflpf.c:
 	.text       start:0x8021054C end:0x80210704
 
-sflpffir8.c:
+snd/source/library/mix/sflpffir8.c:
 	.text       start:0x80210704 end:0x8021085C
 
-sfmixer.c:
+snd/source/library/mix/sfmixer.c:
 	.text       start:0x8021085C end:0x802109B8
 
-sfreson.c:
+snd/source/library/mix/sfreson.c:
 	.text       start:0x802109B8 end:0x80210D08
 
-sfsplit.c:
+snd/source/library/mix/sfsplit.c:
 	.text       start:0x80210D08 end:0x80210E84
 
-sfsrc.c:
+snd/source/library/mix/sfsrc.c:
 	.text       start:0x80210E84 end:0x80210F18
 
-sgettag.c:
+snd/source/library/cmn/sgettag.c:
 	.text       start:0x80210F18 end:0x80211004
 
-shipass.c:
+snd/source/library/mix/shipass.c:
 	.text       start:0x80211004 end:0x8021106C
 
-sinit16.c:
+snd/source/library/mix/sinit16.c:
 	.text       start:0x8021106C end:0x802110B4
 
-sinitut.c:
+snd/source/library/mix/sinitut.c:
 	.text       start:0x802110B4 end:0x80211114
 
-sinitxa.c:
+snd/source/library/mix/sinitxa.c:
 	.text       start:0x80211114 end:0x8021115C
 
-slib.c:
+snd/source/library/cmn/slib.c:
 	.text       start:0x8021115C end:0x802112C4
 
-slinklst.c:
+snd/source/library/cmn/slinklst.c:
 	.text       start:0x802112C4 end:0x802113F0
 
-slinkmix.c:
+snd/source/library/mix/slinkmix.c:
 	.text       start:0x802113F0 end:0x80211474
 
-slowpass.c:
+snd/source/library/cmn/slowpass.c:
 	.text       start:0x80211474 end:0x802114DC
 
-smemhigh.cpp:
+snd/source/library/cmn/smemhigh.cpp:
 	.text       start:0x802114DC end:0x802114FC
 
-smixc.c:
+snd/source/library/mix/smixc.c:
 	.text       start:0x802114FC end:0x8021152C
 
-smixfram.c:
+snd/source/library/mix/smixfram.c:
 	.text       start:0x8021152C end:0x80211574
 
-smixhip.c:
+snd/source/library/mix/smixhip.c:
 	.text       start:0x80211574 end:0x80211644
 
-smixlowp.c:
+snd/source/library/mix/smixlowp.c:
 	.text       start:0x80211644 end:0x80211790
 
-smixptch.c:
+snd/source/library/mix/smixptch.c:
 	.text       start:0x80211790 end:0x8021184C
 
-smixtmul.c:
+snd/source/library/mix/smixtmul.c:
 	.text       start:0x8021184C end:0x80211888
 
-SNDI_cos.c:
+snd/source/library/cmn/SNDI_cos.c:
 	.text       start:0x80211888 end:0x80211920
 
-SNDI_mult16.c:
+snd/source/library/cmn/SNDI_mult16.c:
 	.text       start:0x80211920 end:0x80211954
 
-SNDI_root1x.c:
+snd/source/library/cmn/SNDI_root1x.c:
 	.text       start:0x80211954 end:0x802119E4
 
-SNDI_sin.c:
+snd/source/library/cmn/SNDI_sin.c:
 	.text       start:0x802119E4 end:0x80211A78
 
-sover.c:
+snd/source/library/cmn/sover.c:
 	.text       start:0x80211A78 end:0x80211A9C
 
-spantoaz.c:
+snd/source/library/cmn/spantoaz.c:
 	.text       start:0x80211A9C end:0x80211AB0
 
-spat2hdr.c:
+snd/source/library/cmn/spat2hdr.c:
 	.text       start:0x80211AB0 end:0x80211FD0
 
-spktctoh.c:
+snd/source/library/cmn/spktctoh.c:
 	.text       start:0x80211FD0 end:0x80212058
 
-srrange.c:
+snd/source/library/cmn/srrange.c:
 	.text       start:0x80212058 end:0x802120B4
 
-sstopall.c:
+snd/source/library/cmn/sstopall.c:
 	.text       start:0x802120B4 end:0x8021211C
 
-ssysreal.c:
+snd/source/library/cmn/ssysreal.c:
 	.text       start:0x8021211C end:0x802121B4
 	.data       start:0x8028B9C8 end:0x8028BDEC
 
-supf.c:
+snd/source/library/mix/supf.c:
 	.text       start:0x802121B4 end:0x802122D4
 
-suplf.c:
+snd/source/library/mix/suplf.c:
 	.text       start:0x802122D4 end:0x802123DC
 
-supmutf.c:
+snd/source/library/mix/supmutf.c:
 	.text       start:0x802123DC end:0x802125A0
 
-supmutlf.c:
+snd/source/library/mix/supmutlf.c:
 	.text       start:0x802125A0 end:0x8021277C
 
-supmutpf.c:
+snd/source/library/mix/supmutpf.c:
 	.text       start:0x8021277C end:0x80212A90
 
-suppf.c:
+snd/source/library/mix/suppf.c:
 	.text       start:0x80212A90 end:0x80212C34
 
-supxaf.cpp:
+snd/source/library/mix/supxaf.cpp:
 	.text       start:0x80212C34 end:0x80212D8C
 
-supxalf.cpp:
+snd/source/library/mix/supxalf.cpp:
 	.text       start:0x80212D8C end:0x80213120
 
-supxapf.cpp:
+snd/source/library/mix/supxapf.cpp:
 	.text       start:0x80213120 end:0x80213394
 
-eaxadecf.cpp:
+snd/source/library/extern/coda/cmn/eaxadecf.cpp:
 	.text       start:0x80213394 end:0x80213890
 
-mtdecf.cpp:
+snd/source/library/extern/coda/cmn/mtdecf.cpp:
 	.text       start:0x80213890 end:0x80214B80
 	.data       start:0x8028BDEC end:0x8028C270
 
-sattrdef.c:
+snd/source/library/cmn/sattrdef.c:
 	.text       start:0x80214B80 end:0x80214C18
 
-sexithndl.c:
+snd/source/library/cmn/sexithndl.c:
 	.text       start:0x80214C18 end:0x80214C38
 
-sfrsf.c:
+snd/source/library/mix/sfrsf.c:
 	.text       start:0x80214C38 end:0x80214F74
 
-sgparse.cpp:
+snd/source/library/cmn/sgparse.cpp:
 	.text       start:0x80214F74 end:0x8021517C
 
-SNDI_findprime.c:
+snd/source/library/cmn/SNDI_findprime.c:
 	.text       start:0x8021517C end:0x80215278
 
-scrsfl.c:
+snd/source/library/mix/scrsfl.c:
 	.text       start:0x80215278 end:0x8021533C
 
 dummy.c:
 	.text       start:0x8021533C end:0x8021548C
 	.data       start:0x8028C270 end:0x8028C288
 
-strtod2.c:
+libc/strtod2.c:
 	.data       start:0x8028C288 end:0x8028C2AC
 	.sdata      start:0x80373188 end:0x8037318C
 
 sn_buf.cpp:
 	.data       start:0x8028C2AC end:0x8028C300
 
-tolower.c:
+libc/tolower.c:
 	.text       start:0x8021548C end:0x802154A8
 
-puts.c:
+libc/puts.c:
 	.text       start:0x802154A8 end:0x80215558
 
-atoi.c:
+libc/atoi.c:
 	.text       start:0x80215558 end:0x80215580
 
 bsearch.c:
 	.text       start:0x80215580 end:0x80215618
 
-memcmp.c:
+libc/memcmp.c:
 	.text       start:0x80215618 end:0x802156A8
 
-strstr.c:
+libc/strstr.c:
 	.text       start:0x802156A8 end:0x80215710
 
-strtol.c:
+libc/strtol.c:
 	.text       start:0x80215710 end:0x802158F8
 
-fvwrite.c:
+libc/fvwrite.c:
 	.text       start:0x802158F8 end:0x80215C74
 
-wsetup.c:
+libc/wsetup.c:
 	.text       start:0x80215C74 end:0x80215D5C
 
-fflush.c:
+libc/fflush.c:
 	.text       start:0x80215D5C end:0x80215E50
 
-fopen.c:
+libc/fopen.c:
 	.text       start:0x80215E50 end:0x80215F84
 	.bss        start:0x80340738 end:0x80340748
 	.sdata      start:0x8037318C end:0x80373470
 
-fwalk.c:
+libc/fwalk.c:
 	.text       start:0x80215F84 end:0x80216004
 
-makebuf.c:
+libc/makebuf.c:
 	.text       start:0x80216004 end:0x802160DC
 
-stdio.c:
+libc/stdio.c:
 	.text       start:0x802160DC end:0x8021623C
 
-closer.c:
+libc/closer.c:
 	.text       start:0x8021623C end:0x8021628C
 
-fstatr.c:
+libc/fstatr.c:
 	.text       start:0x8021628C end:0x802162E4
 
-lseekr.c:
+libc/lseekr.c:
 	.text       start:0x802162E4 end:0x8021633C
 
-readr.c:
+libc/readr.c:
 	.text       start:0x8021633C end:0x80216394
 
-writer.c:
+libc/writer.c:
 	.text       start:0x80216394 end:0x802163EC
 
-s_sin.c:
+libc/s_sin.c:
 	.text       start:0x802163EC end:0x802164CC
 
-sf_atan.c:
+libc/sf_atan.c:
 	.text       start:0x802164CC end:0x802166DC
 	.sdata2     start:0x80375418 end:0x80375470
 
-sf_tan.c:
+libc/sf_tan.c:
 	.text       start:0x802166DC end:0x8021675C
 
-k_cos.c:
+libc/k_cos.c:
 	.text       start:0x8021675C end:0x80216850
 	.sdata2     start:0x80375470 end:0x803754A8
 
-k_sin.c:
+libc/k_sin.c:
 	.text       start:0x80216850 end:0x802168FC
 	.sdata2     start:0x803754A8 end:0x803754E0
 
-k_tan.c:
+libc/k_tan.c:
 	.sdata2     start:0x803754E0 end:0x80375560
 
-e_rem_pio2.c:
+libc/e_rem_pio2.c:
 	.text       start:0x802168FC end:0x80216C60
 	.sdata2     start:0x80375560 end:0x80375738
 
-kf_tan.c:
+libc/kf_tan.c:
 	.text       start:0x80216C60 end:0x80216E74
 	.sdata2     start:0x80375738 end:0x80375778
 
-k_rem_pio2.c:
+libc/k_rem_pio2.c:
 	.text       start:0x80216E74 end:0x802176FC
 	.sdata2     start:0x80375778 end:0x803757E8
 
-s_floor.c:
+libc/s_floor.c:
 	.text       start:0x802176FC end:0x80217C5C
 	.sdata2     start:0x803757E8 end:0x803757F0
 
-OSFatal.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/os/OSFatal.c:
 	.bss        start:0x80340748 end:0x80340A20
 	.sdata      start:0x80373470 end:0x803734B0
 	.sdata2     start:0x803757F0 end:0x80375850
 
-ar.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ar/ar.c:
 	.text       start:0x80217C5C end:0x8021ACF8
 	.data       start:0x8028C300 end:0x8028C348
 	.sbss       start:0x80374020 end:0x80374040
 
-arq.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/arq/arq.c:
 	.data       start:0x8028C348 end:0x8028C390
 	.sbss       start:0x80374040 end:0x80374070
 
-AXAlloc.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ax/AXAlloc.c:
 	.bss        start:0x80340A20 end:0x80340B20
 	.sbss       start:0x80374070 end:0x80374078
 
-AXAux.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ax/AXAux.c:
 	.bss        start:0x80340B20 end:0x80343820
 	.sbss       start:0x80374078 end:0x803740B0
 
-AXCL.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ax/AXCL.c:
 	.bss        start:0x80343820 end:0x80343E20
 	.sbss       start:0x803740B0 end:0x803740C8
 
-AX.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ax/AX.c:
 	.data       start:0x8028C390 end:0x8028C3D8
 
-AXOut.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ax/AXOut.c:
 	.text       start:0x8021ACF8 end:0x8021E59C
 	.bss        start:0x80343E20 end:0x803488C0
 	.sbss       start:0x803740C8 end:0x80374100
 
-AXSPB.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ax/AXSPB.c:
 	.bss        start:0x803488C0 end:0x80348900
 	.sbss       start:0x80374100 end:0x80374128
 
-AXVPB.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ax/AXVPB.c:
 	.data       start:0x8028C3D8 end:0x8028FDC0
 	.bss        start:0x80348900 end:0x8035A100
 	.sbss       start:0x80374128 end:0x80374138
 	.sdata2     start:0x80375850 end:0x80375858
 
-AXProf.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/ax/AXProf.c:
 	.sbss       start:0x80374138 end:0x80374148
 
-dsp.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/dsp/dsp.c:
 	.data       start:0x8028FDC0 end:0x8028FE40
 	.sbss       start:0x80374148 end:0x80374150
 
-dsp_task.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/dsp/dsp_task.c:
 	.data       start:0x8028FE40 end:0x8028FF80
 	.sbss       start:0x80374150 end:0x80374178
 
-CARDBios.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDBios.c:
 	.text       start:0x8021E59C end:0x8021E5F4
 	.data       start:0x8028FF80 end:0x8028FFD8
 	.bss        start:0x8035A100 end:0x8035A340
 	.sbss       start:0x80374178 end:0x80374180
 
-CARDBlock.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDBlock.c:
 	.text       start:0x8021E5F4 end:0x8021E9F8
 
-CARDDir.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDDir.c:
 	.text       start:0x8021E9F8 end:0x8021EE04
 
-CARDCheck.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDCheck.c:
 	.text       start:0x8021EE04 end:0x8021FBBC
 
-CARDMount.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDMount.c:
 	.text       start:0x8021FBBC end:0x8022067C
 	.data       start:0x8028FFD8 end:0x80290020
 
-CARDFormat.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDFormat.c:
 	.text       start:0x8022067C end:0x8022155C
 
-CARDCreate.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDCreate.c:
 	.text       start:0x8022155C end:0x80221AAC
 
-CARDRead.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDRead.c:
 	.text       start:0x80221AAC end:0x80221D68
 
-CARDWrite.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDWrite.c:
 	.text       start:0x80221D68 end:0x802220E4
 
-CARDDelete.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDDelete.c:
 	.text       start:0x802220E4 end:0x80222454
 
-CARDStat.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDStat.c:
 	.text       start:0x80222454 end:0x80222C8C
 
-CARDUnlock.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDUnlock.c:
 	.text       start:0x80222C8C end:0x80223EEC
 	.data       start:0x80290020 end:0x80290180
 	.sdata      start:0x803734B0 end:0x803734BC
 
-CARDRdwr.c:
+Speed/GameCube/bWare/GameCube/dolphinsdk/src/card/CARDRdwr.c:
 	.text       start:0x80223EEC end:0x80225C24
 
 eth.c:

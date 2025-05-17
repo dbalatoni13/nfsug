@@ -143,7 +143,7 @@ if not config.non_matching:
 
 # Tool versions
 config.binutils_tag = "2.42-1"
-config.compilers_tag = "20240706"
+config.compilers_tag = "20250513"
 config.dtk_tag = "v1.5.1"
 config.objdiff_tag = "v2.7.1"
 config.sjiswrap_tag = "v1.2.0"
@@ -156,18 +156,15 @@ config.asflags = [
     "-mgekko",
     "--strip-local-absolute",
     "-I include",
+    "-I src",
+    "-I src/Speed/GameCube/bWare/GameCube/dolphinsdk/include",
+    "-I include/libc",
     f"-I build/{config.version}/include",
     f"--defsym BUILD_VERSION={version_num}",
 ]
-config.ldflags = [
-    "-fp hardware",
-    "-nodefaults",
-]
-if args.debug:
-    config.ldflags.append("-g")  # Or -gdwarf-2 for Wii linkers
+config.ldflags = []
 if args.map:
-    config.ldflags.append("-mapunused")
-    # config.ldflags.append("-listclosure") # For Wii linkers
+    config.ldflags.append("-sn-full-map")
 
 # Use for any additional files that should cause a re-configure when modified
 config.reconfig_deps = []
@@ -179,25 +176,11 @@ config.scratch_preset_id = None
 # Base flags, common to most GC/Wii games.
 # Generally leave untouched, with overrides added below.
 cflags_base = [
-    "-nodefaults",
-    "-proc gekko",
-    "-align powerpc",
-    "-enum int",
-    "-fp hardware",
-    "-Cpp_exceptions off",
-    # "-W all",
-    "-O4,p",
-    "-inline auto",
-    '-pragma "cats off"',
-    '-pragma "warn_notinlined off"',
-    "-maxerrors 1",
-    "-nosyspath",
-    "-RTTI off",
-    "-fp_contract on",
-    "-str reuse",
-    "-multibyte",  # For Wii compilers, replace with `-enc SJIS`
-    "-i include",
-    f"-i build/{config.version}/include",
+    "-mps-float",
+    "-O2",
+    # "-Wall",
+    "-I include",
+    f"-I build/{config.version}/include",
     f"-DBUILD_VERSION={version_num}",
     f"-DVERSION_{config.version}",
 ]
@@ -205,30 +188,23 @@ cflags_base = [
 # Debug flags
 if args.debug:
     # Or -sym dwarf-2 for Wii compilers
-    cflags_base.extend(["-sym on", "-DDEBUG=1"])
+    cflags_base.extend(["-gdwarf-2", "-DDEBUG=1"])
 else:
     cflags_base.append("-DNDEBUG=1")
 
 # Metrowerks library flags
-cflags_runtime = [
-    *cflags_base,
-    "-use_lmw_stmw on",
-    "-str reuse,pool,readonly",
-    "-gccinc",
-    "-common off",
-    "-inline auto",
-]
+cflags_runtime = []
 
-cflags_indep = [*cflags_base, "-O0"]
+cflags_indep = [*cflags_base]
 
-config.linker_version = "GC/1.3.2"
+config.linker_version = "ProDG/3.9.3"
 
 
 # Helper function for Dolphin libraries
 def DolphinLib(lib_name: str, objects: List[Object]) -> Dict[str, Any]:
     return {
         "lib": lib_name,
-        "mw_version": "GC/1.2.5n",
+        "toolchain_version": "ProDG/3.9.3",
         "cflags": cflags_base,
         "progress_category": "sdk",
         "objects": objects,
@@ -252,7 +228,7 @@ config.warn_missing_source = False
 config.libs = [
     {
         "lib": "Indep",
-        "mw_version": config.linker_version,
+        "toolchain_version": config.linker_version,
         "cflags": cflags_indep,
         "host": False,
         "objects": [
@@ -262,7 +238,7 @@ config.libs = [
     },
     {
         "lib": "Runtime.PPCEABI.H",
-        "mw_version": config.linker_version,
+        "toolchain_version": config.linker_version,
         "cflags": cflags_runtime,
         "progress_category": "sdk",  # str | List[str]
         "objects": [
