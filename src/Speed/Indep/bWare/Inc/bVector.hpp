@@ -86,8 +86,7 @@ inline bVector3 *bScale(bVector3 *dest, const bVector3 *v, float scale) {
   float z;
 }
 
-inline bVector3 *bScale(bVector3 *dest, const bVector3 *v1,
-                        const bVector3 *v2) {
+inline bVector3 *bScale(bVector3 *dest, const bVector3 *v1, const bVector3 *v2) {
   // Local variables
   float x;
   float y;
@@ -308,8 +307,7 @@ inline bVector4 *bScale(bVector4 *dest, const bVector4 *v, float scale) {
   float w;
 }
 
-inline bVector4 *bScale(bVector4 *dest, const bVector4 *v1,
-                        const bVector4 *v2) {
+inline bVector4 *bScale(bVector4 *dest, const bVector4 *v1, const bVector4 *v2) {
   // Local variables
   float x;
   float y;
@@ -399,11 +397,9 @@ struct bMatrix4 {
 
 inline bMatrix4 *bCopy(bMatrix4 *dest, const bMatrix4 *v) {}
 
-inline bMatrix4 *bCopy(bMatrix4 *dest, const bMatrix4 *v,
-                       const struct bVector4 *position) {}
+inline bMatrix4 *bCopy(bMatrix4 *dest, const bMatrix4 *v, const struct bVector4 *position) {}
 
-inline bMatrix4 *bCopy(bMatrix4 *dest, const bMatrix4 *v,
-                       const struct bVector3 *position) {}
+inline bMatrix4 *bCopy(bMatrix4 *dest, const bMatrix4 *v, const struct bVector3 *position) {}
 
 inline void bIdentity(bMatrix4 *a) {}
 } // namespace bVector

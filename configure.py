@@ -188,7 +188,7 @@ cflags_base = [
 # Debug flags
 if args.debug:
     # Or -sym dwarf-2 for Wii compilers
-    cflags_base.extend(["-gdwarf-2", "-DDEBUG=1"])
+    cflags_base.extend(["-gdwarf", "-DDEBUG=1"])
 else:
     cflags_base.append("-DNDEBUG=1")
 

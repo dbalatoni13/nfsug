@@ -1,10 +1,9 @@
 #pragma once
 
 #include "Speed/Indep/Src/Camera/Camera.hpp"
-#include "Speed/Indep/bWare/Inc/bList.hpp"
+#include "Speed/Indep/Src/Camera/CameraMover.hpp"
 #include <dolphin.h>
 
-namespace eView {
 enum EVIEW_ID {
   NUM_RVM_VIEWS = 1,
   NUM_PLAYER_VIEWS = 3,
@@ -47,8 +46,7 @@ enum EVIEW_ID {
 
 struct eView;
 
-class eViewPlatInfo {
-public:
+struct eViewPlatInfo {
   // total size: 0x174
   bVector::bMatrix4 WorldViewMatrix;   // offset 0x0, size 0x40
   bVector::bMatrix4 ViewScreenMatrix;  // offset 0x40, size 0x40
@@ -67,58 +65,73 @@ public:
   inline bVector::bMatrix4 *GetWorldClipMatrix();
   inline bVector::bMatrix4 *GetWorldScreenMatrix();
 
-  inline void SetWorldViewMatrix(bVector::bMatrix4 *view);
-  inline void SetViewScreenMatrix(bVector::bMatrix4 *proj);
+  void SetWorldViewMatrix(bVector::bMatrix4 *view);
+  void SetViewScreenMatrix(bVector::bMatrix4 *proj);
 
-  inline Mtx44 *GetLightPerspectiveProjection();
-  inline void SetLightPerspectiveProjection(Mtx44 *projection);
+  Mtx44 *GetLightPerspectiveProjection() { return LightPerspectiveProjection; };
+  void SetLightPerspectiveProjection(Mtx44 *projection) { LightPerspectiveProjection = projection; }
 };
 
-struct eViewPlatInterface {
+class eViewPlatInterface {
   // total size: 0x4
   eViewPlatInfo *PlatInfo; // offset 0x0, size 0x4
 
-  eViewPlatInfo *GetPlatInfo() {}
-  void SetPlatInfo(eViewPlatInfo *info) {}
+public:
+  eViewPlatInfo *GetPlatInfo() { return PlatInfo; }
+  void SetPlatInfo(eViewPlatInfo *info) { PlatInfo = info; }
 };
 
-struct CameraMover {}; // temp
+eView *eGetView(int view_id);
+
+inline eView *eGetView(int view_id, bool doAssert) {
+  if (doAssert) {
+    // ?
+  }
+  return eGetView(view_id);
+}
 
 struct eView : public eViewPlatInterface {
-  // total size: 0x68
-  enum EVIEW_ID ID;                               // offset 0x4, size 0x4
-  char Active;                                    // offset 0x8, size 0x1
-  char LetterBox;                                 // offset 0x9, size 0x1
-  char pad0;                                      // offset 0xA, size 0x1
-  char pad1;                                      // offset 0xB, size 0x1
-  float H;                                        // offset 0xC, size 0x4
-  float NearZ;                                    // offset 0x10, size 0x4
-  float FarZ;                                     // offset 0x14, size 0x4
-  float FovBias;                                  // offset 0x18, size 0x4
-  float FovDegrees;                               // offset 0x1C, size 0x4
-  int BlackAndWhiteMode;                          // offset 0x20, size 0x4
-  int PixelMinSize;                               // offset 0x24, size 0x4
-  bVector::bVector3 ViewDirection;                // offset 0x28, size 0x10
-  Camera *pCamera;                                // offset 0x38, size 0x4
-  struct bTList<CameraMover> CameraMoverList;     // offset 0x3C, size 0x8
-  unsigned int NumCopsInView;                     // offset 0x44, size 0x4
-  unsigned int NumCopsTotal;                      // offset 0x48, size 0x4
-  unsigned int NumCopsCherry;                     // offset 0x4C, size 0x4
-  struct TextureInfo *pBlendMask;                 // offset 0x50, size 0x4
-  struct eDynamicLightContext *WorldLightContext; // offset 0x54, size 0x4
-  struct eRenderTarget *RenderTargetTable[1];     // offset 0x58, size 0x4
-  struct ScreenEffectDB *ScreenEffects;           // offset 0x5C, size 0x4
-  struct Rain *Precipitation;                     // offset 0x60, size 0x4
-  struct FacePixelation *facePixelation;          // offset 0x64, size 0x4
+  // total size: 0x54
+  enum EVIEW_ID ID; // offset 0x4, size 0x4
+  char Active;      // offset 0x8, size 0x1
+  char LetterBox;   // offset 0x9, size 0x1
+  char pad0;        // offset 0xA, size 0x1
+  char pad1;        // offset 0xB, size 0x1
+  float H;          // offset 0xC, size 0x4
+  float NearZ;      // offset 0x10, size 0x4
+  float FarZ;       // offset 0x14, size 0x4
+  float FovBias;    // offset 0x18, size 0x4
+  float FovDegrees; // offset 0x1C, size 0x4
+  // int BlackAndWhiteMode;               // offset 0x20, size 0x4
+  int PixelMinSize;                    // offset 0x24, size 0x4
+  bVector::bVector3 ViewDirection;     // offset 0x28, size 0x10
+  Camera *pCamera;                     // offset 0x34, size 0x4
+  bTList<CameraMover> CameraMoverList; // offset 0x38, size 0x8
+  unsigned int NumCopsInView;          // offset 0x40, size 0x4
+  // unsigned int NumCopsTotal;           // offset 0x44, size 0x4
+  // unsigned int NumCopsCherry;                     // offset 0x48, size 0x4
+  struct TextureInfo *pBlendMask;                 // offset 0x4C, size 0x4
+  struct eDynamicLightContext *WorldLightContext; // offset 0x50, size 0x4
+  struct eRenderTarget *RenderTargetTable[1];     // offset 0x54, size 0x4
+  struct ScreenEffectDB *ScreenEffects;           // offset 0x58, size 0x4
+  struct Rain *Precipitation;                     // offset 0x5C, size 0x4
+  struct FacePixelation *facePixelation;          // offset 0x60, size 0x4
 
-  inline void SetRenderTarget(eRenderTarget *target) {
-    this->RenderTargetTable[0] = target;
+  void SetRenderTarget(eRenderTarget *target, int index) { RenderTargetTable[index] = target; }
+
+  void SetRenderTarget0(eRenderTarget *target) { SetRenderTarget(target, 0); }
+
+  void SetCamera(Camera *camera) { this->pCamera = camera; }
+
+  void SetActive(int state) {
+    int prev_state = Active;
+    Active = state;
   }
-  inline void SetCamera(Camera *camera) { this->pCamera = camera; }
 
-  inline void SetActive(int state) {
-    int prev_state = this->Active;
-    this->Active = state;
+  CameraMover *GetCameraMover() {
+    if (CameraMoverList.IsEmpty()) {
+      return static_cast<CameraMover *>(nullptr);
+    }
+    return CameraMoverList.GetHead();
   }
 };
-} // namespace eView

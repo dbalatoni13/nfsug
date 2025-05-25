@@ -2605,3 +2605,8 @@ Speed/GameCube/bWare/GameCube/dolphinsdk/src/net/ethsec.c:
 Speed/GameCube/bWare/GameCube/dolphinsdk/src/net/md5.c:
 	.text       start:0x802268B0 end:0x80227854
 	.data       start:0x80290208 end:0x80298DE0
+
+refsize.cpp:
+	.text       start:0x80227854 end:0x8022F7E0
+	.BINARY     start:0x8022F7E0 end:0x8022FA60
+	.BINARY2    start:0x8022FA60 end:0x8022FBE0
