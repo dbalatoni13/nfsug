@@ -1,5 +1,8 @@
 #include "./eViewPlat.hpp"
+#include "Speed/Indep/Src/Ecstasy/Texture.hpp"
 #include "Speed/Indep/Src/World/Car.hpp"
+#include "Speed/Indep/Src/World/Scenery.hpp"
+#include "Speed/Indep/bWare/Inc/bMath.hpp"
 #include "Speed/Indep/bWare/Inc/bSlotPool.hpp"
 
 enum VIDEO_MODE {
@@ -30,8 +33,6 @@ void InitSlotPools();
 int eInitEnvMap();
 void SetScreenBuffers();
 void eWaitUntilRenderingDone();
-SlotPool *bNewSlotPool(int slot_size, int num_slots, const char *debug_name, int memory_pool);
-eRenderTarget *eGetRenderTarget(int render_target);
 
 // idk where these go
 Camera FlailerCamera;
@@ -73,10 +74,10 @@ int eInitEnginePlat() {
 
 int eSetDisplaySystem(int video_mode) {
   if (eCurrentVideoMode != video_mode) {
-    eCurrentVideoMode = (enum VIDEO_MODE)video_mode;
+    eCurrentVideoMode = static_cast<VIDEO_MODE>(video_mode);
     eWaitUntilRenderingDone();
-    ScreenWidth = 0x280;
-    ScreenHeight = 0x1e0;
+    ScreenWidth = 640;
+    ScreenHeight = 480;
     VISetPreRetraceCallback(cb_PreRetrace);
     VISetPostRetraceCallback(cb_PostRetrace);
   }
@@ -225,7 +226,7 @@ eView *GetPlayerView(int nPlayerNumber) {
 
   if (((pRaceCoordinator != nullptr) && (pRaceCoordinator->unk_00 == 5)) && (pRaceCoordinator->unk_50 != nullptr)) {
     if (nPlayerNumber != pRaceCoordinator->unk_50[5]) {
-      return static_cast<eView *>(nullptr);
+      return nullptr;
     }
     return eGetView(1, false);
   } else {
@@ -248,7 +249,7 @@ void RadialBlurOn(int nPlayerNumber) {
   }
 }
 
-void RadialBlurOff(eView *view) { view->pBlendMask = static_cast<TextureInfo *>(nullptr); }
+void RadialBlurOff(eView *view) { view->pBlendMask = nullptr; }
 
 void RadialBlurOff(int nPlayerNumber) {
   eView *view = GetPlayerView(nPlayerNumber);
@@ -271,3 +272,54 @@ void RadialBlurAlpha(int param_1, float param_2, float param_3) {}
 bool bStraddlesNearZ(Camera *camera, Car *car) { return false; }
 
 void eForceBackgroundColour(unsigned char, unsigned char, unsigned char, float, const char *) {}
+
+int eClampTopLeft(bool bOnOff, int nUnused) { return false; }
+
+void eTagHeadlightCallback(SceneryDrawInfo *info) { info->SceneryInst->Rotation[1] = 512; }
+
+int DisplayCullingStats(int screen_x, int screen_y) { return 0; }
+
+int eGetScreenWidth() { return ScreenWidth; }
+
+int eGetScreenHeight() { return ScreenWidth; }
+
+void eSetScreenDisplayOffsets(int offset_x, int offset_y) {}
+
+void eSetScreenDisplayOffsets(int &offset_x, int &offset_y) {}
+
+eRenderTarget RenderTargets[15];
+TextureInfo RenderTargetTextureInfos[15];
+eRenderTarget *CurrentRenderTarget;
+
+TextureInfo *eRenderTarget::GetTextureInfo() { return &RenderTargetTextureInfos[static_cast<int>(this->ID)]; }
+
+TextureInfo *eGetRenderTargetTextureInfo(int name_hash) {
+  for (int i = FIRST_RENDER_TARGET; i < NUM_RENDER_TARGETS; i++) {
+    eRenderTarget *render_target = eGetRenderTarget(i);
+    TextureInfo *info = render_target->GetTextureInfo();
+    if (name_hash == info->NameHash) {
+      return info;
+    }
+  }
+  return nullptr;
+}
+
+eRenderTarget *eGetCurrentRenderTarget() { return CurrentRenderTarget; }
+
+eRenderTarget *eGetRenderTarget(int render_target) { return &RenderTargets[render_target]; }
+
+void eWaitUntilRenderingDone() {}
+
+float CalculateH(unsigned short alpha) {
+  unsigned short beta = alpha >> 1;
+  float tan = bTan(beta);
+  if (tan == 0.0f) {
+    return 256.0f / tan;
+  }
+  return 10.0f;
+}
+
+// int epSetAllStripsVisibleState(eSolid *param1, int param2) {
+//   param1->GetNext();
+//   return 0;
+// }

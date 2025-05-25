@@ -4,23 +4,23 @@
 
 struct CameraParams {
   // total size: 0xD4
-  bVector::bMatrix4 Matrix;          // offset 0x0, size 0x40
-  bVector::bVector3 Position;        // offset 0x40, size 0x10
-  bVector::bVector3 Direction;       // offset 0x50, size 0x10
-  bVector::bVector3 Target;          // offset 0x60, size 0x10
-  bVector::bVector4 NoiseFrequency1; // offset 0x70, size 0x10
-  bVector::bVector4 NoiseAmplitude1; // offset 0x80, size 0x10
-  bVector::bVector4 NoiseFrequency2; // offset 0x90, size 0x10
-  bVector::bVector4 NoiseAmplitude2; // offset 0xA0, size 0x10
-  float TargetDistance;              // offset 0xB0, size 0x4
-  float FocalDistance;               // offset 0xB4, size 0x4
-  float DepthOfField;                // offset 0xB8, size 0x4
-  float NearZ;                       // offset 0xBC, size 0x4
-  float FarZ;                        // offset 0xC0, size 0x4
-  unsigned short FieldOfView;        // offset 0xC4, size 0x2
-  float LB_height;                   // offset 0xC8, size 0x4
-  float SimTimeMultiplier;           // offset 0xCC, size 0x4
-  unsigned short DummyAngle;         // offset 0xD0, size 0x2
+  bMatrix4 Matrix;            // offset 0x0, size 0x40
+  bVector3 Position;          // offset 0x40, size 0x10
+  bVector3 Direction;         // offset 0x50, size 0x10
+  bVector3 Target;            // offset 0x60, size 0x10
+  bVector4 NoiseFrequency1;   // offset 0x70, size 0x10
+  bVector4 NoiseAmplitude1;   // offset 0x80, size 0x10
+  bVector4 NoiseFrequency2;   // offset 0x90, size 0x10
+  bVector4 NoiseAmplitude2;   // offset 0xA0, size 0x10
+  float TargetDistance;       // offset 0xB0, size 0x4
+  float FocalDistance;        // offset 0xB4, size 0x4
+  float DepthOfField;         // offset 0xB8, size 0x4
+  float NearZ;                // offset 0xBC, size 0x4
+  float FarZ;                 // offset 0xC0, size 0x4
+  unsigned short FieldOfView; // offset 0xC4, size 0x2
+  float LB_height;            // offset 0xC8, size 0x4
+  float SimTimeMultiplier;    // offset 0xCC, size 0x4
+  unsigned short DummyAngle;  // offset 0xD0, size 0x2
 };
 
 struct Camera {
@@ -34,7 +34,7 @@ struct Camera {
   int LastDisparateTime;    // offset 0x288, size 0x4
   int RenderDash;           // offset 0x28C, size 0x4
 
-  bVector::bMatrix4 *GetCameraMatrix() {}
+  bMatrix4 *GetCameraMatrix() {}
 
   int GetRenderDash() {}
 
@@ -44,34 +44,34 @@ struct Camera {
 
   unsigned short GetFieldOfView() {}
 
-  bVector::bMatrix4 *GetWorldToCameraMatrix() {}
+  bMatrix4 *GetWorldToCameraMatrix() {}
 
-  bVector::bVector3 *GetPosition() {}
+  bVector3 *GetPosition() {}
 
-  bVector::bVector3 *GetDirection() {}
+  bVector3 *GetDirection() {}
 
-  bVector::bVector3 *GetTarget() {}
+  bVector3 *GetTarget() {}
 
   unsigned short GetFov() {}
 
-  bVector::bVector3 GetPositionSimSpace() {
+  bVector3 GetPositionSimSpace() {
     // Local variables
-    bVector::bVector3 vec;
+    bVector3 vec;
   }
 
-  bVector::bVector3 *GetPreviousPosition() {}
+  bVector3 *GetPreviousPosition() {}
 
-  bVector::bVector3 *GetPreviousDirection() {}
+  bVector3 *GetPreviousDirection() {}
 
-  bVector::bVector3 *GetPreviousTarget() {}
+  bVector3 *GetPreviousTarget() {}
 
   unsigned short GetPreviousFov() {}
 
-  bVector::bVector3 *GetVelocityPosition() {}
+  bVector3 *GetVelocityPosition() {}
 
-  bVector::bVector3 *GetVelocityDirection() {}
+  bVector3 *GetVelocityDirection() {}
 
-  bVector::bVector3 *GetVelocityTarget() {}
+  bVector3 *GetVelocityTarget() {}
 
   unsigned short GetVelocityFov() {}
 
@@ -97,13 +97,13 @@ struct Camera {
 
   void SetNoiseAmplitude2(float x, float y, float z, float w) {}
 
-  void SetNoiseFrequency1(bVector::bVector4 *p) {}
+  void SetNoiseFrequency1(bVector4 *p) {}
 
-  void SetNoiseFrequency2(bVector::bVector4 *p) {}
+  void SetNoiseFrequency2(bVector4 *p) {}
 
-  void SetNoiseAmplitude1(bVector::bVector4 *p) {}
+  void SetNoiseAmplitude1(bVector4 *p) {}
 
-  void SetNoiseAmplitude2(bVector::bVector4 *p) {}
+  void SetNoiseAmplitude2(bVector4 *p) {}
 
   void SetNoiseFrequency1(float *p) {}
 

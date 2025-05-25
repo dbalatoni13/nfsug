@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Speed/Indep/Src/Camera/Camera.hpp"
-#include "Speed/Indep/Src/Camera/CameraMover.hpp"
+#include "Speed/Indep/Src/Ecstasy/Texture.hpp"
+#include "Speed/Indep/bWare/Inc/bVector.hpp"
 #include <dolphin.h>
 
 enum EVIEW_ID {
@@ -48,25 +48,25 @@ struct eView;
 
 struct eViewPlatInfo {
   // total size: 0x174
-  bVector::bMatrix4 WorldViewMatrix;   // offset 0x0, size 0x40
-  bVector::bMatrix4 ViewScreenMatrix;  // offset 0x40, size 0x40
-  bVector::bMatrix4 WorldClipMatrix;   // offset 0x80, size 0x40
-  bVector::bMatrix4 WorldScreenMatrix; // offset 0xC0, size 0x40
-  Mtx44 *LightPerspectiveProjection;   // offset 0x100, size 0x4
-  eView *ReflectionView;               // offset 0x104, size 0x4
-  eView *SpecularView;                 // offset 0x108, size 0x4
-  float aspect;                        // offset 0x10C, size 0x4
-  float fovscl;                        // offset 0x110, size 0x4
-  bVector::bVector4 ClippingPlanes[6]; // offset 0x114, size 0x60
+  bMatrix4 WorldViewMatrix;          // offset 0x0, size 0x40
+  bMatrix4 ViewScreenMatrix;         // offset 0x40, size 0x40
+  bMatrix4 WorldClipMatrix;          // offset 0x80, size 0x40
+  bMatrix4 WorldScreenMatrix;        // offset 0xC0, size 0x40
+  Mtx44 *LightPerspectiveProjection; // offset 0x100, size 0x4
+  eView *ReflectionView;             // offset 0x104, size 0x4
+  eView *SpecularView;               // offset 0x108, size 0x4
+  float aspect;                      // offset 0x10C, size 0x4
+  float fovscl;                      // offset 0x110, size 0x4
+  bVector4 ClippingPlanes[6];        // offset 0x114, size 0x60
 
   inline eViewPlatInfo();
-  inline bVector::bMatrix4 *GetWorldViewMatrix();
-  inline bVector::bMatrix4 *GetViewScreenMatrix();
-  inline bVector::bMatrix4 *GetWorldClipMatrix();
-  inline bVector::bMatrix4 *GetWorldScreenMatrix();
+  inline bMatrix4 *GetWorldViewMatrix();
+  inline bMatrix4 *GetViewScreenMatrix();
+  inline bMatrix4 *GetWorldClipMatrix();
+  inline bMatrix4 *GetWorldScreenMatrix();
 
-  void SetWorldViewMatrix(bVector::bMatrix4 *view);
-  void SetViewScreenMatrix(bVector::bMatrix4 *proj);
+  void SetWorldViewMatrix(bMatrix4 *view);
+  void SetViewScreenMatrix(bMatrix4 *proj);
 
   Mtx44 *GetLightPerspectiveProjection() { return LightPerspectiveProjection; };
   void SetLightPerspectiveProjection(Mtx44 *projection) { LightPerspectiveProjection = projection; }
@@ -81,57 +81,63 @@ public:
   void SetPlatInfo(eViewPlatInfo *info) { PlatInfo = info; }
 };
 
-eView *eGetView(int view_id);
+enum TARGET_ID {
+  NUM_RENDER_TARGETS = 15,
+  LAST_RENDER_TARGET = 14,
+  FIRST_RENDER_TARGET = 0,
+  TOTAL_RENDER_TARGETS = 15,
+  // TARGET_ENVMAP0_FULL = 16,
+  // TARGET_ENVMAP0D = 15,
+  TARGET_ENVMAP0U = 14,
+  TARGET_ENVMAP0L = 13,
+  TARGET_ENVMAP0B = 12,
+  TARGET_ENVMAP0R = 11,
+  TARGET_ENVMAP0F = 10,
+  TARGET_QUADRANT_BOTTOM_RIGHT = 9,
+  TARGET_QUADRANT_BOTTOM_LEFT = 8,
+  TARGET_QUADRANT_TOP_RIGHT = 7,
+  TARGET_QUADRANT_TOP_LEFT = 6,
+  TARGET_PLAYER2_SPECULAR = 5,
+  TARGET_PLAYER1_SPECULAR = 4,
+  TARGET_PLAYER1_RVM = 3,
+  TARGET_PLAYER2 = 2,
+  TARGET_PLAYER1 = 1,
+  TARGET_FLAYER = 0,
+};
+enum FILTER_ID {
+  FILTER_TOTAL = 11,
+  FILTER_PIXELATE = 10,
+  FILTER_EFB_XFB_AA = 9,
+  FILTER_CONTRAST_INTENSITY = 8,
+  FILTER_GLOWBLOOM = 7,
+  FILTER_MOTIONBLUR = 6,
+  FILTER_REFLECTION = 5,
+  FILTER_SPHERE_MAP = 4,
+  FILTER_CUBE_FACES = 3,
+  FILTER_EFB_XFB = 2,
+  FILTER_DEFAULT = 1,
+  FILTER_OFF = 0,
+};
 
-inline eView *eGetView(int view_id, bool doAssert) {
-  if (doAssert) {
-    // ?
-  }
-  return eGetView(view_id);
-}
+struct eRenderTarget {
+  // total size: 0x40
+  TARGET_ID ID;             // offset 0x0, size 0x4
+  const char *Name;         // offset 0x4, size 0x4
+  int Active;               // offset 0x8, size 0x4
+  int ScissorX;             // offset 0xC, size 0x4
+  int ScissorY;             // offset 0x10, size 0x4
+  int ScissorW;             // offset 0x14, size 0x4
+  int ScissorH;             // offset 0x18, size 0x4
+  int FrameAddress;         // offset 0x1C, size 0x4
+  int FrameWidth;           // offset 0x20, size 0x4
+  int FrameHeight;          // offset 0x24, size 0x4
+  FILTER_ID CopyFilterID;   // offset 0x28, size 0x4
+  GXColor BackgroundColour; // offset 0x2C, size 0x4
+  int ClearBackground;      // offset 0x30, size 0x4
+  bMatrix4 *WorldClip;      // offset 0x34, size 0x4
+  bMatrix4 *WorldView;      // offset 0x38, size 0x4
+  bMatrix4 *ViewScreen;     // offset 0x3C, size 0x4
+  char unk40[4];
 
-struct eView : public eViewPlatInterface {
-  // total size: 0x54
-  enum EVIEW_ID ID; // offset 0x4, size 0x4
-  char Active;      // offset 0x8, size 0x1
-  char LetterBox;   // offset 0x9, size 0x1
-  char pad0;        // offset 0xA, size 0x1
-  char pad1;        // offset 0xB, size 0x1
-  float H;          // offset 0xC, size 0x4
-  float NearZ;      // offset 0x10, size 0x4
-  float FarZ;       // offset 0x14, size 0x4
-  float FovBias;    // offset 0x18, size 0x4
-  float FovDegrees; // offset 0x1C, size 0x4
-  // int BlackAndWhiteMode;               // offset 0x20, size 0x4
-  int PixelMinSize;                    // offset 0x24, size 0x4
-  bVector::bVector3 ViewDirection;     // offset 0x28, size 0x10
-  Camera *pCamera;                     // offset 0x34, size 0x4
-  bTList<CameraMover> CameraMoverList; // offset 0x38, size 0x8
-  unsigned int NumCopsInView;          // offset 0x40, size 0x4
-  // unsigned int NumCopsTotal;           // offset 0x44, size 0x4
-  // unsigned int NumCopsCherry;                     // offset 0x48, size 0x4
-  struct TextureInfo *pBlendMask;                 // offset 0x4C, size 0x4
-  struct eDynamicLightContext *WorldLightContext; // offset 0x50, size 0x4
-  struct eRenderTarget *RenderTargetTable[1];     // offset 0x54, size 0x4
-  struct ScreenEffectDB *ScreenEffects;           // offset 0x58, size 0x4
-  struct Rain *Precipitation;                     // offset 0x5C, size 0x4
-  struct FacePixelation *facePixelation;          // offset 0x60, size 0x4
-
-  void SetRenderTarget(eRenderTarget *target, int index) { RenderTargetTable[index] = target; }
-
-  void SetRenderTarget0(eRenderTarget *target) { SetRenderTarget(target, 0); }
-
-  void SetCamera(Camera *camera) { this->pCamera = camera; }
-
-  void SetActive(int state) {
-    int prev_state = Active;
-    Active = state;
-  }
-
-  CameraMover *GetCameraMover() {
-    if (CameraMoverList.IsEmpty()) {
-      return static_cast<CameraMover *>(nullptr);
-    }
-    return CameraMoverList.GetHead();
-  }
+  TextureInfo *GetTextureInfo();
 };

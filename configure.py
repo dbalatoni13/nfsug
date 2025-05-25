@@ -173,13 +173,13 @@ config.scratch_preset_id = None
 # Base flags, common to most GC/Wii games.
 # Generally leave untouched, with overrides added below.
 cflags_base = [
-    "-mps-float",
     "-O2",
     # "-Wall",
     "-I include",
     "-I src",
     "-I src/Speed/GameCube/bWare/GameCube/dolphinsdk/include",
     "-I include/libc",
+    "-DTARGET_GC",
     f"-I build/{config.version}/include",
     f"-DBUILD_VERSION={version_num}",
     f"-DVERSION_{config.version}",

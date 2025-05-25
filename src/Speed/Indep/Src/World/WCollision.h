@@ -22,7 +22,7 @@ struct WCollisionArticle {
 
 struct WCollisionBarrier {
   // total size: 0x20
-  bVector::bVector4 fPts[2]; // offset 0x0, size 0x20
+  bVector4 fPts[2]; // offset 0x0, size 0x20
 };
 
 struct WCollisionBarrierListEntry {
@@ -41,8 +41,8 @@ struct WCollisionInstance : public CollisionInstance {
 };
 
 struct WorldCollisionInfo {
-  bVector::bVector4 fCollidePt;
-  bVector::bVector4 fNormal;
+  bVector4 fCollidePt;
+  bVector4 fNormal;
   WCollisionBarrierListEntry fBle;
   WCollisionObject *fObj;
   float fDist;

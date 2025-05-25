@@ -29,9 +29,7 @@ struct SlotPool : public bTNode<SlotPool> {
 
   void SetFlag(SlotPoolFlags flag);
 
-  void ClearFlag(SlotPoolFlags flag) {
-    Flags = (SlotPoolFlags)(((int)Flags) & ~flag);
-  }
+  void ClearFlag(SlotPoolFlags flag) { Flags = (SlotPoolFlags)(((int)Flags) & ~flag); }
 
   SlotPoolFlags GetFlags();
 
@@ -53,3 +51,5 @@ struct SlotPool : public bTNode<SlotPool> {
 
   int CountMostAllocatedSlots();
 };
+
+SlotPool *bNewSlotPool(int slot_size, int num_slots, const char *debug_name, int memory_pool);

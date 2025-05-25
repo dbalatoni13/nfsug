@@ -31,16 +31,16 @@ enum CameraMoverTypes {
 
 struct CameraMover : public bTNode<CameraMover>, public WCollisionMgr::ICollisionHandler {
   // total size: 0x80
-  CameraMoverTypes Type;           // offset 0xC, size 0x4
-  int ViewID;                      // offset 0x10, size 0x4
-  int Enabled;                     // offset 0x14, size 0x4
-  eView *pView;                    // offset 0x18, size 0x4
-  Camera *pCamera;                 // offset 0x1C, size 0x4
-  int RenderDash;                  // offset 0x20, size 0x4
-  struct WCollider *mCollider;     // offset 0x24, size 0x4
-  WWorldPos mWPos;                 // offset 0x28, size 0x3C
-  float fAccumulatedClearance;     // offset 0x64, size 0x4
-  float fAccumulatedAdjust;        // offset 0x68, size 0x4
-  float fSavedAdjust;              // offset 0x6C, size 0x4
-  bVector::bVector3 vSavedForward; // offset 0x70, size 0x10
+  CameraMoverTypes Type;       // offset 0xC, size 0x4
+  int ViewID;                  // offset 0x10, size 0x4
+  int Enabled;                 // offset 0x14, size 0x4
+  eView *pView;                // offset 0x18, size 0x4
+  Camera *pCamera;             // offset 0x1C, size 0x4
+  int RenderDash;              // offset 0x20, size 0x4
+  struct WCollider *mCollider; // offset 0x24, size 0x4
+  WWorldPos mWPos;             // offset 0x28, size 0x3C
+  float fAccumulatedClearance; // offset 0x64, size 0x4
+  float fAccumulatedAdjust;    // offset 0x68, size 0x4
+  float fSavedAdjust;          // offset 0x6C, size 0x4
+  bVector3 vSavedForward;      // offset 0x70, size 0x10
 };

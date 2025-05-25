@@ -70,7 +70,7 @@ typedef int BOOL;
 #include <stddef.h>
 #else
 #ifndef NULL
-#define NULL ((void *)0)
+#define NULL 0
 #endif
 #endif
 #if !defined(__cplusplus) || __cplusplus < 201103L
