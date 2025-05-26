@@ -50,6 +50,7 @@ typedef volatile f64 vf64;
 #if defined(TARGET_PC) && !defined(_WIN32)
 #include <stdbool.h>
 typedef bool BOOL;
+typedef bool Bool;
 #ifndef FALSE
 #define FALSE false
 #endif
@@ -58,6 +59,7 @@ typedef bool BOOL;
 #endif
 #else
 typedef int BOOL;
+typedef unsigned char Bool;
 #ifndef FALSE
 #define FALSE 0
 #endif

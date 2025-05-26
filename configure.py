@@ -195,7 +195,7 @@ else:
 # Metrowerks library flags
 cflags_runtime = []
 
-cflags_indep = [*cflags_base]
+cflags_game = [*cflags_base, "-mps-nodf", "-mfast-cast"]
 
 config.linker_version = "ProDG/3.9.3"
 
@@ -229,10 +229,10 @@ config.libs = [
     {
         "lib": "Indep",
         "toolchain_version": config.linker_version,
-        "cflags": cflags_indep,
+        "cflags": cflags_game,
         "host": False,
         "objects": [
-            Object(Matching, "Speed/GameCube/Src/Ecstasy/EcstasyE.cpp"),
+            Object(NonMatching, "Speed/GameCube/Src/Ecstasy/EcstasyE.cpp"),
         ],
     },
     {
