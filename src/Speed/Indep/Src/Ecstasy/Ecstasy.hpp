@@ -96,6 +96,8 @@ struct eView : public eViewPlatInterface {
   }
 };
 
+extern eView eViews;
+
 eView *eGetView(int view_id);
 
 inline eView *eGetView(int view_id, bool doAssert) {

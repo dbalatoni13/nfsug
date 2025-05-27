@@ -227,12 +227,13 @@ config.warn_missing_config = True
 config.warn_missing_source = False
 config.libs = [
     {
-        "lib": "Indep",
+        "lib": "Game",
         "toolchain_version": config.linker_version,
         "cflags": cflags_game,
         "host": False,
         "objects": [
             Object(NonMatching, "Speed/GameCube/Src/Ecstasy/EcstasyE.cpp"),
+            Object(NonMatching, "Speed/Indep/bWare/Src/bVector.cpp"),
         ],
     },
     {

@@ -291,7 +291,7 @@ PhysicsMover.cpp:
 	.sdata      start:0x80371C14 end:0x80371C80
 	.sbss       start:0x803736E8 end:0x803737A0
 
-Speed/Indep/Src/Src/Animation/AnimBank.cpp:
+Speed/Indep/Src/Animation/AnimBank.cpp:
 	.text       start:0x8007F904 end:0x8007FB0C
 
 Speed/Indep/Src/Animation/AnimCtrl.cpp:
@@ -330,7 +330,7 @@ Speed/Indep/Src/Camera/DragData.cpp:
 Speed/Indep/Src/Camera/CameraMover.cpp:
 	.text       start:0x8008B628 end:0x8009FA5C
 	.rodata     start:0x8023F0A0 end:0x80241114
-	.bss        start:0x802BF024 end:0x802ECAA0
+	.bss        start:0x802BF024 end:0x802BF318
 	.sdata      start:0x80371DC4 end:0x80371DCC
 	.sdata2     start:0x803742C4 end:0x803742D0
 
@@ -352,12 +352,15 @@ Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_PostRace.cpp:
 Speed/Indep/Src/Frontend/Hud/FEPkg_Hud.cpp:
 	.text       start:0x800A6054 end:0x800B0A0C
 	.rodata     start:0x80241114 end:0x8024C050
+	.bss        start:0x802BF318 end:0x802BF330
 
 Speed/Indep/Src/Frontend/Database/FEDatabase.cpp:
 	.text       start:0x800B0A0C end:0x800B0BB4
+	.bss        start:0x802BF330 end:0x802EAA18
 
 Speed/Indep/Src/Frontend/MenuScreens/SafeHouse/FEPkg_GarageMain.cpp:
 	.text       start:0x800B0BB4 end:0x800B5EC8
+	.bss        start:0x802EAA18 end:0x802ECAA0
 	.sdata      start:0x80371E7C end:0x80371F10
 
 Speed/Indep/Src/Frontend/MenuScreens/SafeHouse/FEPkg_MU_Main.cpp:
@@ -410,7 +413,7 @@ Speed/Indep/Src/Frontend/MenuScreens/FEPkg_ChooseUserProfile.cpp:
 
 Speed/Indep/Src/Frontend/MenuScreens/FEng_SoundShenanigans.cpp:
 	.text       start:0x800CCEB0 end:0x800CDAA0
-	.bss        start:0x802ECAA0 end:0x802ED6FC
+	.bss        start:0x802ECAA0 end:0x802ECE04
 	.sbss       start:0x80373810 end:0x80373948
 
 Speed/Indep/Src/Frontend/MenuScreens/FEPkg_MU_Pause.cpp:
@@ -430,6 +433,7 @@ Speed/Indep/Src/Frontend/MenuScreens/FEPkg_MU_ScreenPos.cpp:
 
 Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_Chyron.cpp:
 	.text       start:0x800D6524 end:0x800D68AC
+	.bss        start:0x802ECE04 end:0x802ECE24
 	.sdata      start:0x80371F10 end:0x80371F30
 
 Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_Loading.cpp:
@@ -455,6 +459,7 @@ Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_MU_MPChooseGarage.cpp:
 
 Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_VinylShop.cpp:
 	.text       start:0x800DCF74 end:0x800DF774
+	.bss        start:0x802ECE24 end:0x802ECE70
 	.sdata      start:0x80371F54 end:0x80371F7C
 
 Speed/Indep/Src/Frontend/MenuScreens/Ingame/StatsScreen.cpp:
@@ -476,6 +481,7 @@ Speed/Indep/Src/FEng/FEngine.cpp:
 
 Speed/Indep/Src/Frontend/FEngRender.cpp:
 	.text       start:0x800E3820 end:0x800E6258
+	.bss        start:0x802ECE70 end:0x802ED67C
 
 Speed/Indep/Src/FEng/FEngSpeedPackages.cpp:
 	.text       start:0x800E6258 end:0x800E6370
@@ -493,11 +499,12 @@ Speed/Indep/Src/Frontend/FEngInterfaces/FEngInterface.cpp:
 Speed/Indep/Src/Frontend/FEngFrontend.cpp:
 	.text       start:0x800EA2F0 end:0x800ECA9C
 	.data       start:0x80272A08 end:0x80272ED8
+	.bss        start:0x802ED67C end:0x802ED6BC
 
 Speed/Indep/Src/FEng/FEButtonMap.cpp:
 	.text       start:0x800ECA9C end:0x800ECF44
 	.data       start:0x80272ED8 end:0x8027857C
-	.bss        start:0x802ED6FC end:0x802ED744
+	.bss        start:0x802ED6BC end:0x802ED724
 
 Speed/Indep/Src/FEng/FECodeListBox.cpp:
 	.text       start:0x800ECF44 end:0x800EEBF0
@@ -522,19 +529,21 @@ Speed/Indep/Src/FEng/FEKeyInterpNone.cpp:
 
 Speed/Indep/Src/FEng/FEKeyTrack.cpp:
 	.text       start:0x800F0008 end:0x800F0570
+	.bss        start:0x802ED724 end:0x802ED734
 
 Speed/Indep/Src/FEng/FEList.cpp:
 	.text       start:0x800F0570 end:0x800F1EC8
 
 Speed/Indep/Src/FEng/FEMessageResponse.cpp:
 	.text       start:0x800F1EC8 end:0x800F2630
+	.bss        start:0x802ED734 end:0x802ED744
 
 Speed/Indep/Src/FEng/FEMsgTargetList.cpp:
 	.text       start:0x800F2630 end:0x800F2A18
 
 Speed/Indep/Src/FEng/FEObject.cpp:
 	.text       start:0x800F2A18 end:0x800F3C6C
-	.bss        start:0x802ED744 end:0x802F1310
+	.bss        start:0x802ED744 end:0x802ED7E8
 
 Speed/Indep/Src/FEng/FEPackage.cpp:
 	.text       start:0x800F3C6C end:0x800F5204
@@ -547,6 +556,7 @@ Speed/Indep/Src/FEng/FEPackageReader.cpp:
 
 Speed/Indep/Src/FEng/FEScript.cpp:
 	.text       start:0x800F8114 end:0x800F8990
+	.bss        start:0x802ED7E8 end:0x802ED7F8
 
 Speed/Indep/Src/FEng/FESlotPool.cpp:
 	.text       start:0x800F8990 end:0x800F8D84
@@ -563,6 +573,7 @@ Speed/Indep/Src/FEng/FETypes.cpp:
 
 Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_PartsBrowser.cpp:
 	.text       start:0x800FA000 end:0x801076B8
+	.bss        start:0x802ED7F8 end:0x802EEDF0
 	.sdata      start:0x8037202C end:0x80372068
 
 Speed/Indep/Src/FEng/FERefList.cpp:
@@ -580,9 +591,11 @@ Speed/Indep/Src/FEng/FEMouse.cpp:
 
 ScreenPrintf.cpp:
 	.text       start:0x8010A310 end:0x8010A584
+	.bss        start:0x802EEDF0 end:0x802EEEB0
 
 Speed/Indep/Src/FEng/FEng_Magazines.cpp:
 	.text       start:0x8010A584 end:0x8010BB08
+	.bss        start:0x802EEEB0 end:0x802EF14C
 	.sdata      start:0x8037207C end:0x80372088
 
 MagazineDatabase.cpp:
@@ -603,6 +616,7 @@ Speed/Indep/Src/EAXSound/EAXSound.cpp:
 Speed/Indep/Src/EAXSound/EAXAemsManager.cpp:
 	.text       start:0x80110C0C end:0x8011250C
 	.rodata     start:0x8024C224 end:0x8024C29C
+	.bss        start:0x802EF14C end:0x802EF150
 
 Speed/Indep/Src/EAXSound/EAXMod.cpp:
 	.text       start:0x8011250C end:0x801127F0
@@ -613,6 +627,7 @@ Speed/Indep/Src/EAXSound/EAXFrontEnd.cpp:
 
 Speed/Indep/Src/EAXSound/EAXAITunerCar.cpp:
 	.text       start:0x801132E0 end:0x80113F0C
+	.bss        start:0x802EF150 end:0x802EF160
 
 EVTSYS_ENVIRO.cpp:
 	.text       start:0x80113F0C end:0x80113F84
@@ -635,16 +650,19 @@ Speed/Indep/Src/EAXSound/EAXTrafficCar.cpp:
 Speed/Indep/Src/EAXSound/EAXTunerCar.cpp:
 	.text       start:0x80114CC4 end:0x8011C084
 	.rodata     start:0x8024C9BC end:0x8024D41C
+	.bss        start:0x802EF160 end:0x802EF208
 	.sdata      start:0x80372160 end:0x803721AC
 	.sdata2     start:0x803742D0 end:0x80374300
 
 Speed/Indep/Src/EAXSound/EAXCar.cpp:
 	.text       start:0x8011C084 end:0x8011D84C
+	.bss        start:0x802EF208 end:0x802EF284
 	.sdata2     start:0x80374300 end:0x80374388
 
 Speed/Indep/Src/EAXSound/EAX3DS.cpp:
 	.text       start:0x8011D84C end:0x80122C1C
 	.rodata     start:0x8024D41C end:0x8024D934
+	.bss        start:0x802EF284 end:0x802F1310
 
 Speed/Indep/Src/EAXSound/EAXCollision.cpp:
 	.text       start:0x80122C1C end:0x801233F4
@@ -654,7 +672,7 @@ Speed/Indep/Src/EAXSound/EAXCollision.cpp:
 Speed/Indep/Src/EAXSound/EAXSND8Wrapper.cpp:
 	.text       start:0x801233F4 end:0x80123880
 	.rodata     start:0x8024DA40 end:0x8024DA6C
-	.bss        start:0x802F1310 end:0x802F7294
+	.bss        start:0x802F1310 end:0x802F3320
 
 Speed/Indep/Src/EAXSound/EAXSndTweakData.cpp:
 	.rodata     start:0x8024DA6C end:0x8024EF90
@@ -664,9 +682,11 @@ Speed/Indep/bWare/Src/bCrc32.cpp:
 
 SoundObject.cpp:
 	.text       start:0x80123880 end:0x8012415C
+	.bss        start:0x802F3320 end:0x802F33A0
 
 Speed/Indep/Src/EAXSound/EAXEnvironment.cpp:
 	.text       start:0x8012415C end:0x80126B60
+	.bss        start:0x802F33A0 end:0x802F3480
 
 Speed/Indep/Src/EAXSound/EAXMixer.cpp:
 	.text       start:0x80126B60 end:0x801277B0
@@ -674,6 +694,7 @@ Speed/Indep/Src/EAXSound/EAXMixer.cpp:
 
 Speed/Indep/Src/EAXSound/EAXPresets.cpp:
 	.text       start:0x801277B0 end:0x80127AC4
+	.bss        start:0x802F3480 end:0x802F38F4
 
 Speed/Indep/Src/EAXSound/Stream/EAXS_StreamManager.cpp:
 	.text       start:0x80127AC4 end:0x80128FD4
@@ -699,30 +720,35 @@ Speed/Indep/Src/EAXSound/Stream/EAXS_TCMonoStream.cpp:
 Speed/Indep/Src/EAXSound/Stream/EAXS_SpeechStream.cpp:
 	.text       start:0x8012DFFC end:0x8012E8E8
 
-Speed/Indep/Src/Src/Ecstasy/Ecstasy.cpp:
+Speed/Indep/Src/Ecstasy/Ecstasy.cpp:
 	.text       start:0x8012E8E8 end:0x8012ED64
 
 Speed/Indep/Src/Ecstasy/eStreamingPack.cpp:
 	.text       start:0x8012ED64 end:0x8012FF54
+	.bss        start:0x802F38F4 end:0x802F3DF4
 
 Speed/Indep/Src/Ecstasy/eModel.cpp:
 	.text       start:0x8012FF54 end:0x801306A8
 
 Speed/Indep/Src/Ecstasy/eSolid.cpp:
 	.text       start:0x801306A8 end:0x8013255C
+	.bss        start:0x802F3DF4 end:0x802F3E44
 
 Speed/Indep/Src/Ecstasy/eLight.cpp:
 	.text       start:0x8013255C end:0x80136F3C
-	.bss        start:0x802F7294 end:0x802F82D0
+	.bss        start:0x802F3E44 end:0x802F7380
 
 Speed/Indep/Src/Ecstasy/eView.cpp:
 	.text       start:0x80136F3C end:0x801375B4
+	.bss        start:0x802F7380 end:0x802F78C0
 
 Speed/Indep/Src/Ecstasy/Texture.cpp:
 	.text       start:0x801375B4 end:0x80138FB4
+	.bss        start:0x802F78C0 end:0x802F7EFC
 
 Speed/Indep/Src/World/Sun.cpp:
 	.text       start:0x80138FB4 end:0x8013959C
+	.bss        start:0x802F7EFC end:0x802F8030
 
 Speed/Indep/bWare/Src/bDebug.cpp:
 	.text       start:0x8013959C end:0x80139C00
@@ -748,11 +774,12 @@ Speed/Indep/bWare/Src/bMemCpy.cpp:
 
 Speed/Indep/bWare/Src/bMemory.cpp:
 	.text       start:0x8013AC20 end:0x8013BC9C
+	.bss        start:0x802F8030 end:0x802F8290
 
 Speed/Indep/bWare/Src/bPrintf.cpp:
 	.text       start:0x8013BC9C end:0x8013D3F8
 	.rodata     start:0x8024F6A0 end:0x802505BC
-	.bss        start:0x802F82D0 end:0x802F9D48
+	.bss        start:0x802F8290 end:0x802F9D48
 	.sdata      start:0x80372380 end:0x8037267C
 	.sbss       start:0x80373948 end:0x803739A8
 

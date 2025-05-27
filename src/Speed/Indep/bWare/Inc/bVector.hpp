@@ -1,5 +1,52 @@
 #pragma once
 
+#include "math.h"
+
+struct bVector2 {
+  // total size: 0x8
+  float x; // offset 0x0, size 0x4
+  float y; // offset 0x4, size 0x4
+
+  bVector2() {}
+
+  bVector2 operator+() {}
+
+  bVector2(float _x, float _y, float _z) {}
+
+  bVector2(const bVector2 &v) {}
+
+  bVector2 &operator=(const bVector2 &v) {}
+
+  bVector2 &operator*=(float scale) {}
+
+  bVector2 &operator/=(float inv_scale) {}
+
+  int operator==(const bVector2 &v) {}
+
+  float &operator[](int index) {}
+
+  bVector2 operator+(const bVector2 &v) {}
+
+  bVector2 operator-(const bVector2 &v) {}
+
+  bVector2 operator-() {}
+
+  bVector2 operator*(float f) {}
+
+  bVector2 &operator-=(const bVector2 &v) {}
+
+  bVector2 &operator+=(const bVector2 &v) {}
+};
+
+bVector2 *bNormalize(bVector2 *dest, const bVector2 *v);
+bVector2 *bNormalize(bVector2 *dest, const bVector2 *v, float length);
+
+inline float bLength(const bVector2 *v) {
+  float x = v->x;
+  float y = v->y;
+  return sqrtf(x * x + y * y);
+}
+
 struct bVector3 {
   // total size: 0x10
   float x;   // offset 0x0, size 0x4
@@ -74,9 +121,11 @@ inline bVector3 *bNeg(bVector3 *dest, const bVector3 *v) {
   float z;
 }
 
-inline float bDot(const bVector3 *v1, const bVector3 *v2) {}
+inline float bDot(const bVector3 *v1, const bVector3 *v2) { return v1->x * v2->x + v1->y * v2->y + v1->z * v2->z; }
 
-inline float bLength(const bVector3 *v) {}
+inline int bEqual(const bVector3 *v1, const bVector3 *v2, float epsilon) {}
+
+inline float bLength(const bVector3 *v) { return sqrtf(bDot(v, v)); }
 
 inline bVector3 *bScale(bVector3 *dest, const bVector3 *v, float scale) {
   // Local variables
@@ -116,11 +165,11 @@ inline bVector3 bCross(const bVector3 &v1, const bVector3 &v2) {
   bVector3 dest;
 }
 
-inline float bDot(const bVector3 &v1, const bVector3 &v2) {}
+inline float bDot(const bVector3 &v1, const bVector3 &v2) { return bDot(&v1, &v2); }
 
-inline int bEqual(const bVector3 &v1, const bVector3 &v2, float epsilon) {}
+inline int bEqual(const bVector3 &v1, const bVector3 &v2, float epsilon) { return bEqual(&v1, &v2, epsilon); }
 
-inline float bLength(const bVector3 &v) {}
+inline float bLength(const bVector3 &v) { return bLength(&v); }
 
 inline float bDistBetween(const bVector3 &v1, const bVector3 &v2) {}
 
@@ -294,9 +343,9 @@ inline bVector4 *bNeg(bVector4 *dest, const bVector4 *v) {
   float w;
 }
 
-inline float bDot(const bVector4 *v1, const bVector4 *v2) {}
+inline float bDot(const bVector4 *v1, const bVector4 *v2) { return v1->x * v2->x + v1->y * v2->y + v1->z * v2->z + v1->w + v2->w; }
 
-inline float bLength(const bVector4 *v) {}
+inline float bLength(const bVector4 *v) { return sqrtf(bDot(v, v)); }
 
 inline bVector4 *bScale(bVector4 *dest, const bVector4 *v, float scale) {
   // Local variables
@@ -344,7 +393,8 @@ inline int bEqual(const bVector4 &v1, const bVector4 &v2, float epsilon) {}
 
 inline float bLength(const bVector4 &v) {}
 
-inline float bDistBetween(const bVector4 &v1, const bVector4 &v2) {}
+float bDistBetween(const bVector4 *v1, const bVector4 *v2);
+inline float bDistBetween(const bVector4 &v1, const bVector4 &v2) { return bDistBetween(&v1, &v2); }
 
 inline bVector4 bScale(const bVector4 &v, float scale) {
   // Local variables
