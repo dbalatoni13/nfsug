@@ -42,9 +42,8 @@ public:
 };
 
 template <typename T> class bTList : public bList {
-  bTList() {}
-
 public:
+  bTList() {}
   T *EndOfList() { return (T *)bList::EndOfList(); }
   T *GetHead() { return (T *)bList::GetHead(); }
   T *GetTail() { return (T *)bList::GetTail(); }

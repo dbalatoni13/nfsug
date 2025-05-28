@@ -43,4 +43,6 @@ struct CameraMover : public bTNode<CameraMover>, public WCollisionMgr::ICollisio
   float fAccumulatedAdjust;    // offset 0x68, size 0x4
   float fSavedAdjust;          // offset 0x6C, size 0x4
   bVector3 vSavedForward;      // offset 0x70, size 0x10
+
+  CameraMover();
 };

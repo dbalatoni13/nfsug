@@ -74,8 +74,7 @@ struct eView : public eViewPlatInterface {
   struct eDynamicLightContext *WorldLightContext; // offset 0x50, size 0x4
   struct eRenderTarget *RenderTargetTable[1];     // offset 0x54, size 0x4
   struct ScreenEffectDB *ScreenEffects;           // offset 0x58, size 0x4
-  struct Rain *Precipitation;                     // offset 0x5C, size 0x4
-  struct FacePixelation *facePixelation;          // offset 0x60, size 0x4
+  // struct FacePixelation *facePixelation;          // offset 0x60, size 0x4
 
   void SetRenderTarget(eRenderTarget *target, int index) { RenderTargetTable[index] = target; }
 
@@ -95,8 +94,6 @@ struct eView : public eViewPlatInterface {
     return CameraMoverList.GetHead();
   }
 };
-
-extern eView eViews;
 
 eView *eGetView(int view_id);
 

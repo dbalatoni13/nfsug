@@ -775,10 +775,10 @@ def generate_build_ninja(
             n.comment(f"Link {self.name}")
             if self.module_id == 0:
                 elf_path = build_path / f"{self.name}.elf"
-                elf_ldflags = "$ldflags"
+                elf_ldflags = f"$ldflags"
                 if config.generate_map:
                     elf_map = map_path(elf_path)
-                    elf_ldflags += f" -map {serialize_path(elf_map)}"
+                    elf_ldflags += f" -Map {serialize_path(elf_map)}"
                 else:
                     elf_map = None
                 n.build(
@@ -797,7 +797,7 @@ def generate_build_ninja(
                 preplf_path = build_path / self.name / f"{self.name}.preplf"
                 plf_path = build_path / self.name / f"{self.name}.plf"
                 preplf_ldflags = "$ldflags -sdata 0 -sdata2 0 -r"
-                plf_ldflags = f"$ldflags -sdata 0 -sdata2 0 -r1 -lcf {serialize_path(self.ldscript)}"
+                plf_ldflags = f"$ldflags -sdata 0 -sdata2 0 -r1"
                 if self.entry:
                     plf_ldflags += f" -m {self.entry}"
                     # -strip_partial is only valid with -m
@@ -805,9 +805,9 @@ def generate_build_ninja(
                         plf_ldflags += " -strip_partial"
                 if config.generate_map:
                     preplf_map = map_path(preplf_path)
-                    preplf_ldflags += f" -map {serialize_path(preplf_map)}"
+                    preplf_ldflags += f" -Map {serialize_path(preplf_map)}"
                     plf_map = map_path(plf_path)
-                    plf_ldflags += f" -map {serialize_path(plf_map)}"
+                    plf_ldflags += f" -Map {serialize_path(plf_map)}"
                 else:
                     preplf_map = None
                     plf_map = None

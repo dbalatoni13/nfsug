@@ -159,9 +159,8 @@ config.asflags = [
     f"-I build/{config.version}/include",
     f"--defsym BUILD_VERSION={version_num}",
 ]
-config.ldflags = []
-if args.map:
-    config.ldflags.append("-sn-full-map")
+ldscript_path = Path("config") / "ldscript.ld"
+config.ldflags = ["-T", str(ldscript_path)]
 
 # Use for any additional files that should cause a re-configure when modified
 config.reconfig_deps = []
@@ -233,6 +232,7 @@ config.libs = [
         "host": False,
         "objects": [
             Object(NonMatching, "Speed/GameCube/Src/Ecstasy/EcstasyE.cpp"),
+            Object(NonMatching, "Speed/Indep/Src/Ecstasy/eView.cpp"),
             Object(NonMatching, "Speed/Indep/bWare/Src/bVector.cpp"),
         ],
     },

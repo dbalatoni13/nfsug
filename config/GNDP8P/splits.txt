@@ -13,6 +13,8 @@ Sections:
 Speed/GameCube/Src/Ecstasy/EcstasyE.cpp:
 	.text       start:0x800034A0 end:0x800099CC
 	.rodata     start:0x8022FBE0 end:0x802305D0
+	.data       start:0x8026A8C0 end:0x8026AD10
+	.sdata      start:0x803713E0 end:0x803715E0
 
 Speed/GameCube/Src/Ecstasy/EcstasyEx.cpp:
 	.text       start:0x800099CC end:0x8000B850

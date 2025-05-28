@@ -4,4 +4,4 @@ object: sys/main.dol
 hash: f7df6349739089094409b89bb2e5f7cb54c0a756
 symbols: config/GNDP8P/symbols.txt
 splits: config/GNDP8P/splits.txt
-quick_analysis: false
+quick_analysis: true
