@@ -1056,16 +1056,16 @@ def generate_build_ninja(
                 link_steps.append(module_link_step)
         n.newline()
 
-        # Check if all compiler versions exist
-        for toolchain_version in used_compiler_versions:
-            mw_path = compilers / toolchain_version / "mwcceppc.exe"
-            if config.compilers_path and not os.path.exists(mw_path):
-                sys.exit(f"Compiler {mw_path} does not exist")
+        # # Check if all compiler versions exist
+        # for toolchain_version in used_compiler_versions:
+        #     mw_path = compilers / toolchain_version / "mwcceppc.exe"
+        #     if config.compilers_path and not os.path.exists(mw_path):
+        #         sys.exit(f"Compiler {mw_path} does not exist")
 
-        # Check if linker exists
-        mw_path = compilers / str(config.linker_version) / "mwldeppc.exe"
-        if config.compilers_path and not os.path.exists(mw_path):
-            sys.exit(f"Linker {mw_path} does not exist")
+        # # Check if linker exists
+        # mw_path = compilers / str(config.linker_version) / "mwldeppc.exe"
+        # if config.compilers_path and not os.path.exists(mw_path):
+        #     sys.exit(f"Linker {mw_path} does not exist")
 
         # Add all build steps needed before we link and after compiling objects
         write_custom_step("post-compile", "pre-compile")
