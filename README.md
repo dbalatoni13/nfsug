@@ -1,4 +1,4 @@
-Need for Speed: Underground
+Need for Speed: Underground (GC)
 [![Build Status]][actions] [![Code Progress]][progress] [![Data Progress]][progress] [![Discord Badge]][discord]
 =============
 
@@ -14,7 +14,7 @@ Replace with your repository's URL.
 [Discord Badge]: https://img.shields.io/discord/458389297192632330?color=%237289DA&logo=discord&logoColor=%23FFFFFF
 [discord]: https://discord.gg/bBEqpmSV
 
-A work-in-progress decompilation of Need for Speed: Underground.
+A work-in-progress decompilation of the GameCube version of Need for Speed: Underground.
 
 This repository does **not** contain any game assets or assembly whatsoever. An existing copy of the game is required.
 
@@ -65,26 +65,25 @@ sudo xattr -rd com.apple.quarantine '/Applications/Wine Crossover.app'
 - Clone the repository:
 
   ```sh
-  git clone https://github.com/my/repo.git
+  git clone https://github.com/dbalatoni13/nfsug.git
   ```
-
-- Copy your game's disc image to `orig/GNDP8P`.
-
-  - Supported formats: ISO (GCM), RVZ, WIA, WBFS, CISO, NFS, GCZ, TGC
-  - After the initial build, the disc image can be deleted to save space.
 
 - Configure:
 
   ```sh
-  python configure.py
+  python configure.py --debug
   ```
-
-  To use a version other than `GNDP8P` (USA), specify it with `--version`.
 
 - Build:
 
   ```sh
   ninja
+  ```
+
+- Extract `Speed.elf`, copy it into `orig/GNDP8P` and convert it into a DOL:
+
+  ```sh
+  ./build/tools/dtk elf2dol ./orig/GNDP8P/Speed.elf ./orig/GNDP8P/sys/main.dol
   ```
 
 # Diffing

@@ -35,4 +35,5 @@ compile_commands.json
 *.exe
 
 symbols/
+.vscode/
 decompiled.cpp
