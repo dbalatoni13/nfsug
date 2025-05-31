@@ -604,9 +604,21 @@ def generate_build_ninja(
     ###
     compiler_path = compilers / "$toolchain_version"
 
+    # MWCC
+    mwcc = compiler_path / "mwcceppc.exe"
+    mwcc_cmd = f"{wrapper_cmd}{mwcc} $cflags -MMD -c $in -o $basedir"
+    mwcc_implicit: List[Optional[Path]] = [compilers_implicit or mwcc, wrapper_implicit]
+
+    # MWCC with UTF-8 to Shift JIS wrapper
+    mwcc_sjis_cmd = f"{wrapper_cmd}{sjiswrap} {mwcc} $cflags -MMD -c $in -o $basedir"
+    mwcc_sjis_implicit: List[Optional[Path]] = [*mwcc_implicit, sjiswrap]
+
     # NGCCC
     ngccc = compiler_path / "ngccc.exe"
-    ngccc_cmd = f"{wrapper_cmd}{ngccc} $cflags -c -o $basedir $in"
+    if is_windows():
+        ngccc_cmd = f'cmd /c "set SN_NGC_PATH={os.path.abspath(compiler_path)}&& {ngccc} $cflags -c -o $out $in"'
+    else:
+        ngccc_cmd = f"env SN_NGC_PATH={os.path.abspath(compiler_path)} {wrapper_cmd}{ngccc} $cflags -c -o $out $in"
     ngccc_implicit: List[Optional[Path]] = [
         compilers_implicit or ngccc,
         wrapper_implicit,
@@ -630,6 +642,10 @@ def generate_build_ninja(
 
     if os.name != "nt":
         transform_dep = config.tools_dir / "transform_dep.py"
+        mwcc_cmd += f" && $python {transform_dep} $basefile.d $basefile.d"
+        mwcc_sjis_cmd += f" && $python {transform_dep} $basefile.d $basefile.d"
+        mwcc_implicit.append(transform_dep)
+        mwcc_sjis_implicit.append(transform_dep)
         ngccc_cmd += f" && $python {transform_dep} $basefile.d $basefile.d"
         ngccc_implicit.append(transform_dep)
 
@@ -648,6 +664,26 @@ def generate_build_ninja(
         name="elf2dol",
         command=f"{dtk} elf2dol $in $out",
         description="DOL $out",
+    )
+    n.newline()
+
+    n.comment("MWCC build")
+    n.rule(
+        name="mwcc",
+        command=mwcc_cmd,
+        description="MWCC $out",
+        depfile="$basefile.d",
+        deps="gcc",
+    )
+    n.newline()
+
+    n.comment("MWCC build (with UTF-8 to Shift JIS wrapper)")
+    n.rule(
+        name="mwcc_sjis",
+        command=mwcc_sjis_cmd,
+        description="MWCC $out",
+        depfile="$basefile.d",
+        deps="gcc",
     )
     n.newline()
 
