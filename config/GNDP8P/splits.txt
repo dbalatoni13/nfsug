@@ -10,10 +10,6 @@ Sections:
 	.sbss       type:bss align:8
 	.sdata2     type:rodata align:8
 
-ctor_dtor_start.cpp:
-	.ctors      start:0x8022F7E0 end:0x8022F7E4 skip
-	.dtors      start:0x8022FA60 end:0x8022FA64 skip
-
 Speed/GameCube/Src/Ecstasy/EcstasyE.cpp:
 	.text       start:0x800034A0 end:0x800099CC
 	.ctors      start:0x8022F7E4 end:0x8022F7E8
@@ -2813,6 +2809,11 @@ Speed/GameCube/bWare/GameCube/dolphinsdk/src/ax/AXVPB.c:
 	.bss        start:0x80348900 end:0x8035A100
 	.sbss       start:0x80374128 end:0x80374138
 	.sdata2     start:0x80375850 end:0x80375858
+
+prodg_fixes.cpp:
+	.ctors      start:0x8022F7E0 end:0x8022F7E4 skip
+	.dtors      start:0x8022FA60 end:0x8022FA64 skip
+	.sdata2     start:0x8037585E end:0x80375860 skip
 
 Speed/GameCube/bWare/GameCube/dolphinsdk/src/ax/AXProf.c:
 	.sbss       start:0x80374138 end:0x80374148

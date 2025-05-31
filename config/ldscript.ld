@@ -1,7 +1,8 @@
- ENTRY(__start) 
-/* Do we need any of these for elf?
-   __DYNAMIC = 0;    */
+ENTRY(__start) 
 PROVIDE (__stack = 0);
+/* For some reason these two aren't emitted automatically */
+PROVIDE (_ctors = 0x8028c278);
+PROVIDE (_dtors = 0x8028c280);
 SECTIONS
 {
 	.comment :{ *(.comment)}
@@ -95,7 +96,7 @@ SECTIONS
 		_e_sbss = .;
 		__SBSS_END__ = .;
 	}
-	. =  ALIGN(8);
+	. =  ALIGN(32);
 	.sdata2   :
 	{
 		__SDATA2_START__ = .;
