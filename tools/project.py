@@ -915,6 +915,7 @@ def generate_build_ninja(
                     "basedir": str(obj.src_obj_path),
                     "basefile": obj.src_obj_path.with_suffix(""),
                 },
+                implicit=ngccc_implicit,
                 order_only="pre-compile",
             )
 
