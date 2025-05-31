@@ -159,7 +159,7 @@ config.asflags = [
     f"-I build/{config.version}/include",
     f"--defsym BUILD_VERSION={version_num}",
 ]
-ldscript_path = Path("config") / "ldscript.ld"
+ldscript_path = Path("config") / config.version / "ldscript.ld"
 config.ldflags = ["-T", str(ldscript_path)]
 
 # Use for any additional files that should cause a re-configure when modified
