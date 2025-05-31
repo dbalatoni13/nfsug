@@ -1,17 +1,23 @@
 Sections:
 	.init       type:code align:4
-	.text       type:code align:4
-	.BINARY     type:rodata align:4
-	.BINARY2    type:data align:4
-	.rodata     type:rodata align:4
-	.data       type:data align:4
-	.bss        type:bss align:4
-	.sdata      type:data align:16
-	.sbss       type:bss align:4
-	.sdata2     type:rodata align:32
+	.text       type:code align:16
+	.ctors      type:rodata align:1
+	.dtors      type:rodata align:1
+	.rodata     type:rodata align:8
+	.data       type:data align:32
+	.bss        type:bss align:32
+	.sdata      type:data align:32
+	.sbss       type:bss align:8
+	.sdata2     type:rodata align:8
+
+ctor_dtor_start.cpp:
+	.ctors      start:0x8022F7E0 end:0x8022F7E4 skip
+	.dtors      start:0x8022FA60 end:0x8022FA64 skip
 
 Speed/GameCube/Src/Ecstasy/EcstasyE.cpp:
 	.text       start:0x800034A0 end:0x800099CC
+	.ctors      start:0x8022F7E4 end:0x8022F7E8
+	.dtors      start:0x8022FA64 end:0x8022FA68
 	.rodata     start:0x8022FBE0 end:0x802305D0
 	.data       start:0x8026A8C0 end:0x8026AD10
 	.sdata      start:0x803713E0 end:0x803715E0
@@ -22,13 +28,17 @@ Speed/GameCube/Src/Ecstasy/EcstasyEx.cpp:
 
 Speed/GameCube/Src/Ecstasy/eLightE.cpp:
 	.text       start:0x8000B850 end:0x8000BBF8
+	.ctors      start:0x8022F7E8 end:0x8022F7EC
 	.sdata      start:0x8037162C end:0x80371648
 
 Speed/GameCube/Src/Ecstasy/eEnvMapE.cpp:
 	.text       start:0x8000BBF8 end:0x8000C1D8
+	.ctors      start:0x8022F7EC end:0x8022F7F0
+	.dtors      start:0x8022FA68 end:0x8022FA6C
 
 Speed/GameCube/Src/Ecstasy/eMathE.cpp:
 	.text       start:0x8000C1D8 end:0x8000D364
+	.ctors      start:0x8022F7F0 end:0x8022F7F4
 	.sdata      start:0x80371648 end:0x80371650
 
 Speed/Indep/Src/Ecstasy/eMatrixE.cpp:
@@ -48,6 +58,7 @@ Speed/GameCube/Src/Ecstasy/eVShader.cpp:
 
 Speed/GameCube/Src/Ecstasy/eStrip.cpp:
 	.text       start:0x8000F31C end:0x8000F4C4
+	.ctors      start:0x8022F7F4 end:0x8022F7F8
 	.sdata      start:0x80371678 end:0x8037169C
 
 Speed/GameCube/Src/Ecstasy/eSolidPlat.cpp:
@@ -55,6 +66,7 @@ Speed/GameCube/Src/Ecstasy/eSolidPlat.cpp:
 
 Speed/GameCube/Src/Ecstasy/eViewPlat.cpp:
 	.text       start:0x800104A8 end:0x80010734
+	.ctors      start:0x8022F7F8 end:0x8022F7FC
 
 Speed/GameCube/Src/Platform.cpp:
 	.text       start:0x80010734 end:0x80010A28
@@ -82,10 +94,13 @@ Speed/GameCube/Render/bba_com.cpp:
 
 Speed/GameCube/Render/AcidFXE.cpp:
 	.text       start:0x80015160 end:0x800152A4
+	.ctors      start:0x8022F7FC end:0x8022F800
+	.dtors      start:0x8022FA6C end:0x8022FA70
 	.data       start:0x8026B920 end:0x8026BC50
 
 Speed/Indep/Src/Misc/DemoDisc.cpp:
 	.text       start:0x800152A4 end:0x80015328
+	.ctors      start:0x8022F800 end:0x8022F804
 
 Speed/GameCube/Src/MovieE.cpp:
 	.text       start:0x80015328 end:0x800159D0
@@ -121,9 +136,12 @@ Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_MU_OnlineDialogBox.cpp:
 
 Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_MU_Keyboard.cpp:
 	.text       start:0x8001A44C end:0x8001B238
+	.ctors      start:0x8022F804 end:0x8022F808
 
 Speed/GameCube/Src/MemoryCard/GC_MemoryCard.cpp:
 	.text       start:0x8001B238 end:0x8001D3CC
+	.ctors      start:0x8022F808 end:0x8022F80C
+	.dtors      start:0x8022FA70 end:0x8022FA74
 
 Speed/Indep/Src/World/World.cpp:
 	.text       start:0x8001D3CC end:0x8001F148
@@ -133,6 +151,7 @@ Speed/Indep/Src/World/RaceCoordinator.cpp:
 
 Speed/Indep/Src/World/Car.cpp:
 	.text       start:0x80022334 end:0x8002984C
+	.ctors      start:0x8022F80C end:0x8022F810
 	.rodata     start:0x802338AC end:0x80234518
 	.data       start:0x8026BC50 end:0x80271F50
 	.bss        start:0x802ACA34 end:0x802ACB8C
@@ -140,21 +159,27 @@ Speed/Indep/Src/World/Car.cpp:
 
 Speed/Indep/Src/World/Player.cpp:
 	.text       start:0x8002984C end:0x80033538
+	.ctors      start:0x8022F810 end:0x8022F814
 	.rodata     start:0x80234518 end:0x802350B0
 	.bss        start:0x802ACB8C end:0x802B9678
 	.sdata      start:0x80371870 end:0x8037191C
 
 Speed/Indep/Src/World/RaceParameters.cpp:
 	.text       start:0x80033538 end:0x80036C70
+	.ctors      start:0x8022F814 end:0x8022F818
 
 Speed/Indep/Src/World/StylePoints.cpp:
 	.text       start:0x80036C70 end:0x8003775C
 
 Speed/Indep/Src/World/OnlineManager.cpp:
 	.text       start:0x8003775C end:0x800377B8
+	.ctors      start:0x8022F818 end:0x8022F81C
+	.dtors      start:0x8022FA74 end:0x8022FA78
 
 Speed/Indep/Src/World/DriftManager.cpp:
 	.text       start:0x800377B8 end:0x80038834
+	.ctors      start:0x8022F81C end:0x8022F820
+	.dtors      start:0x8022FA78 end:0x8022FA7C
 	.rodata     start:0x802350B0 end:0x802390BC
 
 Speed/Indep/Src/World/MiscStyleManager.cpp:
@@ -162,29 +187,41 @@ Speed/Indep/Src/World/MiscStyleManager.cpp:
 
 Speed/Indep/Src/World/Track.cpp:
 	.text       start:0x8003BDEC end:0x8003BF24
+	.ctors      start:0x8022F820 end:0x8022F824
+	.dtors      start:0x8022FA7C end:0x8022FA80
 
 Speed/Indep/Src/World/TrackInfo.cpp:
 	.text       start:0x8003BF24 end:0x8003C2B0
 
 Speed/Indep/Src/World/TrackRoute.cpp:
 	.text       start:0x8003C2B0 end:0x8003E568
+	.ctors      start:0x8022F824 end:0x8022F828
+	.dtors      start:0x8022FA80 end:0x8022FA84
 
 Speed/Indep/Src/World/TrackRouteEditor.cpp:
 	.text       start:0x8003E568 end:0x8003E58C
 
 Speed/Indep/Src/World/TrackPath.cpp:
 	.text       start:0x8003E58C end:0x800401C4
+	.ctors      start:0x8022F828 end:0x8022F82C
+	.dtors      start:0x8022FA84 end:0x8022FA88
 
 Speed/Indep/Src/World/TrackStreamer.cpp:
 	.text       start:0x800401C4 end:0x80043E6C
+	.ctors      start:0x8022F82C end:0x8022F830
+	.dtors      start:0x8022FA88 end:0x8022FA8C
 
 Speed/Indep/Src/World/Scenery.cpp:
 	.text       start:0x80043E6C end:0x80043F4C
+	.ctors      start:0x8022F830 end:0x8022F834
+	.dtors      start:0x8022FA8C end:0x8022FA90
 	.bss        start:0x802B9678 end:0x802BC328
 	.sdata      start:0x8037191C end:0x80371934
 
 Speed/Indep/Src/World/VisibleSection.cpp:
 	.text       start:0x80043F4C end:0x80044C44
+	.ctors      start:0x8022F834 end:0x8022F838
+	.dtors      start:0x8022FA90 end:0x8022FA94
 
 Speed/Indep/Src/Misc/Main.cpp:
 	.text       start:0x80044C44 end:0x80045FC0
@@ -197,15 +234,20 @@ Speed/Indep/Src/Misc/SpeedChunks.cpp:
 
 Speed/Indep/Src/Misc/ResourceLoader.cpp:
 	.text       start:0x80045FC0 end:0x80047570
+	.ctors      start:0x8022F838 end:0x8022F83C
+	.dtors      start:0x8022FA94 end:0x8022FA98
 
 Speed/Indep/Src/Misc/GameFlow.cpp:
 	.text       start:0x80047570 end:0x80047610
+	.ctors      start:0x8022F83C end:0x8022F840
+	.dtors      start:0x8022FA98 end:0x8022FA9C
 
 Speed/Indep/Src/Misc/BuildRegionAmerica.cpp:
 	.text       start:0x80047610 end:0x80047678
 
 Speed/Indep/Src/AI/AICarController.cpp:
 	.text       start:0x80047678 end:0x8004BB5C
+	.ctors      start:0x8022F840 end:0x8022F844
 	.sbss       start:0x80373658 end:0x80373668
 
 Speed/Indep/Src/AI/AIPlan.cpp:
@@ -213,20 +255,26 @@ Speed/Indep/Src/AI/AIPlan.cpp:
 
 Speed/Indep/Src/AI/AIUtil.cpp:
 	.text       start:0x80055ED8 end:0x80058310
+	.ctors      start:0x8022F844 end:0x8022F848
+	.dtors      start:0x8022FA9C end:0x8022FAA0
 	.sdata      start:0x803719FC end:0x80371A0C
 
 Speed/Indep/Src/AI/CollisionPredictor.cpp:
 	.text       start:0x80058310 end:0x8005979C
+	.ctors      start:0x8022F848 end:0x8022F84C
+	.dtors      start:0x8022FAA0 end:0x8022FAA4
 
 Speed/Indep/Src/AI/CarController.cpp:
 	.text       start:0x8005979C end:0x80059D00
 
 Speed/Indep/Src/AI/DriveTarget.cpp:
 	.text       start:0x80059D00 end:0x8005C6E8
+	.ctors      start:0x8022F84C end:0x8022F850
 	.sbss       start:0x80373668 end:0x80373684
 
 Speed/Indep/Src/AI/DrivingChoice.cpp:
 	.text       start:0x8005C6E8 end:0x8005F5DC
+	.ctors      start:0x8022F850 end:0x8022F854
 	.bss        start:0x802BC5F0 end:0x802BD408
 	.sdata      start:0x80371A0C end:0x80371C14
 
@@ -235,6 +283,7 @@ Speed/Indep/Src/AI/DragController.cpp:
 
 Speed/Indep/Src/AI/PsychoDriver.cpp:
 	.text       start:0x80061E98 end:0x80062260
+	.ctors      start:0x8022F854 end:0x8022F858
 	.rodata     start:0x802390BC end:0x8023BD94
 	.sbss       start:0x80373684 end:0x803736E8
 
@@ -243,15 +292,19 @@ Speed/Indep/Src/AI/DragDriver.cpp:
 
 Speed/Indep/Src/AI/RealDriver.cpp:
 	.text       start:0x80062890 end:0x800647E0
+	.ctors      start:0x8022F858 end:0x8022F85C
 
 Speed/Indep/Src/AI/AIDriver.cpp:
 	.text       start:0x800647E0 end:0x8006637C
+	.ctors      start:0x8022F85C end:0x8022F860
 
 Speed/Indep/Src/Physics/Aerodynamics.cpp:
 	.text       start:0x8006637C end:0x80066798
+	.ctors      start:0x8022F860 end:0x8022F864
 
 Speed/Indep/Src/Physics/BeltMover.cpp:
 	.text       start:0x80066798 end:0x80067FA4
+	.ctors      start:0x8022F864 end:0x8022F868
 
 Speed/Indep/Src/Physics/Dynamics/CarState.cpp:
 	.text       start:0x80067FA4 end:0x8006955C
@@ -261,6 +314,8 @@ Speed/Indep/Src/Physics/Dynamics/Collision.cpp:
 
 Speed/Indep/Src/Physics/Dynamics/CollisionBody.cpp:
 	.text       start:0x8006A5F4 end:0x8006F48C
+	.ctors      start:0x8022F868 end:0x8022F86C
+	.dtors      start:0x8022FAA4 end:0x8022FAA8
 
 Speed/Indep/Src/Physics/Behaviors/ComponentPhysics.cpp:
 	.text       start:0x8006F48C end:0x8006F7A0
@@ -270,6 +325,7 @@ Speed/Indep/Src/Physics/Behaviors/Contact.cpp:
 
 Speed/Indep/Src/Physics/Behaviors/Engine.cpp:
 	.text       start:0x800713B0 end:0x80073F74
+	.ctors      start:0x8022F86C end:0x8022F870
 
 GJKsimplex.cpp:
 	.text       start:0x80073F74 end:0x80076958
@@ -279,16 +335,20 @@ GJKCollision.cpp:
 
 GJKPolyhedron.cpp:
 	.text       start:0x80077578 end:0x80078928
+	.ctors      start:0x8022F870 end:0x8022F874
+	.dtors      start:0x8022FAA8 end:0x8022FAAC
 
 Integrable.cpp:
 	.text       start:0x80078928 end:0x8007895C
 
 MellowMover.cpp:
 	.text       start:0x8007895C end:0x8007AEC0
+	.ctors      start:0x8022F874 end:0x8022F878
 	.bss        start:0x802BD408 end:0x802BD438
 
 PhysicsMover.cpp:
 	.text       start:0x8007AEC0 end:0x8007F904
+	.ctors      start:0x8022F878 end:0x8022F87C
 	.bss        start:0x802BD438 end:0x802BE2D4
 	.sdata      start:0x80371C14 end:0x80371C80
 	.sbss       start:0x803736E8 end:0x803737A0
@@ -298,6 +358,7 @@ Speed/Indep/Src/Animation/AnimBank.cpp:
 
 Speed/Indep/Src/Animation/AnimCtrl.cpp:
 	.text       start:0x8007FB0C end:0x800803C4
+	.ctors      start:0x8022F87C end:0x8022F880
 
 AnimEAGLBridge.cpp:
 	.text       start:0x800803C4 end:0x800805D4
@@ -311,26 +372,38 @@ Speed/Indep/Src/Animation/AnimSkeleton.cpp:
 
 NFSAnimCtrl.cpp:
 	.text       start:0x80080900 end:0x800828DC
+	.ctors      start:0x8022F880 end:0x8022F884
+	.dtors      start:0x8022FAAC end:0x8022FAB0
 
 NFSAnimInit.cpp:
 	.text       start:0x800828DC end:0x8008298C
+	.ctors      start:0x8022F884 end:0x8022F888
 
 NFSAnimBank.cpp:
 	.text       start:0x8008298C end:0x80082C9C
+	.ctors      start:0x8022F888 end:0x8022F88C
+	.dtors      start:0x8022FAB0 end:0x8022FAB4
 
 Speed/Indep/Src/Camera/Camera.cpp:
 	.text       start:0x80082C9C end:0x80083E58
+	.ctors      start:0x8022F88C end:0x8022F890
 	.sdata      start:0x80371C80 end:0x80371DC4
 
 Speed/Indep/Src/Camera/CameraCoordinator.cpp:
 	.text       start:0x80083E58 end:0x8008723C
+	.ctors      start:0x8022F890 end:0x8022F894
+	.dtors      start:0x8022FAB4 end:0x8022FAB8
 
 Speed/Indep/Src/Camera/DragData.cpp:
 	.text       start:0x8008723C end:0x8008B628
+	.ctors      start:0x8022F894 end:0x8022F898
+	.dtors      start:0x8022FAB8 end:0x8022FABC
 	.bss        start:0x802BE2D4 end:0x802BF024
 
 Speed/Indep/Src/Camera/CameraMover.cpp:
 	.text       start:0x8008B628 end:0x8009FA5C
+	.ctors      start:0x8022F898 end:0x8022F89C
+	.dtors      start:0x8022FABC end:0x8022FAC0
 	.rodata     start:0x8023F0A0 end:0x80241114
 	.bss        start:0x802BF024 end:0x802BF318
 	.sdata      start:0x80371DC4 end:0x80371DCC
@@ -353,15 +426,20 @@ Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_PostRace.cpp:
 
 Speed/Indep/Src/Frontend/Hud/FEPkg_Hud.cpp:
 	.text       start:0x800A6054 end:0x800B0A0C
+	.ctors      start:0x8022F89C end:0x8022F8A0
 	.rodata     start:0x80241114 end:0x8024C050
 	.bss        start:0x802BF318 end:0x802BF330
 
 Speed/Indep/Src/Frontend/Database/FEDatabase.cpp:
 	.text       start:0x800B0A0C end:0x800B0BB4
+	.ctors      start:0x8022F8A0 end:0x8022F8A4
+	.dtors      start:0x8022FAC0 end:0x8022FAC4
 	.bss        start:0x802BF330 end:0x802EAA18
 
 Speed/Indep/Src/Frontend/MenuScreens/SafeHouse/FEPkg_GarageMain.cpp:
 	.text       start:0x800B0BB4 end:0x800B5EC8
+	.ctors      start:0x8022F8A4 end:0x8022F8A8
+	.dtors      start:0x8022FAC4 end:0x8022FAC8
 	.bss        start:0x802EAA18 end:0x802ECAA0
 	.sdata      start:0x80371E7C end:0x80371F10
 
@@ -415,6 +493,7 @@ Speed/Indep/Src/Frontend/MenuScreens/FEPkg_ChooseUserProfile.cpp:
 
 Speed/Indep/Src/Frontend/MenuScreens/FEng_SoundShenanigans.cpp:
 	.text       start:0x800CCEB0 end:0x800CDAA0
+	.ctors      start:0x8022F8A8 end:0x8022F8AC
 	.bss        start:0x802ECAA0 end:0x802ECE04
 	.sbss       start:0x80373810 end:0x80373948
 
@@ -443,6 +522,8 @@ Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_Loading.cpp:
 
 Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_ColorPicker.cpp:
 	.text       start:0x800D68AC end:0x800D8B3C
+	.ctors      start:0x8022F8AC end:0x8022F8B0
+	.dtors      start:0x8022FAC8 end:0x8022FACC
 
 Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_ConfirmDialog.cpp:
 	.text       start:0x800D8B3C end:0x800D8FD8
@@ -461,6 +542,7 @@ Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_MU_MPChooseGarage.cpp:
 
 Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_VinylShop.cpp:
 	.text       start:0x800DCF74 end:0x800DF774
+	.ctors      start:0x8022F8B0 end:0x8022F8B4
 	.bss        start:0x802ECE24 end:0x802ECE70
 	.sdata      start:0x80371F54 end:0x80371F7C
 
@@ -483,16 +565,22 @@ Speed/Indep/Src/FEng/FEngine.cpp:
 
 Speed/Indep/Src/Frontend/FEngRender.cpp:
 	.text       start:0x800E3820 end:0x800E6258
+	.ctors      start:0x8022F8B4 end:0x8022F8B8
+	.dtors      start:0x8022FACC end:0x8022FAD0
 	.bss        start:0x802ECE70 end:0x802ED67C
 
 Speed/Indep/Src/FEng/FEngSpeedPackages.cpp:
 	.text       start:0x800E6258 end:0x800E6370
+	.ctors      start:0x8022F8B8 end:0x8022F8BC
+	.dtors      start:0x8022FAD0 end:0x8022FAD4
 
 Speed/Indep/Src/FEng/FEngStandard.cpp:
 	.text       start:0x800E6370 end:0x800E64F4
 
 Speed/Indep/Src/Frontend/FEngFont.cpp:
 	.text       start:0x800E64F4 end:0x800E71B8
+	.ctors      start:0x8022F8BC end:0x8022F8C0
+	.dtors      start:0x8022FAD4 end:0x8022FAD8
 
 Speed/Indep/Src/Frontend/FEngInterfaces/FEngInterface.cpp:
 	.text       start:0x800E71B8 end:0x800EA2F0
@@ -500,11 +588,13 @@ Speed/Indep/Src/Frontend/FEngInterfaces/FEngInterface.cpp:
 
 Speed/Indep/Src/Frontend/FEngFrontend.cpp:
 	.text       start:0x800EA2F0 end:0x800ECA9C
+	.ctors      start:0x8022F8C0 end:0x8022F8C4
 	.data       start:0x80272A08 end:0x80272ED8
 	.bss        start:0x802ED67C end:0x802ED6BC
 
 Speed/Indep/Src/FEng/FEButtonMap.cpp:
 	.text       start:0x800ECA9C end:0x800ECF44
+	.ctors      start:0x8022F8C4 end:0x8022F8C8
 	.data       start:0x80272ED8 end:0x8027857C
 	.bss        start:0x802ED6BC end:0x802ED724
 
@@ -531,6 +621,8 @@ Speed/Indep/Src/FEng/FEKeyInterpNone.cpp:
 
 Speed/Indep/Src/FEng/FEKeyTrack.cpp:
 	.text       start:0x800F0008 end:0x800F0570
+	.ctors      start:0x8022F8C8 end:0x8022F8CC
+	.dtors      start:0x8022FAD8 end:0x8022FADC
 	.bss        start:0x802ED724 end:0x802ED734
 
 Speed/Indep/Src/FEng/FEList.cpp:
@@ -538,6 +630,8 @@ Speed/Indep/Src/FEng/FEList.cpp:
 
 Speed/Indep/Src/FEng/FEMessageResponse.cpp:
 	.text       start:0x800F1EC8 end:0x800F2630
+	.ctors      start:0x8022F8CC end:0x8022F8D0
+	.dtors      start:0x8022FADC end:0x8022FAE0
 	.bss        start:0x802ED734 end:0x802ED744
 
 Speed/Indep/Src/FEng/FEMsgTargetList.cpp:
@@ -545,6 +639,8 @@ Speed/Indep/Src/FEng/FEMsgTargetList.cpp:
 
 Speed/Indep/Src/FEng/FEObject.cpp:
 	.text       start:0x800F2A18 end:0x800F3C6C
+	.ctors      start:0x8022F8D0 end:0x8022F8D4
+	.dtors      start:0x8022FAE0 end:0x8022FAE4
 	.bss        start:0x802ED744 end:0x802ED7E8
 
 Speed/Indep/Src/FEng/FEPackage.cpp:
@@ -558,6 +654,8 @@ Speed/Indep/Src/FEng/FEPackageReader.cpp:
 
 Speed/Indep/Src/FEng/FEScript.cpp:
 	.text       start:0x800F8114 end:0x800F8990
+	.ctors      start:0x8022F8D4 end:0x8022F8D8
+	.dtors      start:0x8022FAE4 end:0x8022FAE8
 	.bss        start:0x802ED7E8 end:0x802ED7F8
 
 Speed/Indep/Src/FEng/FESlotPool.cpp:
@@ -575,6 +673,8 @@ Speed/Indep/Src/FEng/FETypes.cpp:
 
 Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_PartsBrowser.cpp:
 	.text       start:0x800FA000 end:0x801076B8
+	.ctors      start:0x8022F8D8 end:0x8022F8DC
+	.dtors      start:0x8022FAE8 end:0x8022FAEC
 	.bss        start:0x802ED7F8 end:0x802EEDF0
 	.sdata      start:0x8037202C end:0x80372068
 
@@ -591,17 +691,21 @@ Speed/Indep/Src/Frontend/FERenderObject.cpp:
 Speed/Indep/Src/FEng/FEMouse.cpp:
 	.text       start:0x8010A134 end:0x8010A310
 
-ScreenPrintf.cpp:
+Speed/Indep/Src/Debug/ScreenPrintf.cpp:
 	.text       start:0x8010A310 end:0x8010A584
 	.bss        start:0x802EEDF0 end:0x802EEEB0
 
 Speed/Indep/Src/FEng/FEng_Magazines.cpp:
 	.text       start:0x8010A584 end:0x8010BB08
+	.ctors      start:0x8022F8DC end:0x8022F8E0
+	.dtors      start:0x8022FAEC end:0x8022FAF0
 	.bss        start:0x802EEEB0 end:0x802EF14C
 	.sdata      start:0x8037207C end:0x80372088
 
 MagazineDatabase.cpp:
 	.text       start:0x8010BB08 end:0x8010CF9C
+	.ctors      start:0x8022F8E0 end:0x8022F8E4
+	.dtors      start:0x8022FAF0 end:0x8022FAF4
 
 MagazineTextureHandler.cpp:
 	.text       start:0x8010CF9C end:0x8010D1B8
@@ -609,6 +713,8 @@ MagazineTextureHandler.cpp:
 
 WideDecalManager.cpp:
 	.text       start:0x8010D1B8 end:0x8010D44C
+	.ctors      start:0x8022F8E4 end:0x8022F8E8
+	.dtors      start:0x8022FAF4 end:0x8022FAF8
 
 Speed/Indep/Src/EAXSound/EAXSound.cpp:
 	.text       start:0x8010D44C end:0x80110C0C
@@ -631,26 +737,33 @@ Speed/Indep/Src/EAXSound/EAXAITunerCar.cpp:
 	.text       start:0x801132E0 end:0x80113F0C
 	.bss        start:0x802EF150 end:0x802EF160
 
-EVTSYS_ENVIRO.cpp:
+Speed/Indep/Src/Audio/SFXCtl/EVTSYS_ENVIRO.cpp:
 	.text       start:0x80113F0C end:0x80113F84
+	.ctors      start:0x8022F8E8 end:0x8022F8EC
 
-EVTSYS_TURBO.cpp:
+Speed/Indep/Src/Audio/SFXCtl/EVTSYS_TURBO.cpp:
 	.text       start:0x80113F84 end:0x80113FEC
+	.ctors      start:0x8022F8EC end:0x8022F8F0
 
-EVTSYS_FE.cpp:
+Speed/Indep/Src/Audio/SFXCtl/EVTSYS_FE.cpp:
 	.text       start:0x80113FEC end:0x80114064
+	.ctors      start:0x8022F8F0 end:0x8022F8F4
 
-COLLISION_EVTS.cpp:
+Speed/Indep/Src/Audio/SFXCtl/COLLISION_EVTS.cpp:
 	.text       start:0x80114064 end:0x801140E4
+	.ctors      start:0x8022F8F4 end:0x8022F8F8
 
-ENGINE_EVTSYS.cpp:
+Speed/Indep/Src/Audio/SFXCtl/ENGINE_EVTSYS.cpp:
 	.text       start:0x801140E4 end:0x8011415C
+	.ctors      start:0x8022F8F8 end:0x8022F8FC
 
 Speed/Indep/Src/EAXSound/EAXTrafficCar.cpp:
 	.text       start:0x8011415C end:0x80114CC4
 
 Speed/Indep/Src/EAXSound/EAXTunerCar.cpp:
 	.text       start:0x80114CC4 end:0x8011C084
+	.ctors      start:0x8022F8FC end:0x8022F900
+	.dtors      start:0x8022FAF8 end:0x8022FAFC
 	.rodata     start:0x8024C9BC end:0x8024D41C
 	.bss        start:0x802EF160 end:0x802EF208
 	.sdata      start:0x80372160 end:0x803721AC
@@ -658,6 +771,8 @@ Speed/Indep/Src/EAXSound/EAXTunerCar.cpp:
 
 Speed/Indep/Src/EAXSound/EAXCar.cpp:
 	.text       start:0x8011C084 end:0x8011D84C
+	.ctors      start:0x8022F900 end:0x8022F904
+	.dtors      start:0x8022FAFC end:0x8022FB00
 	.bss        start:0x802EF208 end:0x802EF284
 	.sdata2     start:0x80374300 end:0x80374388
 
@@ -668,11 +783,14 @@ Speed/Indep/Src/EAXSound/EAX3DS.cpp:
 
 Speed/Indep/Src/EAXSound/EAXCollision.cpp:
 	.text       start:0x80122C1C end:0x801233F4
+	.ctors      start:0x8022F904 end:0x8022F908
+	.dtors      start:0x8022FB00 end:0x8022FB04
 	.rodata     start:0x8024D934 end:0x8024DA40
 	.sdata      start:0x803721AC end:0x8037221C
 
 Speed/Indep/Src/EAXSound/EAXSND8Wrapper.cpp:
 	.text       start:0x801233F4 end:0x80123880
+	.ctors      start:0x8022F908 end:0x8022F90C
 	.rodata     start:0x8024DA40 end:0x8024DA6C
 	.bss        start:0x802F1310 end:0x802F3320
 
@@ -684,6 +802,8 @@ Speed/Indep/bWare/Src/bCrc32.cpp:
 
 SoundObject.cpp:
 	.text       start:0x80123880 end:0x8012415C
+	.ctors      start:0x8022F90C end:0x8022F910
+	.dtors      start:0x8022FB04 end:0x8022FB08
 	.bss        start:0x802F3320 end:0x802F33A0
 
 Speed/Indep/Src/EAXSound/EAXEnvironment.cpp:
@@ -696,6 +816,7 @@ Speed/Indep/Src/EAXSound/EAXMixer.cpp:
 
 Speed/Indep/Src/EAXSound/EAXPresets.cpp:
 	.text       start:0x801277B0 end:0x80127AC4
+	.ctors      start:0x8022F910 end:0x8022F914
 	.bss        start:0x802F3480 end:0x802F38F4
 
 Speed/Indep/Src/EAXSound/Stream/EAXS_StreamManager.cpp:
@@ -724,6 +845,8 @@ Speed/Indep/Src/EAXSound/Stream/EAXS_SpeechStream.cpp:
 
 Speed/Indep/Src/Ecstasy/Ecstasy.cpp:
 	.text       start:0x8012E8E8 end:0x8012ED64
+	.ctors      start:0x8022F914 end:0x8022F918
+	.dtors      start:0x8022FB08 end:0x8022FB0C
 
 Speed/Indep/Src/Ecstasy/eStreamingPack.cpp:
 	.text       start:0x8012ED64 end:0x8012FF54
@@ -731,25 +854,36 @@ Speed/Indep/Src/Ecstasy/eStreamingPack.cpp:
 
 Speed/Indep/Src/Ecstasy/eModel.cpp:
 	.text       start:0x8012FF54 end:0x801306A8
+	.ctors      start:0x8022F918 end:0x8022F91C
+	.dtors      start:0x8022FB0C end:0x8022FB10
 
 Speed/Indep/Src/Ecstasy/eSolid.cpp:
 	.text       start:0x801306A8 end:0x8013255C
+	.ctors      start:0x8022F91C end:0x8022F920
+	.dtors      start:0x8022FB10 end:0x8022FB14
 	.bss        start:0x802F3DF4 end:0x802F3E44
 
 Speed/Indep/Src/Ecstasy/eLight.cpp:
 	.text       start:0x8013255C end:0x80136F3C
+	.ctors      start:0x8022F920 end:0x8022F924
+	.dtors      start:0x8022FB14 end:0x8022FB18
 	.bss        start:0x802F3E44 end:0x802F7380
 
 Speed/Indep/Src/Ecstasy/eView.cpp:
 	.text       start:0x80136F3C end:0x801375B4
+	.ctors      start:0x8022F924 end:0x8022F928
+	.dtors      start:0x8022FB18 end:0x8022FB1C
 	.bss        start:0x802F7380 end:0x802F78C0
 
 Speed/Indep/Src/Ecstasy/Texture.cpp:
 	.text       start:0x801375B4 end:0x80138FB4
+	.ctors      start:0x8022F928 end:0x8022F92C
+	.dtors      start:0x8022FB1C end:0x8022FB20
 	.bss        start:0x802F78C0 end:0x802F7EFC
 
 Speed/Indep/Src/World/Sun.cpp:
 	.text       start:0x80138FB4 end:0x8013959C
+	.ctors      start:0x8022F92C end:0x8022F930
 	.bss        start:0x802F7EFC end:0x802F8030
 
 Speed/Indep/bWare/Src/bDebug.cpp:
@@ -758,6 +892,8 @@ Speed/Indep/bWare/Src/bDebug.cpp:
 
 Speed/Indep/bWare/Src/bFunkServer.cpp:
 	.text       start:0x80139C00 end:0x80139C88
+	.ctors      start:0x8022F930 end:0x8022F934
+	.dtors      start:0x8022FB20 end:0x8022FB24
 
 Speed/Indep/bWare/Src/bInventory.cpp:
 	.text       start:0x80139C88 end:0x80139C94
@@ -787,23 +923,29 @@ Speed/Indep/bWare/Src/bPrintf.cpp:
 
 Speed/Indep/bWare/Src/bQuaternion.cpp:
 	.text       start:0x8013D3F8 end:0x8013D468
+	.ctors      start:0x8022F934 end:0x8022F938
 
 Speed/Indep/bWare/Src/bSlotPool.cpp:
 	.text       start:0x8013D468 end:0x8013DD8C
+	.ctors      start:0x8022F938 end:0x8022F93C
+	.dtors      start:0x8022FB24 end:0x8022FB28
 
 Speed/Indep/bWare/Src/bVector.cpp:
 	.text       start:0x8013DD8C end:0x8013E8F4
+	.ctors      start:0x8022F93C end:0x8022F940
 
 Speed/Indep/bWare/Src/Strings.cpp:
 	.text       start:0x8013E8F4 end:0x8013EBB4
 
 SpeedGlobal_.cpp:
 	.text       start:0x8013EBB4 end:0x8013EC34
+	.ctors      start:0x8022F940 end:0x8022F944
 
 NFSU_Streams.cpp:
 	.text       start:0x8013EC34 end:0x8013ECBC
+	.ctors      start:0x8022F944 end:0x8022F948
 
-FEPkg_MapScreen.cpp:
+Speed/Indep/Src/Frontend/MenuScreens/Ingame/FEPkg_MapScreen.cpp:
 	.text       start:0x8013ECBC end:0x8013FA60
 
 Speed/Indep/Src/Misc/Config.cpp:
@@ -811,78 +953,106 @@ Speed/Indep/Src/Misc/Config.cpp:
 
 Speed/Indep/Src/World/CarRender.cpp:
 	.text       start:0x8013FA64 end:0x80148DE4
+	.ctors      start:0x8022F948 end:0x8022F94C
+	.dtors      start:0x8022FB28 end:0x8022FB2C
 	.rodata     start:0x802505BC end:0x80251DA4
 	.bss        start:0x802F9D48 end:0x802FB170
 	.sbss       start:0x803739A8 end:0x80373A5C
 
 Speed/Indep/Src/World/SkyRender.cpp:
 	.text       start:0x80148DE4 end:0x80149284
+	.ctors      start:0x8022F94C end:0x8022F950
+	.dtors      start:0x8022FB2C end:0x8022FB30
 
 Replay.cpp:
 	.text       start:0x80149284 end:0x8014B28C
 
 DemoModeReplay.cpp:
 	.text       start:0x8014B28C end:0x8014BD6C
+	.ctors      start:0x8022F950 end:0x8022F954
+	.dtors      start:0x8022FB30 end:0x8022FB34
 
 Speed/Indep/Src/Misc/Joystick.cpp:
 	.text       start:0x8014BD6C end:0x8014D4D0
+	.ctors      start:0x8022F954 end:0x8022F958
+	.dtors      start:0x8022FB34 end:0x8022FB38
 
 Speed/Indep/Src/Misc/Rumble.cpp:
 	.text       start:0x8014D4D0 end:0x8014E5F4
+	.ctors      start:0x8022F958 end:0x8022F95C
+	.dtors      start:0x8022FB38 end:0x8022FB3C
 	.rodata     start:0x80251DA4 end:0x80252D80
 	.bss        start:0x802FB170 end:0x802FB7B4
 
 Speed/Indep/Src/Physics/TrafficMover.cpp:
 	.text       start:0x8014E5F4 end:0x8014EDA8
+	.ctors      start:0x8022F95C end:0x8022F960
 
 Speed/Indep/Src/Physics/PhysicsUpgrades.cpp:
 	.text       start:0x8014EDA8 end:0x8014F65C
 
-MobileTopology.cpp:
+Speed/Indep/Src/World/MobileTopology.cpp:
 	.text       start:0x8014F65C end:0x801501B0
+	.ctors      start:0x8022F960 end:0x8022F964
+	.dtors      start:0x8022FB3C end:0x8022FB40
 
 Speed/Indep/Src/World/WorldEntity.cpp:
 	.text       start:0x801501B0 end:0x80150C90
+	.ctors      start:0x8022F964 end:0x8022F968
+	.dtors      start:0x8022FB40 end:0x8022FB44
 	.sdata      start:0x8037267C end:0x80372798
 
 Speed/Indep/Src/World/WorldObject.cpp:
 	.text       start:0x80150C90 end:0x80151CF8
+	.ctors      start:0x8022F968 end:0x8022F96C
+	.dtors      start:0x8022FB44 end:0x8022FB48
 
 Speed/Indep/Src/World/Mover.cpp:
 	.text       start:0x80151CF8 end:0x80152064
 
 Speed/Indep/Src/World/SpaceNode.cpp:
 	.text       start:0x80152064 end:0x80152920
+	.ctors      start:0x8022F96C end:0x8022F970
+	.dtors      start:0x8022FB48 end:0x8022FB4C
 
-SpaceCase.cpp:
+Speed/Indep/Src/World/SpaceCase.cpp:
 	.text       start:0x80152920 end:0x801529A8
 
-SpaceCadet.cpp:
+Speed/Indep/Src/World/SpaceCadet.cpp:
 	.text       start:0x801529A8 end:0x80152CCC
 
-AnimationMover.cpp:
+Speed/Indep/Src/World/AnimationMover.cpp:
 	.text       start:0x80152CCC end:0x80153A30
+	.ctors      start:0x8022F970 end:0x8022F974
 	.bss        start:0x802FB7B4 end:0x802FBA14
 
 Speed/Indep/Src/World/CarWorldObject.cpp:
 	.text       start:0x80153A30 end:0x80153EB8
+	.ctors      start:0x8022F974 end:0x8022F978
+	.dtors      start:0x8022FB4C end:0x8022FB50
 
-Avoidable.cpp:
+Speed/Indep/Src/World/Avoidable.cpp:
 	.text       start:0x80153EB8 end:0x80155950
+	.ctors      start:0x8022F978 end:0x8022F97C
+	.dtors      start:0x8022FB50 end:0x8022FB54
 
-SomeWorldObjects.cpp:
+Speed/Indep/Src/World/SomeWorldObjects.cpp:
 	.text       start:0x80155950 end:0x8015609C
+	.ctors      start:0x8022F97C end:0x8022F980
+	.dtors      start:0x8022FB54 end:0x8022FB58
 
 Speed/Indep/Src/Misc/Joylog.cpp:
 	.text       start:0x8015609C end:0x80156280
 
 Speed/Indep/Src/World/CarInfo.cpp:
 	.text       start:0x80156280 end:0x8015D464
+	.ctors      start:0x8022F980 end:0x8022F984
+	.dtors      start:0x8022FB58 end:0x8022FB5C
 	.rodata     start:0x80252D80 end:0x80257A38
 	.data       start:0x8027857C end:0x802791B8
 	.sdata2     start:0x80374388 end:0x803743A0
 
-CarPartNames.cpp:
+Speed/Indep/Src/World/CarPartNames.cpp:
 	.text       start:0x8015D464 end:0x8015D46C
 
 Speed/Indep/Src/Misc/Spline.cpp:
@@ -892,43 +1062,61 @@ Speed/Indep/Src/Misc/Spline.cpp:
 
 TrafficController.cpp:
 	.text       start:0x8015E1AC end:0x8015F790
+	.ctors      start:0x8022F984 end:0x8022F988
 
 Speed/Indep/Src/Misc/Table.cpp:
 	.text       start:0x8015F790 end:0x801604C8
 
 Speed/Indep/Src/Physics/Behaviors/RigidBody.cpp:
 	.text       start:0x801604C8 end:0x80161E14
+	.ctors      start:0x8022F988 end:0x8022F98C
 
 Speed/Indep/Src/Misc/Timer.cpp:
 	.text       start:0x80161E14 end:0x80162C90
+	.ctors      start:0x8022F98C end:0x8022F990
 	.sdata      start:0x80372798 end:0x80372910
 
 Speed/Indep/Src/Physics/Core/Wheel.cpp:
 	.text       start:0x80162C90 end:0x801649B0
+	.ctors      start:0x8022F990 end:0x8022F994
 
 Speed/Indep/Src/Physics/Core/Suspension.cpp:
 	.text       start:0x801649B0 end:0x80165B4C
 
 Speed/Indep/Src/World/WeatherMan.cpp:
 	.text       start:0x80165B4C end:0x80165CAC
+	.ctors      start:0x8022F994 end:0x8022F998
+	.dtors      start:0x8022FB5C end:0x8022FB60
 
-fogvolume.cpp:
+Speed/Indep/Src/World/fogvolume.cpp:
 	.text       start:0x80165CAC end:0x801662F4
+	.ctors      start:0x8022F998 end:0x8022F99C
+	.dtors      start:0x8022FB60 end:0x8022FB64
 
 Speed/Indep/Src/World/Skids.cpp:
 	.text       start:0x801662F4 end:0x801673C4
+	.ctors      start:0x8022F99C end:0x8022F9A0
+	.dtors      start:0x8022FB64 end:0x8022FB68
 
 Speed/Indep/Src/World/Clans.cpp:
 	.text       start:0x801673C4 end:0x801678C4
+	.ctors      start:0x8022F9A0 end:0x8022F9A4
+	.dtors      start:0x8022FB68 end:0x8022FB6C
 
 Speed/Indep/Src/Misc/QueuedFile.cpp:
 	.text       start:0x801678C4 end:0x80167FCC
+	.ctors      start:0x8022F9A4 end:0x8022F9A8
+	.dtors      start:0x8022FB6C end:0x8022FB70
 
 Speed/Indep/Src/World/CarLoader.cpp:
 	.text       start:0x80167FCC end:0x8016A170
+	.ctors      start:0x8022F9A8 end:0x8022F9AC
+	.dtors      start:0x8022FB70 end:0x8022FB74
 
 NIS.cpp:
 	.text       start:0x8016A170 end:0x8016A284
+	.ctors      start:0x8022F9AC end:0x8022F9B0
+	.dtors      start:0x8022FB74 end:0x8022FB78
 	.data       start:0x802791B8 end:0x8027ABA8
 	.bss        start:0x802FE13C end:0x802FE674
 
@@ -937,89 +1125,119 @@ Speed/Indep/Src/Misc/LZCompress.cpp:
 
 Speed/Indep/Src/World/BodyDamage.cpp:
 	.text       start:0x8016A630 end:0x8016B1AC
+	.ctors      start:0x8022F9B0 end:0x8022F9B4
+	.dtors      start:0x8022FB78 end:0x8022FB7C
 
 Speed/Indep/Src/World/CarDamage.cpp:
 	.text       start:0x8016B1AC end:0x8016BC98
 
 Speed/Indep/Src/World/EventManager.cpp:
 	.text       start:0x8016BC98 end:0x8016C8A0
+	.ctors      start:0x8022F9B4 end:0x8022F9B8
+	.dtors      start:0x8022FB7C end:0x8022FB80
 
 Speed/Indep/Src/World/TrackMap.cpp:
 	.text       start:0x8016C8A0 end:0x8016FE3C
+	.ctors      start:0x8022F9B8 end:0x8022F9BC
 
 Speed/Indep/Src/World/SrcWorldModel.cpp:
 	.text       start:0x8016FE3C end:0x80171F40
+	.ctors      start:0x8022F9BC end:0x8022F9C0
+	.dtors      start:0x8022FB80 end:0x8022FB84
 
 Speed/Indep/Src/World/TerrainType.cpp:
 	.text       start:0x80171F40 end:0x80171FCC
+	.ctors      start:0x8022F9C0 end:0x8022F9C4
 
 Speed/Indep/Src/World/WorldObjectCollisionBody.cpp:
 	.text       start:0x80171FCC end:0x80172850
 
-CharacterInfo.cpp:
+Speed/Indep/Src/World/CharacterInfo.cpp:
 	.text       start:0x80172850 end:0x80172C68
 
-Subworld.cpp:
+Speed/Indep/Src/World/Subworld.cpp:
 	.text       start:0x80172C68 end:0x8017424C
+	.ctors      start:0x8022F9C4 end:0x8022F9C8
+	.dtors      start:0x8022FB84 end:0x8022FB88
 
-FernFlattener.cpp:
+Speed/Indep/Src/World/FernFlattener.cpp:
 	.text       start:0x8017424C end:0x80174D84
+	.ctors      start:0x8022F9C8 end:0x8022F9CC
+	.dtors      start:0x8022FB88 end:0x8022FB8C
 
 Speed/Indep/Src/Misc/bRepeat.cpp:
 	.text       start:0x80174D84 end:0x8017522C
 
 Speed/Indep/Src/Misc/bFile.cpp:
 	.text       start:0x8017522C end:0x80176088
+	.ctors      start:0x8022F9CC end:0x8022F9D0
+	.dtors      start:0x8022FB8C end:0x8022FB90
 	.sdata      start:0x80372910 end:0x80372958
 
 Speed/Indep/Src/Misc/bMemoryOverloads.cpp:
 	.text       start:0x80176088 end:0x801761D8
 
-Print3d.cpp:
+Speed/Indep/Src/Misc/Print3d.cpp:
 	.text       start:0x801761D8 end:0x801765F4
+	.ctors      start:0x8022F9D0 end:0x8022F9D4
 	.bss        start:0x802FE674 end:0x802FE71C
 
-DebugTopology.cpp:
+Speed/Indep/Src/Misc/DebugTopology.cpp:
 	.text       start:0x801765F4 end:0x80177220
+	.ctors      start:0x8022F9D4 end:0x8022F9D8
+	.dtors      start:0x8022FB90 end:0x8022FB94
 
-Polyhedra.cpp:
+Speed/Indep/Src/Misc/Polyhedra.cpp:
 	.text       start:0x80177220 end:0x80177304
+	.ctors      start:0x8022F9D8 end:0x8022F9DC
+	.dtors      start:0x8022FB94 end:0x8022FB98
 
-Smokeable.cpp:
+Speed/Indep/Src/Misc/Smokeable.cpp:
 	.text       start:0x80177304 end:0x8017B058
+	.ctors      start:0x8022F9DC end:0x8022F9E0
+	.dtors      start:0x8022FB98 end:0x8022FB9C
 
-TerrainEffects.cpp:
+Speed/Indep/Src/Misc/TerrainEffects.cpp:
 	.text       start:0x8017B058 end:0x8017B430
 
-TrafficTeleporter.cpp:
+Speed/Indep/Src/Misc/TrafficTeleporter.cpp:
 	.text       start:0x8017B430 end:0x8017E69C
+	.ctors      start:0x8022F9E0 end:0x8022F9E4
+	.dtors      start:0x8022FB9C end:0x8022FBA0
 
-DrivingLocation.cpp:
+Speed/Indep/Src/Misc/DrivingLocation.cpp:
 	.text       start:0x8017E69C end:0x8017EA2C
 	.bss        start:0x802FE71C end:0x802FE9A4
 	.sdata      start:0x80372958 end:0x803729AC
 
-TrackedController.cpp:
+Speed/Indep/Src/Misc/TrackedController.cpp:
 	.text       start:0x8017EA2C end:0x8017EEF8
 
-RealController.cpp:
+Speed/Indep/Src/Misc/RealController.cpp:
 	.text       start:0x8017EEF8 end:0x8017F9D8
 
 Speed/Indep/Src/Misc/QuickSpline.cpp:
 	.text       start:0x8017F9D8 end:0x80181370
+	.ctors      start:0x8022F9E4 end:0x8022F9E8
+	.dtors      start:0x8022FBA0 end:0x8022FBA4
 
 Speed/Indep/Src/Misc/Stomper.cpp:
 	.text       start:0x80181370 end:0x80181A54
+	.ctors      start:0x8022F9E8 end:0x8022F9EC
 
 Speed/Indep/Src/Misc/EasterEggs.cpp:
 	.text       start:0x80181A54 end:0x80181BB8
+	.ctors      start:0x8022F9EC end:0x8022F9F0
+	.dtors      start:0x8022FBA4 end:0x8022FBA8
 	.data       start:0x8027ABA8 end:0x8027C370
 
 crtE1.tmp:
 	.data       start:0x8027C370 end:0x8027C634
 
-Elipse.cpp:
+Speed/Indep/Src/Misc/Elipse.cpp:
 	.text       start:0x80181BB8 end:0x80181E2C
+	.ctors      start:0x8022F9F0 end:0x8022F9F4
+	.dtors      start:0x8022FBA8 end:0x8022FBAC
 
 Speed/Indep/Src/Frontend/MenuScreens/Common/Slider.cpp:
 	.text       start:0x80181E2C end:0x80182C38
@@ -1034,10 +1252,14 @@ CareerMode.cpp:
 
 RCMP_Player.cpp:
 	.text       start:0x80186D70 end:0x80187728
+	.ctors      start:0x8022F9F4 end:0x8022F9F8
+	.dtors      start:0x8022FBAC end:0x8022FBB0
 	.sdata      start:0x803729AC end:0x80372A00
 
 NFSSkeleton.cpp:
 	.text       start:0x80187728 end:0x8018799C
+	.ctors      start:0x8022F9F8 end:0x8022F9FC
+	.dtors      start:0x8022FBB0 end:0x8022FBB4
 
 FuturePoints.cpp:
 	.text       start:0x8018799C end:0x8018B4E8
@@ -1631,8 +1853,10 @@ audioplayer.cpp:
 
 egami/rcmp/dev/source/decoder/cmn/rcmpbase.cpp:
 	.text       start:0x801C7370 end:0x801C77DC
+	.ctors      start:0x8022F9FC end:0x8022FA00
+	.dtors      start:0x8022FBB4 end:0x8022FBB8
 
-rcmp2real.cpp:
+egami/rcmp/dev/source/decoder/cmn/rcmp2real.cpp:
 	.text       start:0x801C77DC end:0x801C7800
 
 egami/rcmp/dev/source/decoder/cmn/rcmp_mad_codec.cpp:
@@ -1658,6 +1882,8 @@ egami/rcmp/dev/source/decoder/cmn/madidct.cpp:
 
 Speed/Indep/Src/EAGL4Anim/dlopen.cpp:
 	.text       start:0x801C93F4 end:0x801CAEC4
+	.ctors      start:0x8022FA00 end:0x8022FA04
+	.dtors      start:0x8022FBB8 end:0x8022FBBC
 	.rodata     start:0x80259E0C end:0x8026A190
 	.data       start:0x80282BA4 end:0x80282BAC
 
@@ -1666,37 +1892,48 @@ Speed/Indep/Src/EAGL4Anim/conspool.cpp:
 
 device_cmn.cpp:
 	.text       start:0x801CB0B8 end:0x801CB190
+	.ctors      start:0x8022FA04 end:0x8022FA08
 	.data       start:0x80282BAC end:0x80282C44
 
 rendercontext.cpp:
 	.text       start:0x801CB190 end:0x801CC084
+	.ctors      start:0x8022FA08 end:0x8022FA0C
 	.data       start:0x80282C44 end:0x80283340
 
 rendercontext_cmn.cpp:
 	.text       start:0x801CC084 end:0x801CC93C
+	.ctors      start:0x8022FA0C end:0x8022FA10
 
 state.cpp:
 	.text       start:0x801CC93C end:0x801CCCC8
+	.ctors      start:0x8022FA10 end:0x8022FA14
 
 tar.cpp:
 	.text       start:0x801CCCC8 end:0x801CCFAC
+	.ctors      start:0x8022FA14 end:0x8022FA18
 	.data       start:0x80283340 end:0x80287A60
 
 tevstage.cpp:
 	.text       start:0x801CCFAC end:0x801CD5CC
+	.ctors      start:0x8022FA18 end:0x8022FA1C
 
 texturerc_cmn.cpp:
 	.text       start:0x801CD5CC end:0x801CD6AC
+	.ctors      start:0x8022FA1C end:0x8022FA20
 
 viewport.cpp:
 	.text       start:0x801CD6AC end:0x801CE678
+	.ctors      start:0x8022FA20 end:0x8022FA24
 
 viewport_cmn.cpp:
 	.text       start:0x801CE678 end:0x801CE8E0
+	.ctors      start:0x8022FA24 end:0x8022FA28
 	.data       start:0x80287A60 end:0x80287AE0
 
 profiler_cmn.cpp:
 	.text       start:0x801CE8E0 end:0x801CF91C
+	.ctors      start:0x8022FA28 end:0x8022FA2C
+	.dtors      start:0x8022FBBC end:0x8022FBC0
 	.data       start:0x80287AE0 end:0x80287D58
 
 singledraw.cpp:
@@ -1708,10 +1945,12 @@ base.cpp:
 
 SingleDrawGouraud.cpp:
 	.text       start:0x801D08B4 end:0x801D1214
+	.ctors      start:0x8022FA2C end:0x8022FA30
 	.data       start:0x80287D58 end:0x80287DA8
 
 SingleDrawTexture.cpp:
 	.text       start:0x801D1214 end:0x801D1C64
+	.ctors      start:0x8022FA30 end:0x8022FA34
 	.data       start:0x80287DA8 end:0x80287E10
 
 Speed/Indep/Src/EAGL4Anim/printmessage.cpp:
@@ -1722,16 +1961,20 @@ Speed/Indep/Src/EAGL4Anim/sympool.cpp:
 
 model.cpp:
 	.text       start:0x801D25E0 end:0x801D26AC
+	.ctors      start:0x8022FA34 end:0x8022FA38
 
 realcore/source/input/cmn/device.cpp:
 	.text       start:0x801D26AC end:0x801D29C4
+	.ctors      start:0x8022FA38 end:0x8022FA3C
 
 rendermethod.cpp:
 	.text       start:0x801D29C4 end:0x801D34A8
+	.ctors      start:0x8022FA3C end:0x8022FA40
 	.data       start:0x80287E58 end:0x802883D4
 
 texturerc.cpp:
 	.text       start:0x801D34A8 end:0x801D3820
+	.ctors      start:0x8022FA40 end:0x8022FA44
 
 pcode.cpp:
 	.text       start:0x801D3820 end:0x801D3CC8
@@ -1747,6 +1990,7 @@ Speed/Indep/Src/EAGL4Anim/SystemCmn.cpp:
 
 Speed/Indep/Src/EAGL4Anim/ScratchBuffer.cpp:
 	.text       start:0x801D495C end:0x801D4A44
+	.ctors      start:0x8022FA44 end:0x8022FA48
 
 Speed/Indep/Src/EAGL4Anim/MemoryPoolManager.cpp:
 	.text       start:0x801D4A44 end:0x801D521C
@@ -1821,6 +2065,7 @@ realcore/source/file/cmn/filesys.cpp:
 
 realcore/source/file/cmn/filesysopts.cpp:
 	.text       start:0x801EE07C end:0x801EE3CC
+	.ctors      start:0x8022FA48 end:0x8022FA4C
 
 realcore/source/file/cmn/syncfile.cpp:
 	.text       start:0x801EE3CC end:0x801EE944
@@ -1860,6 +2105,8 @@ fixdmult.cpp:
 
 realmemcard/source/lib/gc/gc_interface.cpp:
 	.text       start:0x801F1810 end:0x801F2B60
+	.ctors      start:0x8022FA4C end:0x8022FA50
+	.dtors      start:0x8022FBC0 end:0x8022FBC4
 	.bss        start:0x8032AD20 end:0x8032B538
 	.sdata      start:0x80373090 end:0x803730C4
 	.sbss       start:0x80374008 end:0x80374010
@@ -1974,22 +2221,22 @@ ustrcpy.cpp:
 creates.cpp:
 	.text       start:0x801FD530 end:0x801FDA9C
 
-shpclut.cpp:
+egami/realgraph/source/shape/cmn/shpclut.cpp:
 	.text       start:0x801FDA9C end:0x801FDB04
 
-shpdepth.cpp:
+egami/realgraph/source/shape/cmn/shpdepth.cpp:
 	.text       start:0x801FDB04 end:0x801FDB1C
 
-shpdestroy.cpp:
+egami/realgraph/source/shape/cmn/shpdestroy.cpp:
 	.text       start:0x801FDB1C end:0x801FDB4C
 
-shpisclut.cpp:
+egami/realgraph/source/shape/cmn/shpisclut.cpp:
 	.text       start:0x801FDB4C end:0x801FDBB8
 
-shpmemalloc.cpp:
+egami/realgraph/source/shape/cmn/shpmemalloc.cpp:
 	.text       start:0x801FDBB8 end:0x801FDBC8
 
-shpsize.cpp:
+egami/realgraph/source/shape/cmn/shpsize.cpp:
 	.text       start:0x801FDBC8 end:0x801FDE74
 
 shptype.cpp:
@@ -2003,6 +2250,7 @@ cluttype.cpp:
 
 csis/dev/source/library/cmn/csis.cpp:
 	.text       start:0x801FEE84 end:0x801FEED4
+	.ctors      start:0x8022FA50 end:0x8022FA54
 	.sdata      start:0x80373184 end:0x80373188
 
 snd/source/library/cmn/saems.c:
@@ -2011,6 +2259,7 @@ snd/source/library/cmn/saems.c:
 
 snd/source/library/cmn/saemsamb.c:
 	.text       start:0x8020180C end:0x80201A28
+	.ctors      start:0x8022FA54 end:0x8022FA58
 
 snd/source/library/cmn/saemsstr.c:
 	.text       start:0x80201A28 end:0x802027DC
@@ -2112,6 +2361,7 @@ snd/source/library/cmn/sresopat.c:
 
 snd/source/library/cmn/sserver.c:
 	.text       start:0x8020A1A4 end:0x8020A584
+	.ctors      start:0x8022FA58 end:0x8022FA5C
 	.data       start:0x8028B558 end:0x8028B774
 
 snd/source/library/cmn/ssine.c:
@@ -2124,7 +2374,7 @@ snd/source/library/cmn/sst.c:
 libc/vfscanf.c:
 	.rodata     start:0x8026A7AC end:0x8026A860
 
-base64.c:
+Speed/Indep/Src/Misc/base64.c:
 	.rodata     start:0x8026A860 end:0x8026A8C0
 
 snd/source/library/cmn/sst3dpos.c:
@@ -2413,9 +2663,9 @@ snd/source/library/cmn/SNDI_findprime.c:
 snd/source/library/mix/scrsfl.c:
 	.text       start:0x80215278 end:0x8021533C
 
-dummy.c:
+sk8/sk8memorycard/dev/source/dummy.c:
 	.text       start:0x8021533C end:0x8021548C
-	.data       start:0x8028C270 end:0x8028C288
+	.data       start:0x8028C270 end:0x8028C274
 
 libc/strtod2.c:
 	.data       start:0x8028C288 end:0x8028C2AC
@@ -2433,7 +2683,7 @@ libc/puts.c:
 libc/atoi.c:
 	.text       start:0x80215558 end:0x80215580
 
-bsearch.c:
+libc/bsearch.c:
 	.text       start:0x80215580 end:0x80215618
 
 libc/memcmp.c:
@@ -2635,7 +2885,5 @@ Speed/GameCube/bWare/GameCube/dolphinsdk/src/net/md5.c:
 	.text       start:0x802268B0 end:0x80227854
 	.data       start:0x80290208 end:0x80298DE0
 
-refsize.cpp:
+codec/cmn/refsize.cpp:
 	.text       start:0x80227854 end:0x8022F7E0
-	.BINARY     start:0x8022F7E0 end:0x8022FA60
-	.BINARY2    start:0x8022FA60 end:0x8022FBE0

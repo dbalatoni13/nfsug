@@ -1,33 +1,36 @@
  ENTRY(__start) 
- SEARCH_DIR(/dolphin/gcc/powerpc-x750-elf/lib);
+/* Do we need any of these for elf?
+   __DYNAMIC = 0;    */
 PROVIDE (__stack = 0);
 SECTIONS
 {
 	.comment :{ *(.comment)}
 	.init	0x80003100	 : { *(.init)		} =0
 
-	. =  ALIGN(32);
+	. =  ALIGN(16);
 	.text      :
 	{
 		*(.text)
 		*(.gnu.warning)
 		*(.gnu.linkonce.t*)
 	} =0
-	. =  ALIGN(32);
+	. =  ALIGN(1);
 	.ctors	  : 
 	{ 
 		__CTOR_LIST__ = .;
 		LONG(-1);
 		*(.ctors)
 		LONG(0); 
+		/* PROVIDE (__CTOR_END__ = .); */
 	}
-	. =  ALIGN(32);		
+	. =  ALIGN(1);		
 	.dtors	  :
 	{ 
 		 __DTOR_LIST__ = .;
 		 LONG(-1);
 		*(.dtors)
 		LONG(0);
+		/* PROVIDE (__DTOR_END__ = .); */
 	}
 
 
@@ -42,7 +45,7 @@ SECTIONS
 	{
 		*(extab)
 	}
-	 . =  ALIGN(32);
+	 . =  ALIGN(8);
 	.rodata	  : 
 	{
 		 *(.rodata) *(.gnu.linkonce.r*) *(.rodata.*)
@@ -68,7 +71,6 @@ SECTIONS
 	}
 
 	. =  ALIGN(32);
-
 	.sdata	  :
 	{ 
 
@@ -80,7 +82,7 @@ SECTIONS
 		*(.sdata.*)
 	}
 
-	. =  ALIGN(32);
+	. =  ALIGN(8);
 	.sbss      :
 	{
 		_f_sbss = .;
@@ -93,7 +95,7 @@ SECTIONS
 		_e_sbss = .;
 		__SBSS_END__ = .;
 	}
-	. =  ALIGN(32);
+	. =  ALIGN(8);
 	.sdata2   :
 	{
 		__SDATA2_START__ = .;
@@ -133,7 +135,8 @@ SECTIONS
 	. = ALIGN(32) ;
 	__ArenaLo = .;
 
-	 . = 0x81780000;
+	 /* . = 0x80380000;  HW1_DRIP */
+	 . = 0x81780000; /*   HW1 or HW2 (Others ?)  */
 	__ArenaHi = .;
 	
 

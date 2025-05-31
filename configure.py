@@ -160,7 +160,7 @@ config.asflags = [
     f"--defsym BUILD_VERSION={version_num}",
 ]
 ldscript_path = Path("config") / "ldscript.ld"
-config.ldflags = ["-T", str(ldscript_path)]
+config.ldflags = ["-T", str(ldscript_path), "-defsym", "_ctors=0"]
 
 # Use for any additional files that should cause a re-configure when modified
 config.reconfig_deps = []
