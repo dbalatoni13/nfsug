@@ -323,26 +323,26 @@ Speed/Indep/Src/Physics/Behaviors/Engine.cpp:
 	.text       start:0x800713B0 end:0x80073F74
 	.ctors      start:0x8022F86C end:0x8022F870
 
-GJKsimplex.cpp:
+Speed/GJKsimplex.cpp:
 	.text       start:0x80073F74 end:0x80076958
 
-GJKCollision.cpp:
+Speed/GJKCollision.cpp:
 	.text       start:0x80076958 end:0x80077578
 
-GJKPolyhedron.cpp:
+Speed/GJKPolyhedron.cpp:
 	.text       start:0x80077578 end:0x80078928
 	.ctors      start:0x8022F870 end:0x8022F874
 	.dtors      start:0x8022FAA8 end:0x8022FAAC
 
-Integrable.cpp:
+Speed/Integrable.cpp:
 	.text       start:0x80078928 end:0x8007895C
 
-MellowMover.cpp:
+Speed/MellowMover.cpp:
 	.text       start:0x8007895C end:0x8007AEC0
 	.ctors      start:0x8022F874 end:0x8022F878
 	.bss        start:0x802BD408 end:0x802BD438
 
-PhysicsMover.cpp:
+Speed/PhysicsMover.cpp:
 	.text       start:0x8007AEC0 end:0x8007F904
 	.ctors      start:0x8022F878 end:0x8022F87C
 	.bss        start:0x802BD438 end:0x802BE2D4
@@ -356,7 +356,7 @@ Speed/Indep/Src/Animation/AnimCtrl.cpp:
 	.text       start:0x8007FB0C end:0x800803C4
 	.ctors      start:0x8022F87C end:0x8022F880
 
-AnimEAGLBridge.cpp:
+Speed/AnimEAGLBridge.cpp:
 	.text       start:0x800803C4 end:0x800805D4
 	.rodata     start:0x8023BD94 end:0x8023F0A0
 
@@ -366,16 +366,16 @@ Speed/Indep/Src/Animation/AnimPart.cpp:
 Speed/Indep/Src/Animation/AnimSkeleton.cpp:
 	.text       start:0x80080770 end:0x80080900
 
-NFSAnimCtrl.cpp:
+Speed/NFSAnimCtrl.cpp:
 	.text       start:0x80080900 end:0x800828DC
 	.ctors      start:0x8022F880 end:0x8022F884
 	.dtors      start:0x8022FAAC end:0x8022FAB0
 
-NFSAnimInit.cpp:
+Speed/NFSAnimInit.cpp:
 	.text       start:0x800828DC end:0x8008298C
 	.ctors      start:0x8022F884 end:0x8022F888
 
-NFSAnimBank.cpp:
+Speed/NFSAnimBank.cpp:
 	.text       start:0x8008298C end:0x80082C9C
 	.ctors      start:0x8022F888 end:0x8022F88C
 	.dtors      start:0x8022FAB0 end:0x8022FAB4
@@ -698,16 +698,16 @@ Speed/Indep/Src/FEng/FEng_Magazines.cpp:
 	.bss        start:0x802EEEB0 end:0x802EF14C
 	.sdata      start:0x8037207C end:0x80372088
 
-MagazineDatabase.cpp:
+Speed/MagazineDatabase.cpp:
 	.text       start:0x8010BB08 end:0x8010CF9C
 	.ctors      start:0x8022F8E0 end:0x8022F8E4
 	.dtors      start:0x8022FAF0 end:0x8022FAF4
 
-MagazineTextureHandler.cpp:
+Speed/MagazineTextureHandler.cpp:
 	.text       start:0x8010CF9C end:0x8010D1B8
 	.sdata      start:0x80372088 end:0x803720D4
 
-WideDecalManager.cpp:
+Speed/WideDecalManager.cpp:
 	.text       start:0x8010D1B8 end:0x8010D44C
 	.ctors      start:0x8022F8E4 end:0x8022F8E8
 	.dtors      start:0x8022FAF4 end:0x8022FAF8
@@ -796,7 +796,7 @@ Speed/Indep/Src/EAXSound/EAXSndTweakData.cpp:
 Speed/Indep/bWare/Src/bCrc32.cpp:
 	.rodata     start:0x8024EF90 end:0x8024F6A0
 
-SoundObject.cpp:
+Speed/SoundObject.cpp:
 	.text       start:0x80123880 end:0x8012415C
 	.ctors      start:0x8022F90C end:0x8022F910
 	.dtors      start:0x8022FB04 end:0x8022FB08
@@ -933,11 +933,11 @@ Speed/Indep/bWare/Src/bVector.cpp:
 Speed/Indep/bWare/Src/Strings.cpp:
 	.text       start:0x8013E8F4 end:0x8013EBB4
 
-SpeedGlobal_.cpp:
+Speed/SpeedGlobal_.cpp:
 	.text       start:0x8013EBB4 end:0x8013EC34
 	.ctors      start:0x8022F940 end:0x8022F944
 
-NFSU_Streams.cpp:
+Speed/NFSU_Streams.cpp:
 	.text       start:0x8013EC34 end:0x8013ECBC
 	.ctors      start:0x8022F944 end:0x8022F948
 
@@ -960,10 +960,10 @@ Speed/Indep/Src/World/SkyRender.cpp:
 	.ctors      start:0x8022F94C end:0x8022F950
 	.dtors      start:0x8022FB2C end:0x8022FB30
 
-Replay.cpp:
+Speed/Replay.cpp:
 	.text       start:0x80149284 end:0x8014B28C
 
-DemoModeReplay.cpp:
+Speed/DemoModeReplay.cpp:
 	.text       start:0x8014B28C end:0x8014BD6C
 	.ctors      start:0x8022F950 end:0x8022F954
 	.dtors      start:0x8022FB30 end:0x8022FB34
@@ -1056,7 +1056,7 @@ Speed/Indep/Src/Misc/Spline.cpp:
 	.bss        start:0x802FBA14 end:0x802FE13C
 	.sbss       start:0x80373A5C end:0x80373B54
 
-TrafficController.cpp:
+Speed/TrafficController.cpp:
 	.text       start:0x8015E1AC end:0x8015F790
 	.ctors      start:0x8022F984 end:0x8022F988
 
@@ -1109,7 +1109,7 @@ Speed/Indep/Src/World/CarLoader.cpp:
 	.ctors      start:0x8022F9A8 end:0x8022F9AC
 	.dtors      start:0x8022FB70 end:0x8022FB74
 
-NIS.cpp:
+Speed/NIS.cpp:
 	.text       start:0x8016A170 end:0x8016A284
 	.ctors      start:0x8022F9AC end:0x8022F9B0
 	.dtors      start:0x8022FB74 end:0x8022FB78
@@ -1243,21 +1243,21 @@ Speed/Indep/Src/Frontend/Localization/Localize.cpp:
 	.bss        start:0x802FE9A4 end:0x802FEC20
 	.sbss       start:0x80373B54 end:0x80373B70
 
-CareerMode.cpp:
+Speed/CareerMode.cpp:
 	.text       start:0x801832A8 end:0x80186D70
 
-RCMP_Player.cpp:
+Speed/RCMP_Player.cpp:
 	.text       start:0x80186D70 end:0x80187728
 	.ctors      start:0x8022F9F4 end:0x8022F9F8
 	.dtors      start:0x8022FBAC end:0x8022FBB0
 	.sdata      start:0x803729AC end:0x80372A00
 
-NFSSkeleton.cpp:
+Speed/NFSSkeleton.cpp:
 	.text       start:0x80187728 end:0x8018799C
 	.ctors      start:0x8022F9F8 end:0x8022F9FC
 	.dtors      start:0x8022FBB0 end:0x8022FBB4
 
-FuturePoints.cpp:
+Speed/FuturePoints.cpp:
 	.text       start:0x8018799C end:0x8018B4E8
 
 Speed/Indep/Src/World/NeuQuant.cpp:
@@ -1939,12 +1939,12 @@ singledraw.cpp:
 base.cpp:
 	.text       start:0x801D0864 end:0x801D08B4
 
-SingleDrawGouraud.cpp:
+Speed/SingleDrawGouraud.cpp:
 	.text       start:0x801D08B4 end:0x801D1214
 	.ctors      start:0x8022FA2C end:0x8022FA30
 	.data       start:0x80287D58 end:0x80287DA8
 
-SingleDrawTexture.cpp:
+Speed/SingleDrawTexture.cpp:
 	.text       start:0x801D1214 end:0x801D1C64
 	.ctors      start:0x8022FA30 end:0x8022FA34
 	.data       start:0x80287DA8 end:0x80287E10
