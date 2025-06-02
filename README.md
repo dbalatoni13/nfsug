@@ -71,7 +71,7 @@ sudo xattr -rd com.apple.quarantine '/Applications/Wine Crossover.app'
 - Configure:
 
   ```sh
-  python configure.py --debug
+  python configure.py
   ```
 
 - Build:

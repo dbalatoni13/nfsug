@@ -125,6 +125,9 @@ config = ProjectConfig()
 config.version = str(args.version)
 version_num = VERSIONS.index(config.version)
 
+if version_num == 0:
+    args.debug = True
+
 # Apply arguments
 config.build_dir = args.build_dir
 config.dtk_path = args.dtk
@@ -144,7 +147,7 @@ if not config.non_matching:
 # Tool versions
 config.binutils_tag = "2.42-1"
 config.compilers_tag = "20250513"
-config.dtk_tag = "v1.5.2"
+config.dtk_tag = "v1.6.0"
 config.objdiff_tag = "v2.7.1"
 config.sjiswrap_tag = "v1.2.0"
 config.wibo_tag = "0.6.11"
@@ -253,8 +256,8 @@ config.libs = [
             Object(NonMatching, "Speed/GameCube/Src/Ecstasy/TextureInfoPlat.cpp"),
             Object(NonMatching, "Speed/GameCube/Src/Render/screenshot.cpp"),
             Object(NonMatching, "Speed/GameCube/Src/JoyE.cpp"),
-            Object(NonMatching, "Speed/GameCube/Render/bba_com.cpp"),
-            Object(NonMatching, "Speed/GameCube/Render/AcidFXE.cpp"),
+            Object(NonMatching, "Speed/GameCube/Src/Render/bba_com.cpp"),
+            Object(NonMatching, "Speed/GameCube/Src/Render/AcidFXE.cpp"),
             Object(NonMatching, "Speed/Indep/Src/Misc/DemoDisc.cpp"),
             Object(NonMatching, "Speed/GameCube/Src/MovieE.cpp"),
             Object(NonMatching, "Speed/GameCube/Src/Logitech/Wheels.cpp"),
@@ -907,6 +910,7 @@ config.libs = [
             Object(NonMatching, "realcore/source/system/debug/cmn/printstr.cpp"),
             Object(NonMatching, "realcore/source/system/debug/cmn/abortmsg.cpp"),
             Object(NonMatching, "realcore/source/std/cmn/memclear.cpp"),
+            Object(NonMatching, "realcore/source/std/cmn/exit.cpp"),
             Object(NonMatching, "realcore/source/system/gc/timerthread.cpp"),
             Object(NonMatching, "realcore/source/system/gc/memfill.cpp"),
         ],

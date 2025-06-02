@@ -405,9 +405,9 @@ bool EnableRainIn2P;                                                // size: 0x1
 int efbWcrt;                                                        // size: 0x4
 int xfbWcrt;                                                        // size: 0x4
 bool IsPal50Mode;                                                   // size: 0x1
-int xfbHcrt;                                                        // size: 0x4
-int efbHcrt;                                                        // size: 0x4
-float efbxfbRatio;                                                  // size: 0x4
+int xfbHcrt = 574;                                                  // size: 0x4
+int efbHcrt = 480;                                                  // size: 0x4
+float efbxfbRatio = 1.0f;                                           // size: 0x4
 GXRenderModeObj PalNFS01IntDfScale;                                 // size: 0x3C
 Bool bEProgressive;
 
@@ -697,7 +697,11 @@ void eUpdateCopyFilter2(Bool enable) {
 }
 
 GXTexObj HeadlightClipTextureObj;
-void *HeadlightClipTextureTestData;
+void *HeadlightClipTextureTestData = (void *)0xFFFF0000;
+int FastForwardEnabled = 0;
+int FastForwardRate = 4;
+int EnableTexturing = true;
+int DrawWireframe = 0;
 
 void eDrawStartup(void) {
   GXColor clr = {0};

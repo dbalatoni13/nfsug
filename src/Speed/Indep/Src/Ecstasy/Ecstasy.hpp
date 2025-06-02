@@ -7,6 +7,7 @@
 #endif
 #include "Speed/Indep/Src/Camera/Camera.hpp"
 #include "Speed/Indep/Src/Camera/CameraMover.hpp"
+#include "Speed/Indep/Src/Ecstasy/EcstasyData.hpp"
 #include "Speed/Indep/bWare/Inc/bList.hpp"
 #include "Speed/Indep/bWare/Inc/bVector.hpp"
 
@@ -16,6 +17,8 @@ struct eModel : public bTNode<eModel> {
   struct eSolid *Solid;                                      // offset 0xC, size 0x4
   struct eReplacementTextureTable *pReplacementTextureTable; // offset 0x10, size 0x4
   int NumReplacementTextures;                                // offset 0x14, size 0x4
+
+  int GetBoundingBox(bVector3 *min, bVector3 *max);
 };
 
 struct eSolid : public eSolidPlatInterface, public bTNode<eSolid> {
@@ -52,7 +55,7 @@ struct eSolid : public eSolidPlatInterface, public bTNode<eSolid> {
 
 struct eView : public eViewPlatInterface {
   // total size: 0x54
-  enum EVIEW_ID ID; // offset 0x4, size 0x4
+  EVIEW_ID ID;      // offset 0x4, size 0x4
   char Active;      // offset 0x8, size 0x1
   char LetterBox;   // offset 0x9, size 0x1
   char pad0;        // offset 0xA, size 0x1
@@ -72,26 +75,40 @@ struct eView : public eViewPlatInterface {
   // unsigned int NumCopsCherry;                     // offset 0x48, size 0x4
   struct TextureInfo *pBlendMask;                 // offset 0x4C, size 0x4
   struct eDynamicLightContext *WorldLightContext; // offset 0x50, size 0x4
-  struct eRenderTarget *RenderTargetTable[1];     // offset 0x54, size 0x4
-  struct ScreenEffectDB *ScreenEffects;           // offset 0x58, size 0x4
-  // struct FacePixelation *facePixelation;          // offset 0x60, size 0x4
+  struct eRenderTarget *RenderTargetTable[1];     // offset 0x4C, size 0x4
+  unsigned int pad50;
 
-  void SetRenderTarget(eRenderTarget *target, int index) { RenderTargetTable[index] = target; }
+  eView();
+  ~eView();
 
-  void SetRenderTarget0(eRenderTarget *target) { SetRenderTarget(target, 0); }
+  eVisibleState GetVisibleState(const bVector3 *aabb_min, const bVector3 *aabb_max, bMatrix4 *local_world);
+  eVisibleState GetVisibleState(eModel *model, bMatrix4 *local_world);
+  int GetPixelSize(float radius, float distance);
+  int GetPixelSize(const bVector3 *position, float radius);
+  int GetPixelSize(const bVector3 *bbox_min, const bVector3 *bbox_max);
+
+  int GetID() { return this->ID; }
+
+  void SetID(int id) { ID = static_cast<EVIEW_ID>(id); }
+
+  void SetRenderTarget(eRenderTarget *target, int index) { this->RenderTargetTable[index] = target; }
+
+  void SetRenderTarget0(eRenderTarget *target) { this->SetRenderTarget(target, 0); }
+
+  Camera *GetCamera() { return this->pCamera; }
 
   void SetCamera(Camera *camera) { this->pCamera = camera; }
 
   void SetActive(int state) {
-    int prev_state = Active;
-    Active = state;
+    int prev_state = this->Active;
+    this->Active = state;
   }
 
   CameraMover *GetCameraMover() {
-    if (CameraMoverList.IsEmpty()) {
+    if (this->CameraMoverList.IsEmpty()) {
       return nullptr;
     }
-    return CameraMoverList.GetHead();
+    return this->CameraMoverList.GetHead();
   }
 };
 

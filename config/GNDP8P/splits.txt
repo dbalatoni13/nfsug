@@ -83,12 +83,12 @@ Speed/GameCube/Src/JoyE.cpp:
 	.text       start:0x80010F34 end:0x80011890
 	.rodata     start:0x802306CC end:0x80230C60
 
-Speed/GameCube/Render/bba_com.cpp:
+Speed/GameCube/Src/Render/bba_com.cpp:
 	.text       start:0x80011890 end:0x80015160
 	.bss        start:0x802ABEC8 end:0x802ACA34
 	.sdata      start:0x80371730 end:0x80371784
 
-Speed/GameCube/Render/AcidFXE.cpp:
+Speed/GameCube/Src/Render/AcidFXE.cpp:
 	.text       start:0x80015160 end:0x800152A4
 	.ctors      start:0x8022F7FC end:0x8022F800
 	.dtors      start:0x8022FA6C end:0x8022FA70

@@ -46,9 +46,9 @@ struct Camera {
 
   bMatrix4 *GetWorldToCameraMatrix() {}
 
-  bVector3 *GetPosition() {}
+  bVector3 *GetPosition() { return &this->CurrentKey.Position; }
 
-  bVector3 *GetDirection() {}
+  bVector3 *GetDirection() { return &this->CurrentKey.Direction; }
 
   bVector3 *GetTarget() {}
 

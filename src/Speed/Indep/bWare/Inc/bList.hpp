@@ -3,10 +3,10 @@
 #include <types.h>
 
 class bNode {
+public:
   bNode *Next;
   bNode *Prev;
 
-public:
   bNode *GetNext() { return Next; }
   bNode *GetPrev() { return Prev; }
 };
@@ -19,8 +19,15 @@ struct bList {
   typedef long (*SortFunc)(bNode *, bNode *);
 
 public:
-  bList() {}
-  void InitList() {}
+  bList() {
+    this->HeadNode.Next = &this->HeadNode;
+    this->HeadNode.Prev = &this->HeadNode;
+  }
+  ~bList() {}
+  void InitList() {
+    this->HeadNode.Next = &this->HeadNode;
+    this->HeadNode.Prev = &this->HeadNode;
+  }
   int IsEmpty() { return HeadNode.GetNext() != &HeadNode; }
   bNode *EndOfList(); // TODO
   bNode *GetHead() { return &HeadNode; }
@@ -44,6 +51,7 @@ public:
 template <typename T> class bTList : public bList {
 public:
   bTList() {}
+  ~bTList() {}
   T *EndOfList() { return (T *)bList::EndOfList(); }
   T *GetHead() { return (T *)bList::GetHead(); }
   T *GetTail() { return (T *)bList::GetTail(); }
